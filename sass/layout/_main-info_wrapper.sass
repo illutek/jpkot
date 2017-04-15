@@ -1,0 +1,49 @@
+// /////////////////////////
+// @@ MAIN INFO WRAPPER
+// /////////////////////////
+
+.info-tile_shared
+  height: 450px
+  padding: 35px
+  text-align: center
+  color: white
+  vertical-align: middle
+  position: relative
+  .available-message
+    margin-top: 45px
+    font-size: 1.125em
+
+.btn-info_shared
+  padding: 15px 25px
+
+.info-tiles_wrap
+  p
+    line-height: 2.5em
+  a
+    color: white
+  .info-tile__content
+    display: inline-block
+    width: 75%
+  .info-tile_one
+    background: $main_color1
+    @extend .info-tile_shared
+    .btn-info-tiles
+      @extend .btn-info_shared
+      background: $main_color1_btn
+
+  .info-tile_two
+    background: $main_color2
+    @extend .info-tile_shared
+    .btn-info-tiles
+      @extend .btn-info_shared
+      background: $main_color2_btn
+  .btn-info_wrap
+    position: absolute
+    bottom: 45px
+    width: 100%
+    left: 0
+  .info-slider
+    overflow: hidden
+    img
+      width: 100%
+      height: auto

@@ -323,7 +323,7 @@ h2,h3{page-break-after:avoid}
 .glyphicon-menu-up:before{content:"\e260"}
 *,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{font-size:10px;-webkit-tap-highlight-color:transparent}
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333}
+body{font-size:14px;line-height:1.42857143;color:#333}
 button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}
 a{color:#337ab7;text-decoration:none}
 a:focus,a:hover{color:#23527c;text-decoration:underline}
@@ -2167,5 +2167,15 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .fa-meetup:before{content:"\f2e0"}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}
-@font-face{font-family:alegreya_sans_scthin;src:url(../fonts/alegreyasanssc-thin/alegreyasanss-thin-webfont.woff) format("woff2");src:url(../fonts/alegreyasanssc-thin/alegreyasanss-thin-webfont.woff2) format("woff");font-weight:400;font-style:normal}
-body{background:#4e5266}
+@font-face{font-family:alegreya_sans_scthin;src:url(../fonts/alegreyasanssc-thin/alegreyasanssc-thin-webfont.woff2) format("woff2");src:url(../fonts/alegreyasanssc-thin/alegreyasanssc-thin-webfont.woff) format("woff");font-weight:400;font-style:normal}
+@font-face{font-family:alegreya_sans_scbold;src:url(../fonts/alegreyasssc-bold/alegreyasanssc-bold-webfont.woff2) format("woff2");src:url(../fonts/alegreyasssc-bold/alegreyasanssc-bold-webfont.woff) format("woff");font-weight:400;font-style:normal}
+@font-face{font-family:alegreya_sans_scregular;src:url(../fonts/alegreyasssc-regular/alegreyasanssc-regular-webfont.woff2) format("woff2");src:url(../fonts/alegreyasssc-regular/alegreyasanssc-regular-webfont.woff) format("woff");font-weight:400;font-style:normal}
+body{padding-top:25px;background:#4e5266;font-family:alegreya_sans_scthin,sans-serif}
+.no-gutter>[class*=col-]{padding-right:0;padding-left:0}
+.header-wrap{height:100px;color:#fff;margin-bottom:15px}
+.header-wrap .menu-wrap{padding-top:20px;text-align:right}
+.info-tile_shared,.info-tiles_wrap .info-tile_one,.info-tiles_wrap .info-tile_two{height:450px;padding:35px;text-align:center;color:#fff}
+.info-tiles_wrap .info-tile_one{background:#4cabb1}
+.info-tiles_wrap .info-tile_two{background:#69c7ad}
+.info-tiles_wrap .info-slider{overflow:hidden}
+.info-tiles_wrap .info-slider img{width:100%;height:auto}
