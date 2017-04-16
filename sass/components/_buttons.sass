@@ -4,6 +4,15 @@
 
 .btn-info_extend
   padding: 10px 35px
+  border: none
+  &:after
+    content: ""
+    padding-left: -25px
+  &:hover:after
+    transition: all 0.5s ease
+    font-family: FontAwesome
+    content: "\f101"
+    padding-left: 5px
 
 .btn-wrap
   position: absolute

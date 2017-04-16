@@ -2175,6 +2175,7 @@ h3{font-size:1.675em}
 .no-gutter>[class*=col-]{padding-right:0;padding-left:0}
 .btn{border-radius:0}
 .header-wrap{height:100px;margin-bottom:15px}
+.our-strengths h2,.price .price-content h2{margin-bottom:1.67em}
 .header-wrap .menu-wrap{padding-top:20px;text-align:right}
 .info-tile_extend,.info-tiles_wrap .info-tile_one,.info-tiles_wrap .info-tile_two{height:450px;padding:35px;text-align:center;color:#fff;vertical-align:middle;position:relative}
 .info-tile_extend .available-message,.info-tiles_wrap .info-tile_one .available-message,.info-tiles_wrap .info-tile_two .available-message{margin-top:45px;font-size:1.125em}
@@ -2184,11 +2185,10 @@ h3{font-size:1.675em}
 .info-slider{overflow:hidden}
 .info-slider img{width:100%;height:auto;vertical-align:middle}
 .our-strengths{background:#fff}
-.our-strengths .our-strengths__col:first-child{border-right:solid 1px #4cabb1}
 .our-strengths .our-strengths_content{margin-top:50px}
+.our-strengths__col:last-child{border-left:solid 1px #4cabb1}
 .price{background:#fed586;position:relative}
 .price .price-content{position:absolute;width:100%;display:inline-block;left:0}
-.price .price-content h2{margin-bottom:1.67em}
 .contact-details{position:relative}
 .contact-details .contact-details__content{position:absolute;width:100%;display:inline-block;left:0;bottom:100px}
 .btn-info_extend,.info-tile_one .btn-info,.info-tile_two .btn-info,.price .btn-price{padding:10px 35px}
