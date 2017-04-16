@@ -3,14 +3,30 @@
 // ///////////////////////////
 
 .menu-right-wrapper
+  z-index: 999
   height: 100vh
   background: $main_color3
-  width: 300px
-  position: absolute
+  width: 550px
+  position: fixed
   right: 0
   padding: 25px
-  //display: none
+  +transition(0.5s)
+  transform: translate(570px,0px)
+  .close-btn
+    cursor: pointer
   a
     color: white
   &.menu-right-visible
-    display: block
+    +transition(0.5s)
+    //transition: all 0.5s ease
+    transform: translate(0px,0px)
+
+.menu-items-wrap
+  margin-top: 60px
+
+.menu-item
+  border-bottom: solid 1px white
+  padding: 30px 0
+  font-size: 1.5em
+  &:last-child
+    border-bottom: none
