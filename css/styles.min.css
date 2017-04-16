@@ -2159,24 +2159,27 @@ td.visible-print,th.visible-print{display:table-cell!important}
 @font-face{font-family:alegreya_sans_scbold;src:url(../fonts/alegreyasssc-bold/alegreyasanssc-bold-webfont.woff2) format("woff2");src:url(../fonts/alegreyasssc-bold/alegreyasanssc-bold-webfont.woff) format("woff");font-weight:400;font-style:normal}
 @font-face{font-family:alegreya_sans_scregular;src:url(../fonts/alegreyasssc-regular/alegreyasanssc-regular-webfont.woff2) format("woff2");src:url(../fonts/alegreyasssc-regular/alegreyasanssc-regular-webfont.woff) format("woff");font-weight:400;font-style:normal}
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}
-h1,h2,h3{margin-top:.67em;margin-bottom:.67em}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1;background:#4e5266;font-family:alegreya_sans_scregular,sans-serif}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
-.contact-details,.our-strengths,.price,.section-extend{color:#000;text-align:center;padding:35px;min-height:450px}
-.contact-details,.header-wrap,.info-tiles_wrap a,.price a{color:#fff}
-body{line-height:1;padding-top:25px;background:#4e5266;font-family:alegreya_sans_scthin,sans-serif}
+.contact-details,.our-strengths,.price,.section-extend{color:#444;text-align:center;padding:35px;min-height:450px}
+.contact-details,.header-wrap,.info-tiles_wrap a,.menu-right-wrapper a,.price a{color:#fff}
 p{line-height:1.25em;font-size:1.125em}
 .info-tiles_wrap p,.price p{line-height:2.5em}
+h1,h2,h3{margin-top:.67em;margin-bottom:.67em}
 h1{font-size:2.375em}
 h2{font-size:2em}
 h3{font-size:1.675em}
 .no-gutter>[class*=col-]{padding-right:0;padding-left:0}
 .btn{border-radius:0}
-.header-wrap{height:100px;margin-bottom:15px}
+.header-wrap{height:100px;margin:15px 0}
 .our-strengths h2,.price .price-content h2{margin-bottom:1.67em}
 .header-wrap .menu-wrap{padding-top:20px;text-align:right}
+.header-wrap .menu-wrap .hamburger-icon{cursor:pointer}
+.menu-right-wrapper{height:100vh;background:#fed586;width:300px;position:absolute;right:0;padding:25px;display:none}
+.menu-right-wrapper.menu-right-visible{display:block}
 .info-tile_extend,.info-tiles_wrap .info-tile_one,.info-tiles_wrap .info-tile_two{height:450px;padding:35px;text-align:center;color:#fff;vertical-align:middle;position:relative}
 .info-tile_extend .available-message,.info-tiles_wrap .info-tile_one .available-message,.info-tiles_wrap .info-tile_two .available-message{margin-top:45px;font-size:1.125em}
 .info-tiles_wrap .info-tile__content{display:inline-block;width:75%}
@@ -2185,13 +2188,18 @@ h3{font-size:1.675em}
 .info-slider{overflow:hidden}
 .info-slider img{width:100%;height:auto;vertical-align:middle}
 .our-strengths{background:#fff}
-.our-strengths .our-strengths_content{margin-top:50px}
+.our-strengths .our-strengths_content{margin-top:50px;width:100%}
 .our-strengths__col:last-child{border-left:solid 1px #4cabb1}
 .price{background:#fed586;position:relative}
 .price .price-content{position:absolute;width:100%;display:inline-block;left:0}
-.contact-details{position:relative}
-.contact-details .contact-details__content{position:absolute;width:100%;display:inline-block;left:0;bottom:100px}
-.btn-info_extend,.info-tile_one .btn-info,.info-tile_two .btn-info,.price .btn-price{padding:10px 35px}
+.contact-details{position:relative;min-height:250px}
+.contact-details .contact-details__content{font-family:alegreya_sans_scthin,sans-serif;position:absolute;width:100%;display:inline-block;left:0;bottom:100px}
+.phone{margin-left:25px}
+.phone,.phone-field{display:inline-block}
+.copyright{padding:15px 0 0;font-size:.75em}
+.btn-info_extend,.info-tile_one .btn-info,.info-tile_two .btn-info,.price .btn-price{padding:10px 35px;border:none}
+.btn-info_extend:after,.info-tile_one .btn-info:after,.info-tile_two .btn-info:after,.price .btn-price:after{content:""}
+.btn-info_extend:hover:after,.info-tile_one .btn-info:hover:after,.info-tile_two .btn-info:hover:after,.price .btn-price:hover:after{transition:all .5s ease;font-family:FontAwesome;content:"\f101";padding-left:5px}
 .btn-wrap{position:absolute;bottom:45px;width:100%;left:0}
 .info-tile_one .btn-info{background:#5ab7bd}
 .info-tile_two .btn-info{background:#8cd7c2}

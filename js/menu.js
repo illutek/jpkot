@@ -2,16 +2,13 @@
  * Created by Stefan on 16/04/2017.
  */
 $(document).ready(function () {
-// when loading the page menu hide
-    //$('.menu-header-main').addClass('showmenu');
-
-    $('.showmenu-btn').click(function(){
-        $('.menu-header-main').toggleClass('showmenu');
+    $('.hamburger-icon').click(function(){
+        $('.menu-right-wrapper').toggleClass('menu-right-visible');
     });
 
-    $('.closemenu-btn').click(function(){
-        $('.menu-header-main').toggleClass('showmenu');
-        $('.showmenu-btn').show();
+    $('.close-btn').click(function(){
+        $('.menu-right-wrapper').toggleClass('menu-right-visible');
+        $('.hamburger-icon').show();
     });
 });
 
