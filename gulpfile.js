@@ -8,6 +8,7 @@ var plumber = require('gulp-plumber');
 var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var clean = require('gulp-clean');
+var sourcemaps = require('gulp-sourcemaps');
 //var browserSync = require('browser-sync').create();
 
 // //////////////////////////////////////////////
@@ -15,8 +16,10 @@ var clean = require('gulp-clean');
 // /////////////////////////////////////////////
 gulp.task('sass', function () {
     return gulp.src('sass/styles.sass')
+        .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(sass())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('css'));
 });
 

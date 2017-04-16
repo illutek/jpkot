@@ -5,8 +5,8 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 .collapsing,.nav .nav-divider,svg:not(:root){overflow:hidden}
-.btn-group>.btn-group,.btn-toolbar .btn,.btn-toolbar .btn-group,.btn-toolbar .input-group,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.dropdown-menu{float:left}
 .fa,.glyphicon{-moz-osx-font-smoothing:grayscale}
+.btn-group>.btn-group,.btn-toolbar .btn,.btn-toolbar .btn-group,.btn-toolbar .input-group,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.dropdown-menu{float:left}
 html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
@@ -1381,7 +1381,6 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .hidden,.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}
 .invisible{visibility:hidden}
 .text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
-.fa-inverse,.header-wrap,.info-tiles_wrap a{color:#fff}
 .affix{position:fixed}
 @-ms-viewport{width:device-width}
 @media (max-width:767px){.visible-xs{display:block!important}
@@ -1478,6 +1477,7 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}
 .fa-stack-1x{line-height:inherit}
 .fa-stack-2x{font-size:2em}
+.fa-inverse{color:#fff}
 .fa-glass:before{content:"\f000"}
 .fa-music:before{content:"\f001"}
 .fa-search:before{content:"\f002"}
@@ -2159,28 +2159,40 @@ td.visible-print,th.visible-print{display:table-cell!important}
 @font-face{font-family:alegreya_sans_scbold;src:url(../fonts/alegreyasssc-bold/alegreyasanssc-bold-webfont.woff2) format("woff2");src:url(../fonts/alegreyasssc-bold/alegreyasanssc-bold-webfont.woff) format("woff");font-weight:400;font-style:normal}
 @font-face{font-family:alegreya_sans_scregular;src:url(../fonts/alegreyasssc-regular/alegreyasanssc-regular-webfont.woff2) format("woff2");src:url(../fonts/alegreyasssc-regular/alegreyasanssc-regular-webfont.woff) format("woff");font-weight:400;font-style:normal}
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}
-h1,h2{margin-top:.67em;margin-bottom:.67em}
+h1,h2,h3{margin-top:.67em;margin-bottom:.67em}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-body{line-height:1;padding-top:25px;background:#4e5266;font-family:alegreya_sans_scthin,sans-serif;font-size:16px}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
-p{line-height:1.25em}
+.contact-details,.our-strengths,.price,.section-extend{color:#000;text-align:center;padding:35px;min-height:450px}
+.contact-details,.header-wrap,.info-tiles_wrap a,.price a{color:#fff}
+body{line-height:1;padding-top:25px;background:#4e5266;font-family:alegreya_sans_scthin,sans-serif}
+p{line-height:1.25em;font-size:1.125em}
+.info-tiles_wrap p,.price p{line-height:2.5em}
 h1{font-size:2.375em}
 h2{font-size:2em}
+h3{font-size:1.675em}
 .no-gutter>[class*=col-]{padding-right:0;padding-left:0}
 .btn{border-radius:0}
 .header-wrap{height:100px;margin-bottom:15px}
 .header-wrap .menu-wrap{padding-top:20px;text-align:right}
-.info-tile_shared,.info-tiles_wrap .info-tile_one,.info-tiles_wrap .info-tile_two{height:450px;padding:35px;text-align:center;color:#fff;vertical-align:middle;position:relative}
-.info-tile_shared .available-message,.info-tiles_wrap .info-tile_one .available-message,.info-tiles_wrap .info-tile_two .available-message{margin-top:45px;font-size:1.125em}
-.btn-info_shared,.info-tiles_wrap .info-tile_one .btn-info-tiles,.info-tiles_wrap .info-tile_two .btn-info-tiles{padding:15px 25px}
-.info-tiles_wrap p{line-height:2.5em}
+.info-tile_extend,.info-tiles_wrap .info-tile_one,.info-tiles_wrap .info-tile_two{height:450px;padding:35px;text-align:center;color:#fff;vertical-align:middle;position:relative}
+.info-tile_extend .available-message,.info-tiles_wrap .info-tile_one .available-message,.info-tiles_wrap .info-tile_two .available-message{margin-top:45px;font-size:1.125em}
 .info-tiles_wrap .info-tile__content{display:inline-block;width:75%}
 .info-tiles_wrap .info-tile_one{background:#4cabb1}
-.info-tiles_wrap .info-tile_one .btn-info-tiles{background:#5ab7bd}
 .info-tiles_wrap .info-tile_two{background:#69c7ad}
-.info-tiles_wrap .info-tile_two .btn-info-tiles{background:#8cd7c2}
-.info-tiles_wrap .btn-info_wrap{position:absolute;bottom:45px;width:100%;left:0}
-.info-tiles_wrap .info-slider{overflow:hidden}
-.info-tiles_wrap .info-slider img{width:100%;height:auto}
+.info-slider{overflow:hidden}
+.info-slider img{width:100%;height:auto;vertical-align:middle}
+.our-strengths{background:#fff}
+.our-strengths .our-strengths__col:first-child{border-right:solid 1px #4cabb1}
+.our-strengths .our-strengths_content{margin-top:50px}
+.price{background:#fed586;position:relative}
+.price .price-content{position:absolute;width:100%;display:inline-block;left:0}
+.price .price-content h2{margin-bottom:1.67em}
+.contact-details{position:relative}
+.contact-details .contact-details__content{position:absolute;width:100%;display:inline-block;left:0;bottom:100px}
+.btn-info_extend,.info-tile_one .btn-info,.info-tile_two .btn-info,.price .btn-price{padding:10px 35px}
+.btn-wrap{position:absolute;bottom:45px;width:100%;left:0}
+.info-tile_one .btn-info{background:#5ab7bd}
+.info-tile_two .btn-info{background:#8cd7c2}
+.price .btn-price{background:#d2aa5e}

@@ -3,9 +3,12 @@
 // /////////////////////////
 
 .our-strengths
-  min-height: 450px
   background: white
-  color: black
-  text-align: center
-  padding: 35px
-  margin-bottom: 35px
+  @extend .section-extend // on variables.sass
+  .our-strengths_content
+    margin-top: 50px
+  h2
+    margin-bottom: 1.67em
+
+.our-strengths__col:last-child
+  border-left: solid 1px black
