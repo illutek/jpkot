@@ -2155,6 +2155,7 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .fa-meetup:before{content:"\f2e0"}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}
+.info-slider,.page-content__image{overflow:hidden}
 @font-face{font-family:alegreya_sans_scthin;src:url(../fonts/alegreyasanssc-thin/alegreyasanssc-thin-webfont.woff2) format("woff2");src:url(../fonts/alegreyasanssc-thin/alegreyasanssc-thin-webfont.woff) format("woff");font-weight:400;font-style:normal}
 @font-face{font-family:alegreya_sans_scbold;src:url(../fonts/alegreyasssc-bold/alegreyasanssc-bold-webfont.woff2) format("woff2");src:url(../fonts/alegreyasssc-bold/alegreyasanssc-bold-webfont.woff) format("woff");font-weight:400;font-style:normal}
 @font-face{font-family:alegreya_sans_scregular;src:url(../fonts/alegreyasssc-regular/alegreyasanssc-regular-webfont.woff2) format("woff2");src:url(../fonts/alegreyasssc-regular/alegreyasanssc-regular-webfont.woff) format("woff");font-weight:400;font-style:normal}
@@ -2172,20 +2173,26 @@ h1,h2,h3{margin-top:.67em;margin-bottom:.67em}
 h1{font-size:2.375em}
 h2{font-size:2em}
 h3{font-size:1.675em}
+h4{font-size:1.3em;margin-top:.37em;margin-bottom:.37em}
+ul{list-style-type:disc;padding-left:30px}
 .no-gutter>[class*=col-]{padding-right:0;padding-left:0}
 .btn{border-radius:0}
 .header-wrap{height:100px;margin:15px 0}
 .our-strengths h2,.price .price-content h2{margin-bottom:1.67em}
 .header-wrap .menu-wrap{padding-top:20px;text-align:right}
 .header-wrap .menu-wrap .hamburger-icon{cursor:pointer}
-.menu-right-wrapper{height:100vh;background:#fed586;width:300px;position:absolute;right:0;padding:25px;display:none}
-.menu-right-wrapper.menu-right-visible{display:block}
+.menu-right-wrapper{z-index:999;height:100vh;background:#fed586;width:550px;position:fixed;right:0;padding:25px;-webkit-transition:all .5s ease;-moz-transition:all .5s ease;-o-transition:all .5s ease;-ms-transition:all .5s ease;transform:translate(570px,0)}
+.menu-right-wrapper .close-btn{cursor:pointer;text-align:right}
+.menu-right-wrapper.menu-right__visible{-webkit-transition:all .5s ease;-moz-transition:all .5s ease;-o-transition:all .5s ease;-ms-transition:all .5s ease;transform:translate(0,0)}
+.menu-right-wrapper ul{list-style-type:none}
+.menu-items-wrap{margin-top:60px}
+.menu-item{border-bottom:solid 1px #fff;padding:30px 0;font-size:1.5em}
+.menu-item:last-child{border-bottom:none}
 .info-tile_extend,.info-tiles_wrap .info-tile_one,.info-tiles_wrap .info-tile_two{height:450px;padding:35px;text-align:center;color:#fff;vertical-align:middle;position:relative}
 .info-tile_extend .available-message,.info-tiles_wrap .info-tile_one .available-message,.info-tiles_wrap .info-tile_two .available-message{margin-top:45px;font-size:1.125em}
 .info-tiles_wrap .info-tile__content{display:inline-block;width:75%}
 .info-tiles_wrap .info-tile_one{background:#4cabb1}
 .info-tiles_wrap .info-tile_two{background:#69c7ad}
-.info-slider{overflow:hidden}
 .info-slider img{width:100%;height:auto;vertical-align:middle}
 .our-strengths{background:#fff}
 .our-strengths .our-strengths_content{margin-top:50px;width:100%}
@@ -2197,9 +2204,11 @@ h3{font-size:1.675em}
 .phone{margin-left:25px}
 .phone,.phone-field{display:inline-block}
 .copyright{padding:15px 0 0;font-size:.75em}
+.page-content-wrap{background:#fff;padding:0}
+.page-content__image img{width:100%;height:auto;vertical-align:middle}
 .btn-info_extend,.info-tile_one .btn-info,.info-tile_two .btn-info,.price .btn-price{padding:10px 35px;border:none}
 .btn-info_extend:after,.info-tile_one .btn-info:after,.info-tile_two .btn-info:after,.price .btn-price:after{content:""}
-.btn-info_extend:hover:after,.info-tile_one .btn-info:hover:after,.info-tile_two .btn-info:hover:after,.price .btn-price:hover:after{transition:all .5s ease;font-family:FontAwesome;content:"\f101";padding-left:5px}
+.btn-info_extend:hover:after,.info-tile_one .btn-info:hover:after,.info-tile_two .btn-info:hover:after,.price .btn-price:hover:after{-webkit-transition:all .5s ease;-moz-transition:all .5s ease;-o-transition:all .5s ease;-ms-transition:all .5s ease;font-family:FontAwesome;content:"\f101";padding-left:5px}
 .btn-wrap{position:absolute;bottom:45px;width:100%;left:0}
 .info-tile_one .btn-info{background:#5ab7bd}
 .info-tile_two .btn-info{background:#8cd7c2}
