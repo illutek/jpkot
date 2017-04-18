@@ -10,13 +10,13 @@
 </head>
 <body>
 
-<div class="menu-right-wrapper">
+<div class="menu-right-wrapper menu-right__visible">
   <div class="close-btn">
     <img src="../../images/close.png" alt="close">
   </div>
   <div class="menu-items-wrap">
     <div class="menu-items">
-      <ul class="menu">
+      <ul>
         <li class="menu-item"><a href="index.html">HOME</a></li>
         <li class="menu-item"><a href="steenweg.html">STEENWEG 190</a></li>
         <li class="menu-item"><a href="#">ROOISTRAAT 50</a></li>
@@ -36,12 +36,8 @@
         <h1>OP KOT IN DIEPENBEEK</h1>
       </div>
       <div class="col-xs-2">
-        <div class="menu-wrap">
-          <div class="menu">MENU</div>
-          <div class="hamburger-icon">
-            <img src="../../images/hamburger.png" alt="">
-          </div>
-
+        <div class="menu-wrap menu-wrap__visible">
+          <div class="menu">MENU <i class="fa fa-bars" aria-hidden="true"></i></div>
         </div>
       </div>
     </div>
@@ -49,45 +45,113 @@
 
 
   <section class="page-content-wrap">
-    <div class="row no-gutter">
+    <div class="row">
       <div class="pages">
-        <div class="col-md-4">
-          <div class="page-content__image">
-            <img src="../../html_images/steenweg.jpg" alt="steenweg">
+        <!--vanaf hier de node.tpl.twig hier de node--accommodation.html.twig-->
+        <div class="pages-content">
+          <div class="col-md-4">
+            <div class="page-content__image">
+              <!--hier het field-image-->
+              <img src="../../html_images/steenweg.jpg" alt="steenweg">
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="page-content__body">
+              <!--field-body-->
+              <h2>STEENWEG 190</h2>
+              <h3>Faciliteiten</h3>
+              <h4>Uitrusting studio's</h4>
+              <ul>
+                <li>Badkamer: douche, toilet en lavabo.</li>
+                <li>Keuken: koelkast, kookplaten en spoelbak.</li>
+                <li>Bed</li>
+                <li>Vloerverwarming met individuele regeling.</li>
+                <li>Halogeen verlichting.</li>
+                <li>Internet aansluiting.</li>
+              </ul>
+              <h4>Buiten</h4>
+              <ul>
+                <li>Sportveld voor basketbal, volleybal en minivoetbal.</li>
+                <li>Fietsenstalling</li>
+                <li>BBQ</li>
+                <li>Zitrotonde</li>
+                <li>Voldoende parkeerplaatsen</li>
+              </ul>
+              <h4>Grote volledig uitgerust ontspanningsruimte met</h4>
+              <ul>
+                <li>hoeksalon, tafels</li>
+                <li>Tafeltennis</li>
+                <li>snookertafel</li>
+              </ul>
+              <h4>Fitnessruimte inclusief toestellen</h4>
+            </div>
+          </div>
+          <!--hier een block region in een node.tpl.twig-->
+          <!--https://atendesigngroup.com/blog/making-region-content-available-node-templates-drupal-8-->
+          <div class="col-md-12">
+            <div class="page-content-description-wrap">
+              <h3>Gelijkvloers</h3>
+              <table class="full-width with-borders">
+                <tr>
+                  <th>Beschikbaar</th>
+                  <th>Studio nr.</th>
+                  <th></th>
+                  <th>Orientatie</th>
+                </tr>
+                <tr>
+                  <td>Vrij</td>
+                  <td>Studio 0.0</td>
+                  <td>Indeling</td>
+                  <td>Noord</td>
+                </tr>
+                <tr>
+                  <td style="color: red;">Bezet</td>
+                  <td>Studio 0.1</td>
+                  <td>Indeling</td>
+                  <td>Noord</td>
+                </tr>
+                <tr>
+                  <td>Vrij</td>
+                  <td>Studio 0.2</td>
+                  <td>Indeling</td>
+                  <td>Noord</td>
+                </tr>
+              </table>
+            </div>
+            <h3>Eerst verdieping</h3>
+            <table class="full-width with-borders">
+              <tr>
+                <th>Beschikbaar</th>
+                <th>Studio nr.</th>
+                <th></th>
+                <th>Orientatie</th>
+              </tr>
+              <tr>
+                <td>Vrij</td>
+                <td>Studio 1.0</td>
+                <td>Indeling</td>
+                <td>Noord</td>
+              </tr>
+              <tr>
+                <td style="color: red;">Bezet</td>
+                <td>Studio 1.1</td>
+                <td>Indeling</td>
+                <td>Noord</td>
+              </tr>
+              <tr>
+                <td style="color: red;">Bezet</td>
+                <td>Studio 1.2</td>
+                <td>Indeling</td>
+                <td>Noord</td>
+              </tr>
+            </table>
           </div>
         </div>
-        <div class="col-md-8">
-          <div class="pages-content">
-            <h2>STEENWEG 190</h2>
-            <h3>Faciliteiten</h3>
-            <h4>Uitrusting studio's</h4>
-            <ul>
-              <li>Badkamer: douche, toilet en lavabo.</li>
-              <li>Keuken: koelkast, kookplaten en spoelbak.</li>
-              <li>Bed</li>
-              <li>Vloerverwarming met individuele regeling.</li>
-              <li>Halogeen verlichting.</li>
-              <li>Internet aansluiting.</li>
-            </ul>
-            <h4>Buiten</h4>
-            <ul>
-              <li>Sportveld voor basketbal, volleybal en minivoetbal.</li>
-              <li>Fietsenstalling</li>
-              <li>BBQ</li>
-              <li>Zitrotonde</li>
-              <li>Voldoende parkeerplaatsen</li>
-            </ul>
-            <h4>Grote volledig uitgerust ontspanningsruimte met</h4>
-            <ul>
-              <li>hoeksalon, tafels</li>
-              <li>Tafeltennis</li>
-              <li>snookertafel</li>
-            </ul>
-            <h4>Fitnessruimte inclusief toestellen</h4>
-          </div>
-        </div>
+        <!--end node.html.twig-->
+
       </div>
     </div>
+
   </section>
 
 
@@ -95,9 +159,14 @@
     <div class="row no-gutter">
       <div class="contact-details">
         <div class="contact-details__content">
-          <i class="fa fa-home"></i> ROOISTRAAT 50 3590 DIEPENBEEK
-          <i class="fa fa-phone"></i> +32 11 227 710
-          <p>&copy; Alle rechten voorbehouden JPKOT | 2017</p>
+          <i class="fa fa-home"></i> ROOISTRAAT 50 - 3590 DIEPENBEEK
+          <div class="phone">
+            <i class="fa fa-phone"></i>
+            <div class="phone-field">
+              +32 11 227 710
+            </div>
+          </div>
+          <div class="copyright">&copy; Alle rechten voorbehouden JPKOT | 2017</div>
         </div>
       </div>
     </div>
