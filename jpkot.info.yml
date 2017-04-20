@@ -11,5 +11,6 @@ libraries:
   - jpkot/globaljs
 
 regions:
+  slider:   Slider
   content:  Content
   price:    Prices
