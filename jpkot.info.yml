@@ -12,3 +12,4 @@ libraries:
 
 regions:
   content:  Content
+  price:    Prices

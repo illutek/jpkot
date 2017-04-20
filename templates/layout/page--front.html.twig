@@ -8,7 +8,7 @@
         <li class="menu-item"><a href="index.html">HOME</a></li>
         <li class="menu-item"><a href="steenweg.html">STEENWEG 190</a></li>
         <li class="menu-item"><a href="#">ROOISTRAAT 50</a></li>
-        <li class="menu-item"><a href="#">PRIJZEN</a></li>
+        <li class="menu-item"><a href="{{ base_path }}prijzen">PRIJZEN</a></li>
       </ul>
     </div>
   </div>
@@ -90,10 +90,7 @@
     <div class="row no-gutter">
       <div class="price">
         <div class="price-content">
-          <h2>PRIJZEN</h2>
-          <p>Om je budjet voor je studies adekwaat te kunnen plannen, blijven onze prijzen
-            onveranderd gedurende je hele studie-loopbaan.</p>
-          <p>We maken gebruikt van het standaard LUC-contract.</p>
+          {{ page.price }}
         </div>
         <div class="btn-wrap">
           <a href="#" class="btn btn-price">MEER</a>
