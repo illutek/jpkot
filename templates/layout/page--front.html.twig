@@ -1,18 +1,4 @@
-<div class="menu-right-wrapper menu-right__visible">
-  <div class="close-btn">
-    <img src="{{ base_path ~ directory }}/images/close.png" alt="close">
-  </div>
-  <div class="menu-items-wrap">
-    <div class="menu-items">
-      <ul>
-        <li class="menu-item"><a href="index.html">HOME</a></li>
-        <li class="menu-item"><a href="steenweg.html">STEENWEG 190</a></li>
-        <li class="menu-item"><a href="#">ROOISTRAAT 50</a></li>
-        <li class="menu-item"><a href="{{ base_path }}prijzen">PRIJZEN</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+{% include directory ~ '/templates/components/menu-right-wrap.html.twig' %}
 
 <div class="container">
 
