@@ -19,21 +19,28 @@
     font-size: 1.5em
     &:last-child
       border-bottom: none
+    &.menu-item-upper
+      text-transform: uppercase
+
   .close-btn
     cursor: pointer
     text-align: right
 
-  a
-    color: white
   &.menu-right__visible
     +transition(0.5s)
     transform: translate(0px,0px)
-  ul
-    list-style-type: none
-
 
 .menu-items-wrap
   margin-top: 60px
+
+  ul
+    list-style-type: none
+    a
+      color: white
+      &.is-active
+        color: $main_color3
+
+
 
 +mQuery(479px)
   .menu-right-wrapper

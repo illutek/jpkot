@@ -7,16 +7,15 @@
   padding-top: 35px
   text-align: right
   cursor: pointer
+  .menu-btn
+    font-size: 1.5em
 .menu-wrap__visible
   +transition(0.5s)
   color: transparent
   visibility: hidden
 
-.menu
-  font-size: 1.5em
-
 +mQuery(479px)
   .menu-wrap
     padding-top: 0
-  .menu
-    font-size: 1em
+    .menu-btn
+      font-size: 1em
