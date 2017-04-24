@@ -32,7 +32,6 @@
 
 .menu-items-wrap
   margin-top: 60px
-
   ul
     list-style-type: none
     a
@@ -40,7 +39,19 @@
       &.is-active
         color: $main_color3
 
-
+.menu-right-email-wrap
+  padding: 20px 0 0 15px
+  font-size: 1.2em
+  a
+    color: white
+    &:before
+      font-family: FontAwesome
+      content: '\f003'
+      padding-right: 6px
+    &:hover
+      text-decoration: none
+      &:before
+        content: '\f0e0'
 
 +mQuery(479px)
   .menu-right-wrapper
