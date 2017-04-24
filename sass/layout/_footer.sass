@@ -9,7 +9,7 @@
   min-height: 250px
   .fa
     padding: 0 6px
-    color: rgba(255, 255, 255, 0.4)
+    color: $white-transparant4
   .contact-details__content
     font-family: 'alegreya_sans_scthin', sans-serif
     position: absolute
@@ -20,13 +20,26 @@
 
 .phone-field, .phone
   display: inline-block
+.phone-mobile-view
+  display: none
+  margin: 20px 0
+  a
+    color: white
+    padding: 10px 15px
+    border: solid 1px $white-transparant4
 
 .email-url-wrap
   a
     color: white
+    &:before
+      color: rgba(255, 255, 255, 0.4)
+      font-family: FontAwesome
+      content: '\f003'
+      padding-right: 6px
     &:hover
-      color: white
-      text-decoration: underline
+      text-decoration: none
+      &:before
+        content: '\f0e0'
 
 .copyright
   padding: 15px 0 0
@@ -36,3 +49,7 @@
   .contact-details
     .contact-details__content
       padding: 10px
+      .phone
+        display: none
+      .phone-mobile-view
+        display: block
