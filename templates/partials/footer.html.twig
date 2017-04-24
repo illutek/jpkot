@@ -8,15 +8,27 @@
   <div class="row no-gutter">
     <div class="contact-details">
       <div class="contact-details__content">
-        <i class="fa fa-home"></i> ROOISTRAAT 50 - 3590 DIEPENBEEK
-        <div class="phone">
-          <i class="fa fa-phone"></i>
-          <div class="phone-field">
-            +32 11 227 710
-          </div>
+        <div class="address">
+          <i class="fa fa-home"></i>ROOISTRAAT 50 - 3590 DIEPENBEEK
         </div>
-        <div class="copyright">&copy; Alle rechten voorbehouden JPKOT | 2017</div>
+
+        <div class="phone">
+          <i class="fa fa-phone"></i><div class="phone-field">+32 11 227 710</div>
+        </div>{# end .phone #}
+        <div class="email-url-wrap">
+          <i class="fa fa-envelope-o"></i>
+          <script>
+              document.write("<a class='email-url' href=\"mail" + "to:" + new Array("jp.kot", "hotmail.com"). join("@") + "\">" +
+                  "Ons contacteren via mail" + "</" + "a>");
+          </script>
+        </div>
+        <div class="copyright">
+          <i class="fa fa-copyright"></i>Alle rechten voorbehouden JPKOT | 2017
+        </div>
       </div>
+      {# contact-details__content #}
     </div>
+    {# contact-details #}
   </div>
+  {# .row #}
 </footer>
