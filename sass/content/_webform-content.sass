@@ -1,0 +1,33 @@
+// ////////////////////
+// @@ WEBFORM CONTENT
+// ///////////////////
+
+.field-extend
+  background: none
+  color: white
+  border: none
+  outline: none
+  border-bottom: dotted 1px white
+
+.webform-contact-content
+  color: white
+  input
+    @extend .field-extend
+    padding: 5px 0 0
+    width: 400px
+    &:focus
+      border-color: $white-transparant4
+    &[type='submit']
+      border: solid 1px white
+      width: 100px
+      padding: 6px
+  textarea
+    @extend .field-extend
+    width: 500px
+    resize: none
+    overflow: hidden
+    min-height: 20px!important
+    padding: 0
+    margin-top: 10px
+
+

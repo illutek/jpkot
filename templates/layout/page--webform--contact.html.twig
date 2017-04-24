@@ -1,0 +1,23 @@
+{% include directory ~ '/templates/components/menu-right-wrap.html.twig' %}
+
+<div class="container">
+  {% include directory ~ '/templates/partials/header.html.twig' %}
+
+  {{ page.breadcrumb }}
+
+  {{ page.highlighted }}
+
+  {{ page.help }}
+<div class="row">
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <section class="page-webform-contact-wrap">
+      {{ page.content }}
+    </section>
+  </main>
+</div>
+
+
+  {% include directory ~ '/templates/partials/footer.html.twig' %}
+</div>
