@@ -8,16 +8,17 @@
   {{ page.highlighted }}
 
   {{ page.help }}
-<div class="row">
+
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <div class="row no-gutter">
+      <section class="page-webform-contact-wrap">
 
-    <section class="page-webform-contact-wrap">
-      {{ page.content }}
-    </section>
+        {{ page.content }}
+
+      </section>
+    </div>
   </main>
-</div>
-
 
   {% include directory ~ '/templates/partials/footer.html.twig' %}
 </div>

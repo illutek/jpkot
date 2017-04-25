@@ -8,6 +8,8 @@
   border: none
   outline: none
   border-bottom: dotted 1px white
+  &:focus
+    border-color: $white-transparant4
 
 .webform-contact-content
   color: white
@@ -15,8 +17,6 @@
     @extend .field-extend
     padding: 5px 0 0
     width: 400px
-    &:focus
-      border-color: $white-transparant4
     &[type='submit']
       border: solid 1px white
       width: 100px
@@ -29,5 +29,12 @@
     min-height: 20px!important
     padding: 0
     margin-top: 10px
+
++mQuery(479px)
+  .webform-contact-content
+    input
+      width: 200px
+    textarea
+      width: 300px
 
 
