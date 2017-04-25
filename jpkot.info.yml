@@ -15,3 +15,4 @@ regions:
   slider:   Slider
   content:  Content
   price:    Prices
+  accommodation: 'Accommodatie info'
