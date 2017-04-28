@@ -15,4 +15,6 @@ regions:
   slider:   Slider
   content:  Content
   price:    Prices
+  accommodation_steenweg: 'Accommodatie Steenweg'
+  accommodation_rooistraat: 'Accommodatie Rooistraat'
   accommodation: 'Accommodatie info'
