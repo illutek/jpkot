@@ -79,6 +79,13 @@ not node.isPublished() ? 'node--unpublished',
 view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ] %}
 {{ attach_library('classy/node') }}
+
+{% set go_back = app.request.server.get('http-referer')|default('/') %}
+{#{% set go_back = htmlspecialchars($_SERVER['HTTP_REFERER']); %}#}
+
+{% set available = (content.field_beschikbaar|render|striptags) %}
+{% set stillAvailable = 'Vrij' %}
+
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
@@ -100,9 +107,18 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
       <div class="studio-body_content">
         <div class="available-message">
           {# TODO afhankelijk van content label aanpassen #}
-          {{ 'Beschikbaarheid: ' }}{{ content.field_beschikbaar }}
+          {% if available == stillAvailable %}
+            {{ 'Beschikbaarheid: ' }}{{ content.field_beschikbaar }}
+          {% else %}
+            <div class="not-available">
+              {{ 'Studio is reeds verhuurd' }}
+            </div>
+          {% endif %}
         </div>
         {{ content.body }}
+        {{ available }}
+        {{ stillAvailable }}
+        {{ 'Go-back link: ' }}{{ go_back }}
       </div>
     </div>
 
