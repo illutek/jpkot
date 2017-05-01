@@ -80,12 +80,6 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ] %}
 {{ attach_library('classy/node') }}
 
-{% set go_back = app.request.server.get('http-referer')|default('/') %}
-{#{% set go_back = htmlspecialchars($_SERVER['HTTP_REFERER']); %}#}
-
-{% set available = (content.field_beschikbaar|render|striptags) %}
-{% set stillAvailable = 'Vrij' %}
-
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
@@ -106,22 +100,36 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     <div class="col-md-5">
       <div class="studio-body_content">
         <div class="available-message">
-          {# TODO afhankelijk van content label aanpassen #}
-          {% if available == stillAvailable %}
-            {{ 'Beschikbaarheid: ' }}{{ content.field_beschikbaar }}
+          {#
+          /**
+           * Is enkel mogelijk met een extra module twig_field_value
+           * https://www.drupal.org/project/twig_field_value
+           * set available = content.field_beschikbaar|render|lower
+           * set available = content.field_beschikbaar|field_raw.value|lower
+           * content.field_beschikbaar|field_label voor het label
+           */
+           #}
+          {% set available = content.field_beschikbaar|field_raw.value|lower %}
+
+          {% if available == 'vrij' %}
+            <div class="available">
+              {{ 'Studio is nog beschikbaar' }}
+            </div>
           {% else %}
             <div class="not-available">
               {{ 'Studio is reeds verhuurd' }}
             </div>
           {% endif %}
         </div>
-        {{ content.body }}
-        {{ available }}
-        {{ stillAvailable }}
+
+        <div class="studio-body">
+          {{ content.body }}
+        </div>
+
+        {% set go_back = app.request.server.get('http-referer')|default('/') %}
+
         {{ 'Go-back link: ' }}{{ go_back }}
       </div>
     </div>
-
   </div>
-
 </article>
