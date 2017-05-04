@@ -38,32 +38,53 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
       </div>
     </div>
 
-{# Layout floor #}
-      <div class="col-md-12">
-        <div class="layout-floor">
-          <h2>Verdieping</h2>
-          <div class="floor-wrap">
-            <div class="floor">
-              <h3>Gelijkvloers</h3>
-              <img src="{{ base_path ~ directory }}/html_images/gelijkvloers-Steenweg-wit.png" alt="gelijkvloers">
-            </div>
-            <div class="floor">
-              <h3>1ste verdieping</h3>
-              <img src="{{ base_path ~ directory }}/html_images/eerste-verdieping-Steenweg.png" alt="">
-            </div>
-            <div class="floor">
-              <h3>2de verdieping</h3>
-              <img src="{{ base_path ~ directory }}/html_images/tweede-verdieping.png" alt="">
-            </div>
-            <div class="floor">
-              <h3>3de verdieping</h3>
-              <img src="{{ base_path ~ directory }}/html_images/derde-verdieping-Steenweg.png" alt="">
-            </div>
-          </div>
-        </div>
+    {#
+    /**
+    * Layout floor
+    * De volledige opmaak in een aangepaste blok geplaatst, dit om een verschil te
+    * hebben tussen rooistraat en steenweg
+    * Hieronder de oorspronkelijke code
+    *
+    * <div class="col-md-12">
+    *   <div class="layout-floor">
+    *     <h2>Verdieping</h2>
+    *     <div class="floor-wrap">
+    *       <div class="floor">
+    *        <h3>Gelijkvloers</h3>
+    *        <img src="{{ base_path ~ directory }}/html_images/gelijkvloers-Steenweg-wit.png" alt="gelijkvloers">
+    *      </div>
+    *      <div class="floor">
+    *        <h3>1ste verdieping</h3>
+    *        <img src="{{ base_path ~ directory }}/html_images/eerste-verdieping-Steenweg.png" alt="">
+    *      </div>
+    *      <div class="floor">
+    *        <h3>2de verdieping</h3>
+    *        <img src="{{ base_path ~ directory }}/html_images/tweede-verdieping.png" alt="">
+    *      </div>
+    *      <div class="floor">
+    *        <h3>3de verdieping</h3>
+    *        <img src="{{ base_path ~ directory }}/html_images/derde-verdieping-Steenweg.png" alt="">
+    *      </div>
+    *    </div>
+    *  </div>
+    */
+    #}
 
-    </div>
-    {# block region accommodation #}
+    {#
+    /**
+    * De region floor dient ook toegevoegd aan jpkot.theme file onder $allowed_regions
+    */
+    #}
+    {{ floors }}
+
+
+    {#
+    /**
+    * block region accommodation dient ook toegevoegd aan jpkot.theme file onder $allowed_regions
+    *
+    */
+     #}
+
     {# TODO ga dit een een betere/andere naam moeten geven #}
 
     <div class="col-md-12">
@@ -73,4 +94,5 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     </div>
 
   </div>
+  {# end .pages-content #}
 </article>
