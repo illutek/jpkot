@@ -38,7 +38,7 @@
  */
 #}
 {% set classes = [
-'field',
+'waterfall',
 'field--name-' ~ field_name|clean_class,
 'field--type-' ~ field_type|clean_class,
 'field--label-' ~ label_display,
@@ -50,10 +50,15 @@ label_display == 'visually_hidden' ? 'visually-hidden',
 
 {% if label_hidden %}
   {% if multiple %}
-    <div{{ attributes.addClass(classes, 'field__items') }}>
+    <div{{ attributes.addClass(classes) }}>
       {% for item in items %}
         <ul class="pin list-group">
-          <li class="list-group-item">{{ item.content }}</li>
+          <li class="list-group-custom">
+            {{ item.content }}
+          </li>
+          <li class="pin-footer"><div class="enlarge">
+              <a href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a>
+            </div></li>
         </ul>
       {% endfor %}
     </div>

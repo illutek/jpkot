@@ -4,19 +4,28 @@
 
 .waterfall
   .list-group
-    margin-right: 14px
-
+    margin-right: 5px
+    margin-left: 5px
+    &:hover
+      > li.pin-footer
+        opacity: 1
+        transition: all 0.5s ease-in-out
     > li:first-child
       padding: 0
-      background-color: white
-
+      position: relative
       img
         width: 100%
-        border-top-right-radius: 4px
-        border-top-left-radius: 4px
-
     > li
-      background-color: #f5f5f5
+      list-style: none
+    > li.pin-footer
+      position: absolute
+      left: 45%
+      bottom: 50%
+      opacity: 0
+      a
+        color: white
+        width: 50px
+
 
 +mQueryMin(768px)
   .waterfall
@@ -31,4 +40,4 @@
 +mQueryMin(1200px)
   .waterfall
     .pin
-      width: 271px
+      width: 275px

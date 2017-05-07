@@ -27,5 +27,6 @@ globaljs:
 waterfalljs:
   js:
     js/bootstrap-waterfall.js: {}
+    js/waterfall.js: {}
   dependencies:
     - core/jquery

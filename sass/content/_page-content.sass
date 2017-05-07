@@ -14,3 +14,18 @@
     width: 100%
     height: auto
     vertical-align: middle
+
+// geen witte achtergrond en padding voor .page-content-wrap
+// op de impressie pagina's (photo albums)
+
+.page-node-type-foto-album
+  .page-content-wrap
+    background: $main_color1
+    padding: 1%
+  h1
+    color: white
+
++mQuery(479px)
+  .page-node-type-foto-album
+    .page-content-wrap
+      padding: 15px 10px
