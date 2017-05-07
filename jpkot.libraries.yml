@@ -23,3 +23,9 @@ globaljs:
       - core/drupal
       - core/drupalSettings
       - core/jquery.once
+
+waterfalljs:
+  js:
+    js/bootstrap-waterfall.js: {}
+  dependencies:
+    - core/jquery
