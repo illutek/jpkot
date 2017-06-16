@@ -126,9 +126,14 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
           {{ content.body }}
         </div>
 
-        {% set go_back = app.request.server.get('http-referer')|default('/') %}
+        {# @todo back link toevoegen #}
+        
+        {#{% set go_back = app.request.server.get('http-referer')|default('/') %}#}
+        {#{{ 'Go-back link: ' }}{{ go_back }}#}
+        {#{{ app.request.headers.get('referer') }}#}
 
-        {{ 'Go-back link: ' }}{{ go_back }}
+        {#{% set referer = app.request.server.get('http-referer') %}#}
+        {#<a href="{{ referer }}">{{ 'Terug naar overzicht' }}</a>#}
       </div>
     </div>
   </div>
