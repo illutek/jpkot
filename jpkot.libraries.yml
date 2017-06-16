@@ -26,7 +26,7 @@ globaljs:
 
 waterfalljs:
   js:
-    js/bootstrap-waterfall.js: {}
+    bower_components/bootstrap-waterfall/dist/bootstrap-waterfall.js: {}
     js/waterfall.js: {}
   dependencies:
     - core/jquery
