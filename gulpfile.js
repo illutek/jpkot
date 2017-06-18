@@ -45,7 +45,8 @@ var filesToMove = [
     './jpkot.libraries.yml',
     './jpkot.theme',
     './readme.md',
-    './screenshot.png'
+    './screenshot.png',
+    './logo.png'
 ];
 
 gulp.task('clean', function(){
