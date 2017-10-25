@@ -1,12 +1,43 @@
-# JPkot
+# JP-kot
 
 ### Drupal 8
-Een met Bootstrap opgezet theme
+A theme set up with Bootstrap
 
-### Technieken
-- yarn voor de devDependencies vooral gulp is a toolkit for automating tasks in your development.  
-- bower voor de theme Dependencies
-- het theme wordt in de dist folder opgebouwd met de gulp task
+### Technologies 
+- yarn for devDependencies primarily for gulp is a toolkit for automating tasks in your development.  
+- bower for the theme Dependencies
+- The theme is built up in the dist folder with a gulp task
+
+#### Photo-album
+With bootstrap-waterfall https://github.com/Mystist/bootstrap-waterfall (with bower)
+- On node--foto-album.html.twig attach the library {{ attach_library('jpkot/waterfalljs') }} and print
+the images {{ content.field_impressie_img }}
+- On field--field-impressie-img.html.twig add the class waterfall
+```
+{% for item in items %}
+  <ul class="pin list-group">
+    <li class="list-group-custom">
+      {{ item.content }}
+    </li>
+  </ul>
+{% endfor %}  
+```
+
+Extra the magnifying lens on the images
+```
+{% for item in items %}
+  <ul class="pin list-group">
+    <li class="list-group-custom">
+      {{ item.content }}
+    </li>
+    <li class="pin-footer">
+      <div class="enlarge">
+        <a href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a>
+      </div>
+    </li>
+  </ul>
+{% endfor %}  
+```  
 
 #### Field-beschikbaarheid
 Wil de content van het field-beschikbaar een andere kleur geven afhankelijk van de waarde.
