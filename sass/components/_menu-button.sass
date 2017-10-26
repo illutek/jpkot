@@ -3,23 +3,60 @@
 // /////////////////////////
 
 .menu-wrap
-  +transition(0.4s)
+  +transition(0.1s)
   padding-top: 35px
-  text-align: right
+  position: absolute
+  right: 0
   cursor: pointer
-  .menu-btn
-    font-size: 1.5em
-    label
-      padding: 5px
+
 .menu-wrap__visible
-  +transition(0.5s)
-  color: transparent
-  visibility: hidden
+  display: none
+
+
+// E from MENU to hamburger
+
+.line-group
+  position: relative
+  width: 12px
+  height: 15px
+  float: left
+  margin: 4px 2px 0 2px
+  .line
+    position: absolute
+    width: 100%
+    height: 1px
+    background: #ffffff
+    display: block
+    +transition(0.3s)
+  .line-top
+    margin-top: 1px
+  .line-midle
+    margin-top: 8px
+    width: 50%
+  .line-bottom
+    margin-top: 15px
+    width: 75%
+
+.menu-btn
+  font-size: 1.5em
+  +transition(0.3s)
+  &:hover
+    color: $main_color1_btn
+    .line
+      background: $main_color1_btn
+      width: 100%
 
 +mQuery(479px)
   .menu-wrap
-    padding-top: 0
+    padding-top: 25px
+    right: 25px
     .menu-btn
       font-size: 1em
-      label
+      .menu-text
         display: none
+      .line
+        width: 100%
+      .line-top
+        margin-top: 3px
+      .line-bottom
+        margin-top: 13px

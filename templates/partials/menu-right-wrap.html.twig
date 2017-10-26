@@ -1,4 +1,14 @@
-<div class="menu-right-wrapper">
+{#
+/**
+ * Main-navigation
+ /*
+ #}
+{% set classes = [
+  'menu-right-wrapper',
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
   <div class="close-btn">
     <i class="fa fa-times fa-2x" aria-hidden="true"></i>
   </div>
@@ -7,7 +17,7 @@
       {{ page.nav }}
     </div>
   </div>
-  {#menu-items-wrap#}
+
   <div class="menu-right-email-wrap">
     <script>
         document.write("<a class='email-url' href=\"mail" + "to:" + new Array("jp.kot", "hotmail.com"). join("@") + "\">" +
