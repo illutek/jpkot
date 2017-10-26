@@ -4,14 +4,17 @@
  /*
  #}
 {% set classes = [
-  'menu-right-wrapper',
-]
-%}
+'menu-right-wrapper',
+] %}
 
 <div{{ attributes.addClass(classes) }}>
-  <div class="close-btn">
-    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+  <div class="close-btn-wrapper">
+    <div class="close-btn">
+      <span class="line line-one"></span>
+      <span class="line line-two"></span>
+    </div>
   </div>
+
   <div class="menu-items-wrap">
     <div class="menu-items">
       {{ page.nav }}
@@ -20,8 +23,8 @@
 
   <div class="menu-right-email-wrap">
     <script>
-        document.write("<a class='email-url' href=\"mail" + "to:" + new Array("jp.kot", "hotmail.com"). join("@") + "\">" +
-            "Ons contacteren via mail" + "</" + "a>");
+      document.write("<a class='email-url' href=\"mail" + "to:" + new Array("jp.kot", "hotmail.com").join("@") + "\">" +
+          "Ons contacteren via mail" + "</" + "a>");
     </script>
   </div>
 </div>
