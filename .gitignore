@@ -5,6 +5,6 @@
 node_modules
 bower_components
 *.css.map
-css/
+css/styles.css
 build/
 dist/
