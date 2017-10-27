@@ -7,7 +7,6 @@ core: 8.x
 version: 1.0.0
 libraries:
   - jpkot/globalstyle
-  - jpkot/bootstrap
   - jpkot/globaljs
 
 regions:

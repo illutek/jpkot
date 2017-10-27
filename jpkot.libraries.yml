@@ -3,6 +3,7 @@ globalstyle:
     theme:
       css/styles.css: {}
 
+# don't use bootstrap.js on this theme
 bootstrap:
   version: 1.x
   js:
