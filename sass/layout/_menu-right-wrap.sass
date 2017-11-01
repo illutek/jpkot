@@ -41,7 +41,8 @@
           transform: rotate(45deg)
         &.line-two
           transform: rotate(-45deg)
-      &:hover .line
+      &:hover .line,
+      &:focus .line
         background: $main_color3
         &.line-one
           transform: rotate(-45deg)
@@ -60,6 +61,9 @@
     list-style-type: none
     a
       color: white
+      &:hover
+        text-decoration: none
+        color: $main_color3
       &.is-active
         color: $main_color3
 
