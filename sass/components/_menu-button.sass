@@ -8,6 +8,21 @@
   position: absolute
   right: 0
   cursor: pointer
+  +mQuery(479px)
+    padding-top: 25px
+    right: 25px
+    .menu-btn
+      font-size: 1em
+      .menu-text
+        display: none
+      .line
+        width: 100%
+      .line-top
+        margin-top: 3px
+      .line-midle
+        margin-top: 8px
+      .line-bottom
+        margin-top: 13px
 
 .menu-wrap__visible
   display: none
@@ -40,23 +55,26 @@
 .menu-btn
   font-size: 1.5em
   +transition(0.3s)
-  &:hover
+  &:hover,
+  &:focus
     color: $main_color1_btn
     .line
       background: $main_color1_btn
       width: 100%
 
-+mQuery(479px)
-  .menu-wrap
-    padding-top: 25px
-    right: 25px
-    .menu-btn
-      font-size: 1em
-      .menu-text
-        display: none
-      .line
-        width: 100%
-      .line-top
-        margin-top: 3px
-      .line-bottom
-        margin-top: 13px
+//+mQuery(479px)
+//  .menu-wrap
+//    padding-top: 25px
+//    right: 25px
+//    .menu-btn
+//      font-size: 1em
+//      .menu-text
+//        display: none
+//      .line
+//        width: 100%
+//      .line-top
+//        margin-top: 3px
+//      .line-midle
+//        margin-top: 8px
+//      .line-bottom
+//        margin-top: 13px
