@@ -3,15 +3,14 @@
 // /////////////////////////
 
 .contact-details
-  @extend .section-extend
-  color: white
+  @extend .section-extend //_variables.sass
+  color: $white-transparant4
   position: relative
   min-height: 250px
   .fa
     padding: 0 6px
     color: $white-transparant4
   .contact-details__content
-    font-family: 'alegreya_sans_scthin', sans-serif
     position: absolute
     width: 100%
     display: inline-block
@@ -30,7 +29,7 @@
 
 .email-url-wrap
   a
-    color: white
+    color: $white-transparant4
     &:before
       color: rgba(255, 255, 255, 0.4)
       font-family: FontAwesome
