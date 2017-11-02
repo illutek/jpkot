@@ -1,5 +1,6 @@
 {#
 /**
+ * @file
  *
 */
 #}
@@ -12,7 +13,14 @@ not node.isPublished() ? 'node--unpublished',
 view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ] %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
+
+{#
+/**
+ * id="node-{{ node.id }}"
+ * Does not use this but does give possibilities for styling
+*/
+#}
+<article id="node-{{ node.id }}" {{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
   {% if not page %}
@@ -32,60 +40,44 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     <div class="col-md-8">
       <div class="page-content__body">
         <div class="available-message">
+          {#{{ node.id }}#}
           {{ content.field_aantal_vrij }}
         </div>
+
         {{ content.body }}
+
+        {% set nodeId = node.id %}
+        <div class="impression__link">
+          {% if nodeId == 7 %}
+            <a href="{{ base_path }}impressie-steenweg">{{ "Een impressie van deze locatie" }}</a>
+          {% else %}
+            <a href="{{ base_path }}impressie-rooistraat">{{ "Een impressie van deze locatie" }}</a>
+          {% endif %}
+        </div>
+
       </div>
     </div>
 
-    {#
-    /**
-    * Layout floor
-    * De volledige opmaak in een aangepaste blok geplaatst, dit om een verschil te
-    * hebben tussen rooistraat en steenweg
-    * Hieronder de oorspronkelijke code
-    *
-    * <div class="col-md-12">
-    *   <div class="layout-floor">
-    *     <h2>Verdieping</h2>
-    *     <div class="floor-wrap">
-    *       <div class="floor">
-    *        <h3>Gelijkvloers</h3>
-    *        <img src="{{ base_path ~ directory }}/html_images/gelijkvloers-Steenweg-wit.png" alt="gelijkvloers">
-    *      </div>
-    *      <div class="floor">
-    *        <h3>1ste verdieping</h3>
-    *        <img src="{{ base_path ~ directory }}/html_images/eerste-verdieping-Steenweg.png" alt="">
-    *      </div>
-    *      <div class="floor">
-    *        <h3>2de verdieping</h3>
-    *        <img src="{{ base_path ~ directory }}/html_images/tweede-verdieping.png" alt="">
-    *      </div>
-    *      <div class="floor">
-    *        <h3>3de verdieping</h3>
-    *        <img src="{{ base_path ~ directory }}/html_images/derde-verdieping-Steenweg.png" alt="">
-    *      </div>
-    *    </div>
-    *  </div>
-    */
-    #}
 
     {#
     /**
-    * De region floor dient ook toegevoegd aan jpkot.theme file onder $allowed_regions
+    * This two regions lives only in the node--accommodatie
+    * The region floor should also be added to jpkot.theme file under $allowed_regions
+    * The region {{ floors }} only exist in the node--accommodatie, this is only possibly
+    * with the code on .theme
+    * A custom block region block with all style code and content no content-type or views
+    * Only the locatie 'Steenweg' has floors
     */
     #}
+
     {{ floors }}
 
-
     {#
     /**
-    * block region accommodation dient ook toegevoegd aan jpkot.theme file onder $allowed_regions
-    *
+    * The region accommodation should also be added to jpkot. theme file under $allowed_regions
+    * This region is filled with a block-view - Format tabel (all the rooms/studios
     */
      #}
-
-    {# TODO ga dit een een betere/andere naam moeten geven #}
 
     <div class="col-md-12">
       <div class="page-content-description-wrap">
