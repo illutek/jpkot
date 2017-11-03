@@ -3,30 +3,21 @@
 // ///////////////////
 
 .page-content-wrap
-  //@extend .section-extend
   background: white
   padding: 35px
   overflow: hidden
+  +mQuery(479px)
+    padding: 10px
 
-.page-content__image
-  overflow: hidden
-  img
-    width: 100%
-    height: auto
-    vertical-align: middle
 
-// geen witte achtergrond en padding voor .page-content-wrap
-// op de impressie pagina's (photo albums)
 
-.page-node-type-foto-album
+// no white background and padding for .page-content-wrap
+// on the impressie pages (photo albums)
+// this is actually a override on the page.html.twig
+
+.page-node-type-foto-album //class on body tag
   .page-content-wrap
     background: $main_color1
     padding: 1%
   h1
     color: white
-
-+mQuery(479px)
-  .page-content-wrap
-    padding: 10px
-    h1
-      margin-left: 15px
