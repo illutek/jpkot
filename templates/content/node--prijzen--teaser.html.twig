@@ -1,6 +1,11 @@
 {#
 /**
- * View block Prijzen teaser dit op de frontpage
+ * View block Prijzen teaser on the frontpage.
+ * url: Direct URL of the current node.
+ * {{ label }} prints next html <span class="field field--name-title field--type-string">Title</span>
+ * {{ node.label }} prints Title
+ * {{ node.label|upper }} prints the title in uppercase
+ * {{ label|upper }} - gives no result
  #}
 
 {% set classes = [
@@ -8,11 +13,11 @@
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-  <h2{{ title_attributes }}>{{ label }}</h2>
+  <h2{{ title_attributes }}>{{ node.label|upper }}</h2>
   {{ content }}
 </div>
 
 <div class="btn-wrap">
-  <a href="{{ url }}" rel="bookmark" class="btn btn-price">MEER</a>
+  <a href="{{ url }}" rel="bookmark" class="btn btn-price">{{ 'MEER'|t }}</a>
 </div>
 
