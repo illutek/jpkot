@@ -39,3 +39,27 @@ Extra the magnifying lens on the images
 {% endfor %}  
 ```  
 
+#### @media Bubbling
+Sass provide a pretty killer feature for authoring @media when you nest them inside other selectors. If you add a @media query by nesting it inside a selector Sass will "bubble" that @media query and the new rule outside of the nest and back out to the root of your style sheet.
+In this project i use it in combination with a mediaquery mixin  
+The mixin  
+```
+=mQuery($arg...)
+  @if length($arg) == 1
+    @media screen and (max-width: nth($arg, 1))
+      @content
+
+  @if length($arg) == 2
+    @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2))
+      @content
+```
+
+The Bubbling
+```
+.page-content-wrap
+  background: white
+  padding: 35px
+  overflow: hidden
+  +mQuery(479px)
+    padding: 10px
+```

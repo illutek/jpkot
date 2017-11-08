@@ -6,22 +6,20 @@
   background: $main_color3
   position: relative
   @extend .section-extend // on variables.sass
+  +mQuery(479px)
+    padding: 15px
   .price-content
     position: absolute
     width: 100%
     display: inline-block
     left: 0
+    +mQuery(479px)
+      padding: 0 10px
     h2
       margin-bottom: 1.67em
+      +mQuery(479px)
+        margin-bottom: 1em
   p
     line-height: 2.5em
   a
     color: white
-
-+mQuery(479px)
-  .price
-    padding: 15px
-    .price-content
-      padding: 0 10px
-      h2
-        margin-bottom: 0em

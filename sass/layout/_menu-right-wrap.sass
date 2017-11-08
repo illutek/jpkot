@@ -7,12 +7,15 @@
   height: 100vh
   background: $main_color1
   width: 350px
+  padding: 25px
   position: fixed
   right: 0
-  padding: 25px
   color: white
   +transition(0.5s)
   transform: translate(570px,0px)
+  +mQuery(479px)
+    width: 200px
+    padding: 10px
   .menu-item
     border-bottom: solid 1px white
     padding: 30px 0
@@ -21,6 +24,9 @@
       border-bottom: none
     &.menu-item-upper
       text-transform: uppercase
+    +mQuery(479px)
+      font-size: 1em
+      padding: 15px 0
 
   .close-btn-wrapper //The close-button
     position: relative
@@ -57,6 +63,8 @@
 
 .menu-items-wrap
   margin-top: 60px
+  +mQuery(479px)
+    margin-top: 25px
   ul
     list-style-type: none
     a
@@ -71,6 +79,9 @@
 .menu-right-email-wrap //
   padding: 20px 0 0 15px
   font-size: 1.2em
+  +mQuery(479px)
+    padding: 20px 0 0 5px
+    font-size: 1em
   a
     color: white
     &:before
@@ -81,16 +92,3 @@
       text-decoration: none
       &:before
         content: '\f0e0'
-
-+mQuery(479px)
-  .menu-right-wrapper
-    width: 200px
-    padding: 10px
-    .menu-item
-      font-size: 1em
-      padding: 15px 0
-  .menu-items-wrap
-    margin-top: 25px
-  .menu-right-email-wrap
-    padding: 20px 0 0 5px
-    font-size: 1em

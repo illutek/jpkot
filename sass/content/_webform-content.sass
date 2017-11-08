@@ -21,6 +21,8 @@
       border: solid 1px white
       width: 100px
       padding: 6px
+    +mQuery(479px)
+      width: 200px
   textarea
     @extend .field-extend
     width: 500px
@@ -29,12 +31,9 @@
     min-height: 20px!important
     padding: 0
     margin-top: 10px
-
-+mQuery(479px)
-  .webform-contact-content
-    input
-      width: 200px
-    textarea
+    +mQuery(479px)
       width: 300px
+
+
 
 

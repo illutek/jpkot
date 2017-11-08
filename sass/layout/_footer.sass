@@ -16,6 +16,12 @@
     display: inline-block
     left: 0
     bottom: 100px
+    +mQuery(479px)
+      padding: 10px
+      .phone
+        display: none
+      .phone-mobile-view
+        display: block
 
 .phone-field, .phone
   display: inline-block
@@ -44,11 +50,3 @@
   padding: 15px 0 0
   font-size: 0.75em
 
-+mQuery(479px)
-  .contact-details
-    .contact-details__content
-      padding: 10px
-      .phone
-        display: none
-      .phone-mobile-view
-        display: block
