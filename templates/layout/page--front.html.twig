@@ -10,11 +10,11 @@
         <div class="col-md-6">
           <div class="info-tiles_wrap">
             <div class="info-tile_one">
-                {{ page.accommodation_steenweg }}
+              {{ page.accommodation_steenweg }}
             </div>
             {# end info-tile_one #}
             <div class="info-tile_two">
-                {{ page.accommodation_rooistraat }}
+              {{ page.accommodation_rooistraat }}
             </div>
             {# end info-tile_two #}
           </div>
@@ -37,23 +37,27 @@
         <h2>ONZE TROEVEN</h2>
         <div class="col-md-6 our-strengths__col">
           <a href="{{ base_path }}node/41">
-            <img src="{{ base_path ~ directory }}/images/Google_Maps.png" alt="ligging">
+            <div class="our-strengths_img location-img"></div>
           </a>
           <div class="our-strengths_content">
             <h3>LIGGING</h3>
             <p>Ideaal gelegen tussen campus Diepenbeek en stad Hasselt</p>
           </div>
         </div>
+        {#end our-strengths__col#}
+
         <div class="col-md-6 our-strengths__col">
           <a href="{{ base_path }}node/42">
-            <img src="{{ base_path ~ directory }}/images/relaxation.png" alt="ontspanning">
+            <div class="our-strengths_img recreation-img"></div>
           </a>
           <div class="our-strengths_content">
             <h3>ONTSPANNING</h3>
             <p>Tafeltennis, snooker, pool, darts en fitness voorzien.</p>
           </div>
         </div>
+        {#end our-strengths__col#}
       </div>
+      {#end our-strengths#}
     </div>
   </section>
 

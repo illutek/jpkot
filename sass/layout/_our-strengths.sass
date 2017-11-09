@@ -5,6 +5,18 @@
 .our-strengths
   background: white
   @extend .section-extend // on variables.sass
+  .our-strengths_img
+    display: inline-block
+    width: 116px
+    height: 116px
+  .location-img
+    background: transparent url("../images/Google_Maps-sprites.png") no-repeat 0 0
+    &:hover
+      background-position: 0 -116px
+  .recreation-img
+    background: transparent url("../images/relaxation-sprites.png") no-repeat 0 0
+    &:hover
+      background-position: 0 -116px
   .our-strengths_content
     margin-top: 50px
     width: 100%
