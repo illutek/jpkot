@@ -1,9 +1,13 @@
 # JP-kot
 
 ### Drupal 8
-A theme set up with Bootstrap
+A theme set-up with Bootstrap
 
-### Technologies 
+#### Used modules  
+twig_field_value - backup_migrate - pathauto - colorbox - views_slideshow - 
+metatag - webform - google_analytics - xmlsitemap
+
+### Webtechnologies 
 - yarn for devDependencies primarily for gulp is a toolkit for automating tasks in your development.  
 - bower for the theme Dependencies
 - The theme is built up in the dist folder with a gulp task
@@ -41,6 +45,7 @@ Extra the magnifying lens on the images
 
 #### @media Bubbling
 Sass provide a pretty killer feature for authoring @media when you nest them inside other selectors. If you add a @media query by nesting it inside a selector Sass will "bubble" that @media query and the new rule outside of the nest and back out to the root of your style sheet.
+http://thesassway.com/intermediate/responsive-web-design-part-2  
 In this project i use it in combination with a mediaquery mixin  
 The mixin  
 ```
@@ -63,3 +68,11 @@ The Bubbling
   +mQuery(479px)
     padding: 10px
 ```
+
+
+
+### Method of setting up this theme
+- after download and unzip, change directory to jpkot.
+- cd to jpkot and run 'bower install' for theme dependencies (bootstrap, bootstrap-waterfall and font-awesome) 
+- run 'yarn install' for the dev-dependencies (gulp ....) see package.json for a complete list
+- run 'gulp' this create the css directory and a minify styles.css file but also a dist directory with the final theme
