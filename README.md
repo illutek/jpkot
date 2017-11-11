@@ -79,3 +79,8 @@ The Bubbling
 - cd to jpkot and run 'bower install' for theme dependencies (bootstrap, bootstrap-waterfall and font-awesome) 
 - run 'yarn install' for the dev-dependencies (gulp ....) see package.json for a complete list
 - run 'gulp' this create the css directory and a minify styles.css file but also a dist directory with the final theme
+
+### Starting point
+Used my own Drupal8 boilerplate as startpoint for this project  
+https://github.com/illutek/theme-directory  
+Edit the bower.json file in order not to use bootstrap 4.0.0-beta but version 3.x.x.
