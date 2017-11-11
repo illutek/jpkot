@@ -5,12 +5,15 @@ A theme set-up with Bootstrap
 
 #### Used modules  
 twig_field_value - backup_migrate - pathauto - colorbox - views_slideshow - 
-metatag - webform - google_analytics - xmlsitemap
+metatag - webform - google_analytics - xmlsitemap  
+
+---
 
 ### Webtechnologies 
 - yarn for devDependencies primarily for gulp is a toolkit for automating tasks in your development.  
 - bower for the theme Dependencies
-- The theme is built up in the dist folder with a gulp task
+- Sass is the most mature, stable, and powerful professional grade CSS extension language in the world. 
+- Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
 #### Photo-album
 With bootstrap-waterfall https://github.com/Mystist/bootstrap-waterfall (with bower)
@@ -69,7 +72,7 @@ The Bubbling
     padding: 10px
 ```
 
-
+---
 
 ### Method of setting up this theme
 - after download and unzip, change directory to jpkot.
