@@ -128,12 +128,14 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 
         {# @todo back link toevoegen #}
 
-        {#{% set go_back = app.request.server.get('http-referer')|default('/') %}#}
-        {#{{ 'Go-back link: ' }}{{ go_back }}#}
-        {#{{ app.request.headers.get('referer') }}#}
+        <div class="studio-body_content__backto">
+          <script>
+            document.write('<a href="' + document.referrer + '">Terug naar overzicht</a>');
 
-        {#{% set referer = app.request.server.get('http-referer') %}#}
-        {#<a href="{{ referer }}">{{ 'Terug naar overzicht' }}</a>#}
+          </script>
+        </div>
+
+
       </div>
     </div>
   </div>
