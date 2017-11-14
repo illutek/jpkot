@@ -12,7 +12,7 @@
   right: 0
   color: white
   +transition(0.5s)
-  transform: translate(570px,0px)
+  transform: translateX(370px)
   +mQuery(479px)
     width: 200px
     padding: 10px
@@ -28,38 +28,38 @@
       font-size: 1em
       padding: 15px 0
 
-  .close-btn-wrapper //The close-button
-    position: relative
-    .close-btn
-      cursor: pointer
-      position: absolute
-      width: 20px
-      height: 20px
-      top: 30px
-      right: 20px
-      .line
-        height: 2px
-        width: 20px
-        background: #ffffff
-        position: absolute
-        +transition(0.5s)
-        &.line-one
-          transform: rotate(45deg)
-        &.line-two
-          transform: rotate(-45deg)
-      &:hover .line,
-      &:focus .line
-        background: $main_color3
-        &.line-one
-          transform: rotate(-45deg)
-        &.line-two
-          transform: rotate(45deg)
+  //.close-btn-wrapper //The close-button
+  //  position: relative
+  //  .close-btn
+  //    cursor: pointer
+  //    position: absolute
+  //    width: 20px
+  //    height: 20px
+  //    top: 30px
+  //    right: 20px
+  //    .line
+  //      height: 2px
+  //      width: 20px
+  //      background: #ffffff
+  //      position: absolute
+  //      +transition(0.5s)
+  //      &.line-one
+  //        transform: rotate(45deg)
+  //      &.line-two
+  //        transform: rotate(-45deg)
+  //    &:hover .line,
+  //    &:focus .line
+  //      background: $main_color3
+  //      &.line-one
+  //        transform: rotate(-45deg)
+  //      &.line-two
+  //        transform: rotate(45deg)
 
 
 
   &.menu-right__visible
     +transition(0.5s)
-    transform: translate(0px,0px)
+    transform: translateX(0px)
 
 .menu-items-wrap
   margin-top: 60px

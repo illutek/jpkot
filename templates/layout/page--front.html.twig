@@ -1,76 +1,78 @@
 {% include directory ~ '/templates/partials/menu-right-wrap.html.twig' %}
 
-<div class="container">
+<div class="container__wrapper">
+  <div class="container">
 
-  {% include directory ~ '/templates/partials/header.html.twig' %}
+    {% include directory ~ '/templates/partials/header.html.twig' %}
 
-  <section class="main-info_wrap">
-    <div class="main-info">
+    <section class="main-info_wrap">
+      <div class="main-info">
+        <div class="row no-gutter">
+          <div class="col-md-6">
+            <div class="info-tiles_wrap">
+              <div class="info-tile_one">
+                {{ page.accommodation_steenweg }}
+              </div>
+              {# end info-tile_one #}
+              <div class="info-tile_two">
+                {{ page.accommodation_rooistraat }}
+              </div>
+              {# end info-tile_two #}
+            </div>
+            {# end info-tiles_wrap #}
+          </div>
+          {# end col-md-6 #}
+          {# Accommodatie slider #}
+          <div class="col-md-6 info-slider_wrap">
+            <div class="info-slider">
+              {{ page.slider }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-strengths-wrap">
       <div class="row no-gutter">
-        <div class="col-md-6">
-          <div class="info-tiles_wrap">
-            <div class="info-tile_one">
-              {{ page.accommodation_steenweg }}
+        <div class="our-strengths">
+          <h2>ONZE TROEVEN</h2>
+          <div class="col-md-6 our-strengths__col">
+            <a href="{{ base_path }}node/41">
+              <div class="our-strengths_img location-img"></div>
+            </a>
+            <div class="our-strengths_content">
+              <h3>LIGGING</h3>
+              <p>Ideaal gelegen tussen campus Diepenbeek en stad Hasselt</p>
             </div>
-            {# end info-tile_one #}
-            <div class="info-tile_two">
-              {{ page.accommodation_rooistraat }}
+          </div>
+          {#end our-strengths__col#}
+
+          <div class="col-md-6 our-strengths__col">
+            <a href="{{ base_path }}node/42">
+              <div class="our-strengths_img recreation-img"></div>
+            </a>
+            <div class="our-strengths_content">
+              <h3>ONTSPANNING</h3>
+              <p>Tafeltennis, snooker, pool, darts en fitness voorzien.</p>
             </div>
-            {# end info-tile_two #}
           </div>
-          {# end info-tiles_wrap #}
+          {#end our-strengths__col#}
         </div>
-        {# end col-md-6 #}
-        {# Accommodatie slider #}
-        <div class="col-md-6 info-slider_wrap">
-          <div class="info-slider">
-            {{ page.slider }}
-          </div>
+        {#end our-strengths#}
+      </div>
+    </section>
+
+    <section class="price-wrap">
+      <div class="row no-gutter">
+        <div class="price">
+
+          {{ page.price }}
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="our-strengths-wrap">
-    <div class="row no-gutter">
-      <div class="our-strengths">
-        <h2>ONZE TROEVEN</h2>
-        <div class="col-md-6 our-strengths__col">
-          <a href="{{ base_path }}node/41">
-            <div class="our-strengths_img location-img"></div>
-          </a>
-          <div class="our-strengths_content">
-            <h3>LIGGING</h3>
-            <p>Ideaal gelegen tussen campus Diepenbeek en stad Hasselt</p>
-          </div>
-        </div>
-        {#end our-strengths__col#}
+    {% include directory ~ '/templates/partials/footer.html.twig' %}
 
-        <div class="col-md-6 our-strengths__col">
-          <a href="{{ base_path }}node/42">
-            <div class="our-strengths_img recreation-img"></div>
-          </a>
-          <div class="our-strengths_content">
-            <h3>ONTSPANNING</h3>
-            <p>Tafeltennis, snooker, pool, darts en fitness voorzien.</p>
-          </div>
-        </div>
-        {#end our-strengths__col#}
-      </div>
-      {#end our-strengths#}
-    </div>
-  </section>
-
-  <section class="price-wrap">
-    <div class="row no-gutter">
-      <div class="price">
-
-        {{ page.price }}
-
-      </div>
-    </div>
-  </section>
-
-  {% include directory ~ '/templates/partials/footer.html.twig' %}
-
+  </div>
 </div>

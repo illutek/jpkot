@@ -1,20 +1,24 @@
 /**
  * Created by Stefan on 16/04/2017.
  */
-(function ($){
+(function ($) {
     $(document).ready(function () {
 
-        $('.menu-right-wrapper').removeClass('menu-right__visible');
-        $('.menu-wrap').removeClass('menu-wrap__visible');
+        function openMenu() {
+            $('.menu-right-wrapper').toggleClass('menu-right__visible');
+            $('.container__wrapper').toggleClass('pushover-left');
+        }
 
-        $('.menu-wrap').click(function () {
-            $('.menu-right-wrapper').addClass('menu-right__visible');
-            $('.menu-wrap').addClass('menu-wrap__visible');
-        });
-
-        $('.close-btn').click(function () {
+        function closeMenu() {
             $('.menu-right-wrapper').removeClass('menu-right__visible');
-            $('.menu-wrap').removeClass('menu-wrap__visible');
+            $('.container__wrapper').removeClass('pushover-left');
+        }
+
+        closeMenu()
+
+        $('.menu-wrap, .close-btn').click(function () {
+            openMenu()
         });
+
     });
 })(jQuery);

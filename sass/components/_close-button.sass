@@ -1,0 +1,30 @@
+// /////////////////////////
+// @@ CLOSE BUTTON
+// /////////////////////////
+
+.close-btn-wrapper //The close-button
+    position: relative
+    .close-btn
+      cursor: pointer
+      position: absolute
+      width: 30px
+      height: 30px
+      top: 30px
+      right: 20px
+      .line
+        height: 2px
+        width: 30px
+        background: #ffffff
+        position: absolute
+        +transition(0.5s)
+        &.line-one
+          transform: rotate(45deg)
+        &.line-two
+          transform: rotate(-45deg)
+      &:hover .line,
+      &:focus .line
+        background: $main_color3
+        &.line-one
+          transform: rotate(-45deg)
+        &.line-two
+          transform: rotate(45deg)
