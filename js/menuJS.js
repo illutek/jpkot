@@ -1,14 +1,22 @@
 /**
  * Created by Stefan on 17/11/2017.
  * Strict mode makes it easier to write "secure" JavaScript.
- * Added id's, this makes it easier to get document.getElement, none need for [0]
+ *
  */
 (function () {
     'use strict';
 
-    // var openBtnMenu = document.getElementsByClassName('menu-wrap')[0];
-    // var closeBtn = document.getElementsByClassName('close-btn')[0];
-    // var containerWrapper = document.getElementsByClassName('container__wrapper')[0];
+    /**
+     * Added id's, this makes it easier to get document.getElement, none need for [0]
+     *
+     * var openBtnMenu = document.getElementsByClassName('menu-wrap')[0];
+     * var closeBtn = document.getElementsByClassName('close-btn')[0];
+     * var containerWrapper = document.getElementsByClassName('container__wrapper')[0];
+     * 
+     * @type {Element}
+     */
+
+
     var openBtn = document.getElementById('open__menu');
     var closeBtn = document.getElementById('close__menu');
     var menuRightWrapper = document.getElementsByClassName('menu-right-wrapper')[0];
