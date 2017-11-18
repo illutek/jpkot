@@ -1,16 +1,23 @@
 /**
  * Created by Stefan on 17/11/2017.
  * Strict mode makes it easier to write "secure" JavaScript.
+ * Added id's, this makes it easier to get document.getElement, none need for [0]
  */
 (function () {
     'use strict';
 
-    var openBtnMenu = document.getElementsByClassName('menu-wrap')[0];
+    // var openBtnMenu = document.getElementsByClassName('menu-wrap')[0];
+    // var closeBtn = document.getElementsByClassName('close-btn')[0];
+    // var containerWrapper = document.getElementsByClassName('container__wrapper')[0];
+    var openBtn = document.getElementById('open__menu');
+    var closeBtn = document.getElementById('close__menu');
     var menuRightWrapper = document.getElementsByClassName('menu-right-wrapper')[0];
-    var containerWrapper = document.getElementsByClassName('container__wrapper')[0];
-    var closeBtn = document.getElementsByClassName('close-btn')[0];
+    var containerWrapper = document.getElementById('container__wrapper');
 
 
+    /**
+     * functions
+     */
     function closeMenu() {
         menuRightWrapper.classList.remove('menu-right__visible');
         containerWrapper.classList.remove('pushover-left');
@@ -21,14 +28,18 @@
         containerWrapper.classList.toggle('pushover-left');
     }
 
-    closeMenu()
+    // close menu when the page loads
+    closeMenu();
 
+    // close menu when the user clicks the close button on the open menu-wrapper
     closeBtn.addEventListener('click', function () {
         closeMenu()
     });
 
-    openBtnMenu.addEventListener('click', function () {
+    // Toggle open and close menu-wrapper when the user clicks the menu button
+    openBtn.addEventListener('click', function () {
         openMenu()
     });
+
 
 }());
