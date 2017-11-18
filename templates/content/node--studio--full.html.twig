@@ -104,9 +104,9 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
           /**
            * Is enkel mogelijk met een extra module twig_field_value
            * https://www.drupal.org/project/twig_field_value
-           * set available = content.field_beschikbaar|render|lower
-           * set available = content.field_beschikbaar|field_raw.value|lower
-           * content.field_beschikbaar|field_label voor het label
+           * set available = 3-content.field_beschikbaar|render|lower
+           * set available = 3-content.field_beschikbaar|field_raw.value|lower
+           * 3-content.field_beschikbaar|field_label voor het label
            */
            #}
           {% set available = content.field_beschikbaar|field_raw.value|lower %}
