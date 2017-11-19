@@ -16,7 +16,6 @@
      * @type {Element}
      */
 
-
     var openBtn = document.getElementById('open__menu');
     var closeBtn = document.getElementById('close__menu');
     var menuRightWrapper = document.getElementsByClassName('menu-right-wrapper')[0];
@@ -40,14 +39,9 @@
     closeMenu();
 
     // close menu when the user clicks the close button on the open menu-wrapper
-    closeBtn.addEventListener('click', function () {
-        closeMenu()
-    });
+    closeBtn.addEventListener('click', closeMenu);
 
     // Toggle open and close menu-wrapper when the user clicks the menu button
-    openBtn.addEventListener('click', function () {
-        openMenu()
-    });
-
+    openBtn.addEventListener('click', openMenu);
 
 }());
