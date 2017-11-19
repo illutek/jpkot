@@ -2,21 +2,52 @@
 // @@ OUR-STRENGTHS
 // /////////////////////////
 
+// the extends for the DRY principles
+// http://programmer.97things.oreilly.com/wiki/index.php/Don%27t_Repeat_Yourself
+.strengts-img-after-extend
+  content: ""
+  transition: opacity 0.5s
+  position: absolute
+  opacity: 0
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.strengts-img-hover-after-extend
+  opacity: 1
+  transition: opacity 0.5s
+
+
 .our-strengths
   background: white
   @extend .section-extend // on variables.sass
+
+  // The images sprites with transition https://gordonlesti.com/css-background-transitions-with-image-sprites/
+  // Disadvantage with this method strites must be pixel perfect (sprites do not change but lie together)
   .our-strengths_img
+    position: relative
     display: inline-block
     width: 116px
     height: 116px
+
   .location-img
     background: transparent url("../images/Google_Maps-sprites.png") no-repeat 0 0
-    &:hover
-      background-position: 0 -116px
+    &::after
+      background: transparent url("../images/Google_Maps-sprites.png") no-repeat 0 -116px
+      @extend .strengts-img-after-extend
+    &:hover::after
+      @extend .strengts-img-hover-after-extend
+
   .recreation-img
     background: transparent url("../images/relaxation-sprites.png") no-repeat 0 0
-    &:hover
-      background-position: 0 -116px
+    &::after
+      background: transparent url("../images/relaxation-sprites.png") no-repeat 0 -116px
+      @extend .strengts-img-after-extend
+    &:hover::after
+      @extend .strengts-img-hover-after-extend
+
+
   .our-strengths_content
     margin-top: 50px
     width: 100%

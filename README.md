@@ -50,6 +50,7 @@ Extra the magnifying lens on the images
 Sass provide a pretty killer feature for authoring @media when you nest them inside other selectors. If you add a @media query by nesting it inside a selector Sass will "bubble" that @media query and the new rule outside of the nest and back out to the root of your style sheet.
 http://thesassway.com/intermediate/responsive-web-design-part-2  
 In this project i use it in combination with a mediaquery mixin  
+
 The mixin  
 ```
 =mQuery($arg...)
@@ -71,7 +72,20 @@ The Bubbling
   +mQuery(479px)
     padding: 10px
 ```
+##### The css way without mixin and bubbling
+```
+.page-content-wrap {
+  background: white;
+  padding: 35px;
+  overflow: hidden;
+}
 
+@media screen and (max-width: 479px) {
+  .page-content-wrap {
+    padding: 10px;
+  }
+}
+```
 ---
 
 ### Method of setting up this theme

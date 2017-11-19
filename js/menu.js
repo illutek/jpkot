@@ -18,9 +18,7 @@
 
         closeMenu()
 
-        $('.menu-wrap, .close-btn').click(function () {
-            openMenu()
-        });
+        $('.menu-wrap, .close-btn').click(openMenu);
 
     });
 })(jQuery);
