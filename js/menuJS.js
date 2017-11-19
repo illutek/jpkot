@@ -12,7 +12,13 @@
      * var openBtnMenu = document.getElementsByClassName('menu-wrap')[0];
      * var closeBtn = document.getElementsByClassName('close-btn')[0];
      * var containerWrapper = document.getElementsByClassName('container__wrapper')[0];
-     * 
+     *
+     * #open__menu on templates/partials/header.html.twig
+     * #close__menu on templates/partials/menu-right-wrap.html.twig
+     * #container__wrapper on templates/layout/page.html.twig and on page--front.html.twig
+     *
+     * .menu-right-wrapper on templates/partials/menu-right-wrap.html.twig
+     *
      * @type {Element}
      */
 
@@ -20,6 +26,7 @@
     var openBtn = document.getElementById('open__menu');
     var closeBtn = document.getElementById('close__menu');
     var menuRightWrapper = document.getElementsByClassName('menu-right-wrapper')[0];
+    // var menuRightWrapper = document.getElementsByClassName('menu-right-wrapper');
     var containerWrapper = document.getElementById('container__wrapper');
 
 
@@ -28,6 +35,7 @@
      */
     function closeMenu() {
         menuRightWrapper.classList.remove('menu-right__visible');
+        // menuRightWrapper[0].classList.remove('menu-right__visible');
         containerWrapper.classList.remove('pushover-left');
     }
 
