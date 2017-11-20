@@ -1,0 +1,42 @@
+// /////////////////////////////
+// @@ ++ FONTAWESOME ICONS
+// ////////////////////////////
+// http://fontawesome.io/cheatsheet/
+
+.icon
+  font-family: FontAwesome
+  display: inline-block
+  padding-right: 5px
+
+.search-icon
+  &:before
+    @extend .icon
+    font-size: 2rem
+    content: "\f00e"
+
+    //content: "\f002" search-icon without plus
+
+.phone-icon
+  &:before
+    @extend .icon
+
+.copy-icon
+  &:before
+    @extend .icon
+    content: "\f1f9"
+
+.home-icon
+  &:before
+    @extend .icon
+    content: "\f015"
+
+.mail-icon
+  &:before
+    color: rgba(255, 255, 255, 0.4)
+    @extend .icon
+    content: '\f003'
+  &:hover
+    text-decoration: none
+    &:before
+      content: '\f0e0'
+

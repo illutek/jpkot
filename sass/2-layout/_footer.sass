@@ -36,15 +36,7 @@
 .email-url-wrap
   a
     color: $white-transparant4
-    &:before
-      color: rgba(255, 255, 255, 0.4)
-      font-family: FontAwesome
-      content: '\f003'
-      padding-right: 6px
-    &:hover
-      text-decoration: none
-      &:before
-        content: '\f0e0'
+    @extend .mail-icon
 
 .copyright
   padding: 15px 0 0
