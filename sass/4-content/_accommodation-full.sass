@@ -17,8 +17,15 @@
 
 .accommodation-impression-link
   margin: 25px 0
-  padding: 15px
-  background: $main_color1
   display: inline-block
+  &.link-steenweg
+    @extend .btn-info_extend
+    background: $main_color1
+  &.link-rooistraat
+    @extend .btn-info_extend
+    background: $main_color2
   a
     color: white
+    &:hover
+      text-decoration: none
+      color: white
