@@ -54,3 +54,16 @@ function jpkot_add_regions_to_node($allowed_regions, &$variables) {
         $variables[$region] = $build;
     }
 }
+
+/**
+ * @param $variables
+ * This will add "node-{{nid}}" class in body tag.
+ *
+ */
+function jpkot_preprocess_html(&$variables) {
+  // Add node id to the body class.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if($node) {
+    $variables['attributes']['class'][] = 'node-' . $node->id();
+  }
+}
