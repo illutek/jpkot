@@ -44,7 +44,7 @@
     }
 
     // close menu when the page loads
-    closeMenu();
+    window.onload = closeMenu();
 
     // close menu when the user clicks the close button on the open menu-wrapper
     closeBtn.addEventListener('click', closeMenu);
