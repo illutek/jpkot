@@ -43,7 +43,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 
             <div class="col-md-8">
                 <div class="accommodation__body">
-                    <div class="accommodation-message">
+                    <div class="accommodation__body-message">
                         {#{{ node.id }}#}
                         {{ content.field_aantal_vrij }}
                     </div>
@@ -57,15 +57,17 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                     #}
                     {% set nodeId = node.id %}
                     {% if nodeId == 7 %}
-                    <div class="accommodation-impression-link link-steenweg">
+                    <div class="accommodation__impression-link link-steenweg">
                         <a href="{{ base_path }}impressie-steenweg">{{ 'Een impressie van deze locatie'|t }}</a>
                         {% else %}
-                        <div class="accommodation-impression-link link-rooistraat">
+                        <div class="accommodation__impression-link link-rooistraat">
                             <a href="{{ base_path }}impressie-rooistraat">{{ 'Een impressie van deze locatie'|t }}</a>
                             {% endif %}
                         </div>
                     </div>
+                    {# end accommodation__body #}
                 </div>
+                {# end col-md-8 #}
 
 
                 {#
@@ -79,7 +81,10 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                 */
                 #}
 
-                {{ floors }}
+                <div class="accommodation__floors">
+                    {{ floors }}
+                </div>
+
 
                 {#
                 /**
@@ -89,7 +94,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                  #}
 
                 <div class="col-md-12">
-                    <div class="page-content-description-wrap">
+                    <div class="accommodation__overview">
                         {{ accommodation }}
                     </div>
                 </div>

@@ -3,11 +3,11 @@
 // /////////////////////////
 
 .btn-info_extend
-  padding: 10px 35px
+  padding: 1rem 3.5rem
   border: none
   &:after
     content: ""
-    padding-left: -25px
+    padding-left: -2.5rem
     color: white
   &:hover:after
     +transition(0.5s)
@@ -17,17 +17,17 @@
     //color: white
 
 
-.info-tile_one
+.info__tile--one
   .btn-info
     @extend .btn-info_extend
     background: $main_color1_btn
 
-.info-tile_two
+.info__tile--two
   .btn-info
     @extend .btn-info_extend
     background: $main_color2_btn
 
-.price
-  .btn-price
-    @extend .btn-info_extend
-    background: $main-color3_btn
+
+.btn-price
+  @extend .btn-info_extend
+  background: $main-color3_btn
