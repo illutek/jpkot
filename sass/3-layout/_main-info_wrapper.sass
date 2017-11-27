@@ -4,20 +4,17 @@
 
 .info-tile_extend
   height: 450px
-  padding: 35px
+  padding: 3.5rem
   text-align: center
   color: white
   vertical-align: middle
   position: relative
   +mQuery(479px)
-    padding: 15px
-  .available-message
-    margin-top: 45px
-    font-size: 1.125em
+    padding: 1.5rem
 
 .info-tiles_wrap
   p
-    line-height: 2.5em
+    line-height: 4rem
   a
     color: white
 
@@ -35,6 +32,9 @@
     background: $main_color2
     @extend .info-tile_extend
 
+.readmore-wrap
+  margin-top: 5rem
+  display: block
 
 .info-slider
   overflow: hidden

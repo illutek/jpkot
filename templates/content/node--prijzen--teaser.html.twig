@@ -5,6 +5,7 @@
  * {{ label }} prints next html <span class="field field--name-title field--type-string">Title</span>
  * {{ node.label }} prints Title
  * {{ node.label|upper }} prints the title in uppercase
+ * nevertheless set in sass
  * {{ label|upper }} - gives no result
  #}
 
@@ -13,11 +14,11 @@
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-  <h2{{ title_attributes }}>{{ node.label|upper }}</h2>
+  <h2 class="heading-secondary heading-secondary--black">{{ node.label }}</h2>
   {{ content }}
 </div>
 
-<div class="btn-wrap">
+<div class="readmore-wrap">
   <a href="{{ url }}" rel="bookmark" class="btn btn-price">{{ 'MEER'|t }}</a>
 </div>
 
