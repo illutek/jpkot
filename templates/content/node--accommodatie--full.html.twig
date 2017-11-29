@@ -57,11 +57,11 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                     #}
                     {% set nodeId = node.id %}
                     {% if nodeId == 7 %}
-                    <div class="accommodation__impression-link link-steenweg">
-                        <a href="{{ base_path }}impressie-steenweg">{{ 'Een impressie van deze locatie'|t }}</a>
+                    <div class="accommodation-readmore accommodation-readmore--steenweg">
+                        <a href="{{ base_path }}impressie-steenweg" class="btn">{{ 'Een impressie van deze locatie'|t }}</a>
                         {% else %}
-                        <div class="accommodation__impression-link link-rooistraat">
-                            <a href="{{ base_path }}impressie-rooistraat">{{ 'Een impressie van deze locatie'|t }}</a>
+                        <div class="accommodation__impression-link accommodation__impression-link--rooistr">
+                            <a href="{{ base_path }}impressie-rooistraat" class="btn">{{ 'Een impressie van deze locatie'|t }}</a>
                             {% endif %}
                         </div>
                     </div>

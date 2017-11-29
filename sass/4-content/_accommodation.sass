@@ -1,0 +1,77 @@
+// /////////////////////////////////////
+// @@ ACCOMMODATION
+// ////////////////////////////////////
+
+// ACCOMMODATION ON FRONT-PAGE NODE--ACCOMMODATIE--TEASER.HTML.TWIG
+
+.accommodation__tiles
+  p
+    line-height: 4rem
+  a
+    color: white
+
+  .accommodation__tile
+    height: 450px
+    padding: 3.5rem
+    text-align: center
+    color: white
+    vertical-align: middle
+    position: relative
+    +mQuery(479px)
+      padding: 1.5rem
+
+    &-content
+      display: inline-block
+      width: 75%
+      +mQuery(479px)
+        width: 100%
+
+    &--one
+      background: $main_color1
+      .btn--info
+        background: $main_color1_btn
+
+
+    &--two
+      background: $main_color2
+      .btn--info
+        background: $main_color2_btn
+
+
+
+.accommodation-readmore
+  margin-top: 5rem
+  display: block
+
+.info-slider
+  overflow: hidden
+  img
+    width: 100%
+    height: auto
+    vertical-align: middle
+  +mQuery(479px)
+    display: none
+
+
+//ACCOMMODATION FULL NODE--ACCOMMODATIE--FULL.HTML.TWIG
+
+.accommodation__body-message
+  background: $main_color3
+  padding: 1.5rem
+  display: inline-block
+  margin-bottom: .5rem
+
+.accommodation__image
+  overflow: hidden
+  img
+    width: 100%
+    height: auto
+    vertical-align: middle
+
+.accommodation-readmore
+  margin: 2.5rem 0
+  display: inline-block
+  &--steenweg
+    background: $main_color1
+  &--rooistr
+    background: $main_color2

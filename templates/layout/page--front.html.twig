@@ -10,41 +10,48 @@
 
         {% include directory ~ '/templates/partials/header.html.twig' %}
 
-        <section class="main-info_wrap">
-            <div class="main-info">
-                <div class="row no-gutter">
-                    <div class="col-md-6">
-                        <div class="info__tiles-wrapper">
-                            <div class="info__tile--one">
-                                {# Accommodatie steenweg #}
-                                {{ page.accommodation_steenweg }}
-                            </div>
-                            {# end info-tile_one #}
+        <section class="section-accommodation">
+            <div class="row no-gutter">
+                <div class="col-md-6">
 
-                            <div class="info__tile--two">
-                                {# Accommodatie rooistraat #}
-                                {{ page.accommodation_rooistraat }}
-                            </div>
-                            {# end info-tile_two #}
-
+                    <div class="accommodation__tiles">
+                        <div class="accommodation__tile accommodation__tile--one">
+                            {# Accommodatie steenweg #}
+                            {{ page.accommodation_steenweg }}
                         </div>
-                        {# end info-tiles_wrap #}
+                        {# end info-tile_one #}
+
+                        <div class="accommodation__tile accommodation__tile--two">
+                            {# Accommodatie rooistraat #}
+                            {{ page.accommodation_rooistraat }}
+                        </div>
+                        {# end info-tile_two #}
                     </div>
-                    {# end col-md-6 #}
-                    {# Accommodatie slider #}
-                    <div class="col-md-6 info-slider_wrap">
+                    {# end info-tiles_wrap #}
+
+                </div>
+                {# end col-md-6 #}
+
+                {# Accommodatie slider #}
+                <div class="col-md-6">
+
+                    <div class="info-slider_wrap">
                         <div class="info-slider">
                             {{ page.slider }}
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
         <section class="our-strengths-wrap">
+
             <div class="row no-gutter">
                 <div class="our-strengths">
-                    <h2 class="heading-secondary heading-secondary--black">ONZE TROEVEN</h2>
+                    <h2 class="heading-secondary heading-secondary--black">
+                        ONZE TROEVEN
+                    </h2>
                     <div class="col-md-6 our-strengths__col">
                         <a href="{{ base_path }}node/41">
                             <div class="our-strengths_img location-img"></div>
