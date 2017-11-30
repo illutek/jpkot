@@ -14,10 +14,10 @@
      * var containerWrapper = document.getElementsByClassName('container__wrapper')[0];
      *
      * #open__menu on templates/partials/header.html.twig
-     * #close__menu on templates/partials/menu-right-wrap.html.twig
+     * #close__menu on templates/partials/menu-right.html.twig
      * #container__wrapper on templates/layout/page.html.twig and on page--front.html.twig
      *
-     * .menu__right on templates/partials/menu-right-wrap.html.twig
+     * .menu__right on templates/partials/menu-right.html.twig
      *
      * @type {Element}
      */
