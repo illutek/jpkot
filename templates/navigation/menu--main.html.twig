@@ -4,7 +4,7 @@
  * Theme override to display menu-main.
  *
  *
- * SASS - _menu-right-wrap.sass
+ * SASS - _menu__right.sass
  */
 #}
 {% import _self as menus %}
@@ -26,11 +26,11 @@
     {% for item in items %}
       {%
         set classes = [
-          'menu-item',
-          'menu-item-upper',
-          item.is_expanded ? 'menu-item--expanded',
-          item.is_collapsed ? 'menu-item--collapsed',
-          item.in_active_trail ? 'menu-item--active-trail',
+          'menu__item',
+          'menu__item--upper',
+          item.is_expanded ? 'menu__item--expanded',
+          item.is_collapsed ? 'menu__item--collapsed',
+          item.in_active_trail ? 'menu__item--active-trail',
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>

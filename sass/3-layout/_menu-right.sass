@@ -1,0 +1,70 @@
+// /////////////////////////// 25px
+// @@ MENU WRAPPER
+// ///////////////////////////
+
+.menu-right
+  z-index: 999
+  height: 100vh
+  background: $main_color1
+  width: 350px
+  padding: 25px
+  position: fixed
+  right: 0
+  color: white
+  +transition(0.5s)
+  transform: translateX(370px)
+  +mQuery(479px)
+    width: 200px
+    padding: 10px
+
+  &__menu-items
+    margin-top: 60px
+    +mQuery(479px)
+      margin-top: 25px
+    ul
+      list-style-type: none
+      a
+        color: white
+        text-decoration: none
+        &:hover
+          text-decoration: none
+          color: $main_color3
+        &.is-active
+          color: $main_color3
+
+
+  &__email
+    padding: 20px 0 0 15px
+    font-size: 1.2em
+    +mQuery(479px)
+      padding: 20px 0 0 5px
+      font-size: 1em
+    a
+      color: white
+      @extend .mail-icon
+
+  &--visible
+    +transition(0.5s)
+    transform: translateX(0px)
+
+  .menu
+    &__item
+      border-bottom: solid 1px white
+      padding: 30px 0
+      font-size: 1.5em
+      &:last-child
+        border-bottom: none
+      &--upper
+        text-transform: uppercase
+      &--active-trail
+        padding-left: 3rem
+      +mQuery(479px)
+        font-size: 1em
+        padding: 15px 0
+
+
+
+
+
+
+

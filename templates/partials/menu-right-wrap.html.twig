@@ -5,10 +5,10 @@
  /*
  #}
 {% set classes = [
-'menu-right-wrapper',
+'menu-right',
 ] %}
 
-<div{{ attributes.addClass(classes) }}>
+<nav{{ attributes.addClass(classes) }}>
   <div class="close-btn-wrapper">
     <div class="close-btn" id="close__menu">
       <span class="line line-one"></span>
@@ -16,16 +16,14 @@
     </div>
   </div>
 
-  <div class="menu-items-wrap">
-    <div class="menu-items">
+  <div class="menu-right__menu-items">
       {{ page.nav }}
-    </div>
   </div>
 
-  <div class="menu-right-email-wrap">
+  <div class="menu-right__email">
     <script>
       document.write("<a class='email-url' href=\"mail" + "to:" + new Array("jp.kot", "hotmail.com").join("@") + "\">" +
           "Ons contacteren via mail" + "</" + "a>");
     </script>
   </div>
-</div>
+</nav>

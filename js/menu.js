@@ -7,18 +7,18 @@
     $(document).ready(function () {
 
         function openMenu() {
-            $('.menu-right-wrapper').toggleClass('menu-right__visible');
+            $('.menu-right').toggleClass('menu-right--visible');
             $('#container__wrapper').toggleClass('pushover-left');
         }
 
         function closeMenu() {
-            $('.menu-right-wrapper').removeClass('menu-right__visible');
+            $('.menu__right').removeClass('menu-right--visible');
             $('#container__wrapper').removeClass('pushover-left');
         }
 
-        closeMenu()
+        closeMenu();
 
-        $('.menu-wrap, .close-btn').click(openMenu);
+        $('.header__menu, .close-btn').click(openMenu);
 
     });
 })(jQuery);

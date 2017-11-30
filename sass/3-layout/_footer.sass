@@ -2,43 +2,54 @@
 // @@ FOOTER
 // /////////////////////////
 
-.contact-details
-  @extend .section-extend //_variables.sass
-  color: rgba($color-white, .4)
-  position: relative
-  min-height: 250px
-  .fa
-    padding: 0 6px
+.footer
+  &__contact
+    @extend .section-extend //_variables.sass
     color: rgba($color-white, .4)
-  .contact-details__content
-    position: absolute
-    width: 100%
-    display: inline-block
-    left: 0
-    bottom: 100px
-    +mQuery(479px)
-      padding: 10px
-      .phone
-        display: none
-      .phone-mobile-view
-        display: block
+    position: relative
+    min-height: 250px
+    .fa
+      padding: 0 6px
+      color: rgba($color-white, .4)
+    &-content
+      position: absolute
+      width: 100%
+      display: inline-block
+      left: 0
+      bottom: 100px
 
-.phone-field, .phone
+      +mQuery(479px)
+        padding: 10px
+        .footer__phone
+          &--desktop
+            display: none
+          &--mobile
+            display: block
+
+  &__phone
+    &--desktop
+      display: block
+    &--mobile
+      display: none
+      margin: 20px 0
+      a
+        color: white
+        padding: 10px 15px
+        border: solid 1px rgba($color-white, .4)
+
+  &__email
+    a
+      color: rgba($color-white, .4)
+      @extend .mail-icon
+
+  &__copyright
+    padding: 15px 0 0
+    font-size: 0.75em
+
+
+.phone-field
   display: inline-block
-.phone-mobile-view
-  display: none
-  margin: 20px 0
-  a
-    color: white
-    padding: 10px 15px
-    border: solid 1px rgba($color-white, .4)
 
-.email-url-wrap
-  a
-    color: rgba($color-white, .4)
-    @extend .mail-icon
 
-.copyright
-  padding: 15px 0 0
-  font-size: 0.75em
+
 

@@ -2,27 +2,43 @@
 // @@ MENU-BUTTON
 // /////////////////////////
 
-.menu-wrap
+.header__menu
   +transition(0.1s)
   padding-top: 3.5rem
   position: absolute
   right: 0
   cursor: pointer
+
+  &-btn
+    +transition(0.3s)
+    &:hover,
+    &:focus
+      color: $main_color1_btn
+      .line
+        background: $main_color1_btn
+        width: 100%
+
+    .menu-text
+      font-size: 1.5em
+
   +mQuery(479px)
     padding-top: 2.5rem
     right: 25px
-    .menu-btn
-      font-size: 1.6rem
-      .menu-text
-        display: none
+
+    .line-group
+      width: 24px
       .line
         width: 100%
-      .line-top
-        margin-top: 3px
-      .line-midle
-        margin-top: 8px
-      .line-bottom
-        margin-top: 13px
+        &--top
+          margin-top: 3px
+        &--midle
+          margin-top: 8px
+        &--bottom
+          margin-top: 13px
+
+    .menu-text
+      display: none
+
 
 
 // E from MENU to hamburger
@@ -39,21 +55,13 @@
     background: #ffffff
     display: block
     +transition(0.3s)
-  .line-top
-    margin-top: 1px
-  .line-midle
-    margin-top: 7px
-    width: 50%
-  .line-bottom
-    margin-top: 14px
-    width: 75%
 
-.menu-btn
-  font-size: 1.5em
-  +transition(0.3s)
-  &:hover,
-  &:focus
-    color: $main_color1_btn
-    .line
-      background: $main_color1_btn
-      width: 100%
+    &--top
+      margin-top: 1px
+    &--midle
+      margin-top: 7px
+      width: 50%
+    &--bottom
+      margin-top: 14px
+      width: 75%
+

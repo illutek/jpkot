@@ -17,15 +17,15 @@
      * #close__menu on templates/partials/menu-right-wrap.html.twig
      * #container__wrapper on templates/layout/page.html.twig and on page--front.html.twig
      *
-     * .menu-right-wrapper on templates/partials/menu-right-wrap.html.twig
+     * .menu__right on templates/partials/menu-right-wrap.html.twig
      *
      * @type {Element}
      */
 
     var openBtn = document.getElementById('open__menu');
     var closeBtn = document.getElementById('close__menu');
-    var menuRightWrapper = document.getElementsByClassName('menu-right-wrapper')[0];
-    // var menuRightWrapper = document.getElementsByClassName('menu-right-wrapper');
+    var menuRightWrapper = document.getElementsByClassName('menu-right')[0];
+    // var menuRightWrapper = document.getElementsByClassName('menu-right');
     var containerWrapper = document.getElementById('container__wrapper');
 
 
@@ -33,13 +33,13 @@
      * functions
      */
     function closeMenu() {
-        menuRightWrapper.classList.remove('menu-right__visible');
-        // menuRightWrapper[0].classList.remove('menu-right__visible');
+        menuRightWrapper.classList.remove('menu-right--visible');
+        // menuRightWrapper[0].classList.remove('menu__right--visible');
         containerWrapper.classList.remove('pushover-left');
     }
 
     function openMenu() {
-        menuRightWrapper.classList.toggle('menu-right__visible');
+        menuRightWrapper.classList.toggle('menu-right--visible');
         containerWrapper.classList.toggle('pushover-left');
     }
 

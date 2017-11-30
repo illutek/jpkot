@@ -13,6 +13,7 @@ metatag - webform - google_analytics - xmlsitemap
 - yarn for devDependencies primarily for gulp is a toolkit for automating tasks in your development.  
 - bower for the theme Dependencies
 - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world. 
+- BEM — Block Element Modifier is a methodology that helps you to create reusable components.
 - Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
 #### Photo-album

@@ -1,32 +1,38 @@
 {#
 /**
  * Created by Stefan on 18/04/2017.
- * Header with logo, site-title and menu-btn
- * menu-items on menu-right-wrap.html.twig
+ * Header with logo, site-title and header__menu-btn
+ * menu-items on menu-right.html.twig
  */
 #}
 
-<header class="header-wrap">
+<header class="header">
   <div class="row">
     <div class="col-xs-2">
-      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-        <img src="{{ base_path ~ directory }}/logo.png" alt="JP-KOT">
-      </a>
+      <div class="header__logo">
+        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+          <img src="{{ base_path ~ directory }}/logo.png" alt="JP-KOT">
+        </a>
+      </div>
     </div>
+
     <div class="col-xs-8">
-      <h1 class="heading-primary heading-primary--white">
-        OP KOT IN DIEPENBEEK
-      </h1>
+      <div class="header__heading">
+        <h1 class="heading-primary heading-primary--white">
+          OP KOT IN DIEPENBEEK
+        </h1>
+      </div>
+
     </div>
 
     <div class="col-xs-2">
-      <div class="menu-wrap" id="open__menu">
-        <div class="menu-btn">
+      <div class="header__menu" id="open__menu">
+        <div class="header__menu-btn">
           <span class="menu-text" style="float: left">M</span>
           <div class="line-group">
-            <span class="line line-top"></span>
-            <span class="line line-midle"></span>
-            <span class="line line-bottom"></span>
+            <span class="line line--top"></span>
+            <span class="line line--midle"></span>
+            <span class="line line--bottom"></span>
           </div>
           <span class="menu-text">NU</span>
         </div>
