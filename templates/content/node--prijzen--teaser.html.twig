@@ -2,10 +2,10 @@
 /**
  * View block Prijzen teaser on the frontpage.
  * url: Direct URL of the current node.
- * {{ label }} prints next html <span class="field field--name-title field--type-string">Title</span>
+ * {{ label }} prints following html <span class="field field--name-title field--type-string">Title</span>
  * {{ node.label }} prints Title
  * {{ node.label|upper }} prints the title in uppercase
- * nevertheless set in sass
+ * nevertheless set uppercase in sass on component .btn
  * {{ label|upper }} - gives no result
  #}
 
@@ -18,7 +18,7 @@
   {{ content }}
 </div>
 
-<div class="accommodation-readmore">
+<div class="readmore readmore--price">
   <a href="{{ url }}" rel="bookmark" class="btn btn--price">{{ 'MEER INFORMATIE'|t }}</a>
 </div>
 

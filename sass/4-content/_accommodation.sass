@@ -42,20 +42,16 @@
   font-size: 1.8rem
 
 
-.accommodation__slider-slides
-  overflow: hidden
-  img
-    width: 100%
-    height: auto
-    vertical-align: middle
-  +mQuery(479px)
-    display: none
+.accommodation__slider
+  &-slides
+    overflow: hidden
+    img
+      width: 100%
+      height: auto
+      vertical-align: middle
+    +mQuery(479px)
+      display: none
 
-.accommodation__readmore
-  margin-top: 5rem
-  display: block
-  &--impressie-link
-    margin-top: 3rem
 
 //ACCOMMODATION FULL NODE--ACCOMMODATIE--FULL.HTML.TWIG
 
@@ -75,7 +71,3 @@
       margin-bottom: .5rem
 
 
-.btn--steenweg
-  background: $main_color1
-.btn--rooistr
-  background: $main_color2

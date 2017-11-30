@@ -11,7 +11,7 @@
     text-transform: uppercase
     border-radius: 2px
     +transition(.5s)
-    box-shadow: 0 1rem 4rem rgba($color-black, .15)
+    box-shadow: 0 1rem 2rem rgba($color-black, .15)
 
   &:after
     content: ""
@@ -20,6 +20,7 @@
 
   &:hover
     color: $color-white
+    box-shadow: 0 1rem 4rem rgba($color-black, .15)
     transform: translateY(-3px)
 
   &:active
@@ -32,8 +33,13 @@
     content: "\f101"
     padding-left: .5rem
 
-  //&--arrow-after
 
+// accommodation--full
+.btn--steenweg
+  background: $main_color1
+.btn--rooistr
+  background: $main_color2
 
+// prijzen--teaser
 .btn--price
   background: $main-color3_btn
