@@ -31,19 +31,18 @@
       .btn--info
         background: $main_color1_btn
 
-
     &--two
       background: $main_color2
       .btn--info
         background: $main_color2_btn
 
 
+.accommodation__available-message
+  margin-top: 4.5rem
+  font-size: 1.8rem
 
-.accommodation-readmore
-  margin-top: 5rem
-  display: block
 
-.info-slider
+.accommodation__slider-slides
   overflow: hidden
   img
     width: 100%
@@ -52,26 +51,31 @@
   +mQuery(479px)
     display: none
 
+.accommodation__readmore
+  margin-top: 5rem
+  display: block
+  &--impressie-link
+    margin-top: 3rem
 
 //ACCOMMODATION FULL NODE--ACCOMMODATIE--FULL.HTML.TWIG
 
-.accommodation__body-message
-  background: $main_color3
-  padding: 1.5rem
-  display: inline-block
-  margin-bottom: .5rem
+.accommodation
+  &__image
+    overflow: hidden
+    img
+      width: 100%
+      height: auto
+      vertical-align: middle
 
-.accommodation__image
-  overflow: hidden
-  img
-    width: 100%
-    height: auto
-    vertical-align: middle
+  &__content
+    &-message
+      background: $main_color3
+      padding: 1.5rem
+      display: inline-block
+      margin-bottom: .5rem
 
-.accommodation-readmore
-  margin: 2.5rem 0
-  display: inline-block
-  &--steenweg
-    background: $main_color1
-  &--rooistr
-    background: $main_color2
+
+.btn--steenweg
+  background: $main_color1
+.btn--rooistr
+  background: $main_color2
