@@ -8,38 +8,37 @@
   display: inline-block
   padding-right: 5px
 
-.search-icon
-  &:before
-    @extend .icon
-    font-size: 2rem
-    content: "\f00e"
-
-    //content: "\f002" search-icon without plus
-
-.phone-icon
-  &:before
-    @extend .icon
-    content: "\f095"
-
-.copy-icon
-  &:before
-    @extend .icon
-    content: "\f1f9"
-
-.home-icon
-  &:before
-    @extend .icon
-    content: "\f015"
-
-.mail-icon
-  &:before
-    color: rgba($color-white, 0.4)
-    @extend .icon
-    content: '\f003'
-  &:hover
-    text-decoration: none
+  &--copy
     &:before
-      content: '\f0e0'
+      @extend .icon
+      content: "\f1f9"
+
+  &--search
+    &:before
+      @extend .icon
+      font-size: 2rem
+      content: "\f00e"
+      //content: "\f002" search-icon without plus
+
+  &--phone
+    &:before
+      @extend .icon
+      content: "\f095"
+
+  &--home
+    &:before
+      @extend .icon
+      content: "\f015"
+
+  &--mail
+    &:before
+      color: rgba($color-white, 0.4)
+      @extend .icon
+      content: '\f003'
+    &:hover
+      text-decoration: none
+      &:before
+        content: '\f0e0'
 
 // icons on the location
 .bus

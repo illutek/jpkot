@@ -1,6 +1,7 @@
 // /////////////////////////
 // @@ CLOSE BUTTON
 // /////////////////////////
+
 .menu-right
   &__close-btn
     position: relative
@@ -18,14 +19,16 @@
         background: #ffffff
         position: absolute
         +transition(0.5s)
-        &.line-one
+
+        &--one
           transform: rotate(45deg)
-        &.line-two
+        &--two
           transform: rotate(-45deg)
+
       &:hover .button-close__line,
       &:focus .button-close__line
         background: $main_color3
-        &.line-one
+        &--one
           transform: rotate(-45deg)
-        &.line-two
+        &--two
           transform: rotate(45deg)

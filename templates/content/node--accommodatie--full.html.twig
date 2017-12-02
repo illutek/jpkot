@@ -23,86 +23,90 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 #}
 <article id="node-{{ node.id }}" {{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      {{ label }}
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+    {{ title_prefix }}
+    {% if not page %}
+        <h2{{ title_attributes }}>
+            {{ label }}
+        </h2>
+    {% endif %}
+    {{ title_suffix }}
 
 
-  <div{{ content_attributes.addClass('accommodation') }}>
-    <div class="row">
+    <div{{ content_attributes.addClass('accommodation') }}>
+        <div class="row">
 
-      <div class="col-md-4">
-        <div class="accommodation__image">
-          {{ content.field_img_accomm_pand }}
-        </div>
-      </div>
-
-      <div class="col-md-8">
-        <div class="accommodation__content">
-          <div class="accommodation__content-message">
-            {#{{ node.id }}#}
-            {{ content.field_aantal_vrij }}
-          </div>
-
-          <div class="accommodation__body">
-            {{ content.body }}
-          </div>
-
-          {#
-          /**
-          * impressie-steenweg = node/7, impressie-rooistraat = node/10
-          */
-          #}
-          {% set nodeId = node.id %}
-          {% if nodeId == 7 %}
-          <div class="readmore readmore--impressie-link">
-            <a href="{{ base_path }}impressie-steenweg"
-               class="btn btn--steenweg">{{ 'Een impressie van deze locatie'|t }}</a>
-            {% else %}
-            <div class="readmore readmore--impressie-link">
-              <a href="{{ base_path }}impressie-rooistraat"
-                 class="btn btn--rooistr">{{ 'Een impressie van deze locatie'|t }}</a>
-              {% endif %}
+            <div class="col-md-4">
+                <div class="accommodation__image">
+                    {{ content.field_img_accomm_pand }}
+                </div>
             </div>
-          </div>
-          {# end accommodation__body #}
+
+            <div class="col-md-8">
+                <div class="accommodation__content">
+                    <div class="accommodation__content-message">
+                        {#{{ node.id }}#}
+                        {{ content.field_aantal_vrij }}
+                    </div>
+
+                    <div class="accommodation__body">
+                        {{ content.body }}
+                    </div>
+
+                    {#
+                    /**
+                    * impressie-steenweg = node/7, impressie-rooistraat = node/10
+                    */
+                    #}
+                    {% set nodeId = node.id %}
+                    {% if nodeId == 7 %}
+                    <div class="readmore readmore--impressie-link">
+                        <a href="{{ base_path }}impressie-steenweg"
+                           class="btn btn--steenweg">{{ 'Een impressie van deze locatie'|t }}</a>
+                        {% else %}
+                        <div class="readmore readmore--impressie-link">
+                            <a href="{{ base_path }}impressie-rooistraat"
+                               class="btn btn--rooistr">{{ 'Een impressie van deze locatie'|t }}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {# end accommodation__body #}
+                </div>
+                {# end col-md-8 #}
+
+
+                {#
+                /**
+                * This two regions lives only in the node--accommodatie
+                * The region floor should also be added to jpkot.theme file under $allowed_regions
+                * The region {{ floors }} only exist in the node--accommodatie, this is only possibly
+                * with the code on .theme
+                * A custom block region block with all style code and 4-content no 4-content-type or views
+                * Only the locatie 'Steenweg' has floors
+                */
+                #}
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="accommodation__floors">
+                            {{ floors }}
+                        </div>
+                    </div>
+
+                </div>
+
+
+                {#
+                /**
+                * The region accommodation should also be added to jpkot. theme file under $allowed_regions
+                * This region is filled with a block-view - Format tabel (all the rooms/studios
+                */
+                 #}
+
+                <div class="col-md-12">
+                    <div class="accommodation__overview">
+                        {{ accommodation }}
+                    </div>
+                </div>
+            </div>
         </div>
-        {# end col-md-8 #}
-
-
-        {#
-        /**
-        * This two regions lives only in the node--accommodatie
-        * The region floor should also be added to jpkot.theme file under $allowed_regions
-        * The region {{ floors }} only exist in the node--accommodatie, this is only possibly
-        * with the code on .theme
-        * A custom block region block with all style code and 4-content no 4-content-type or views
-        * Only the locatie 'Steenweg' has floors
-        */
-        #}
-
-        <div class="accommodation__floors">
-          {{ floors }}
-        </div>
-
-
-        {#
-        /**
-        * The region accommodation should also be added to jpkot. theme file under $allowed_regions
-        * This region is filled with a block-view - Format tabel (all the rooms/studios
-        */
-         #}
-
-        <div class="col-md-12">
-          <div class="accommodation__overview">
-            {{ accommodation }}
-          </div>
-        </div>
-      </div>
-    </div>
-    {# end .pages-content #}
+        {# end .pages-content #}
 </article>
