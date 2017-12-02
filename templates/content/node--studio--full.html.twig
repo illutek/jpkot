@@ -51,11 +51,11 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                             {% set available = content.field_beschikbaar|field_raw.value|lower %}
 
                             {% if available == 'vrij' %}
-                                <div class="studio__description-available--free">
+                                <div class="studio__description-available studio__description-available--free">
                                     {{ 'Studio is nog beschikbaar'|t }}
                                 </div>
                             {% else %}
-                                <div class="studio__description-available--occupied">
+                                <div class="studio__description-available studio__description-available--occupied">
                                     {{ 'Studio is reeds verhuurd'|t }}
                                 </div>
                             {% endif %}

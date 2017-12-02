@@ -1,12 +1,14 @@
 {#
 /**
  * Created by Stefan on 18/04/2017.
+ * container__wrapper for slide to the left when menu is visible
  */
 #}
 {% include directory ~ '/templates/partials/menu-right.html.twig' %}
 
 <div id="container__wrapper">
   <div class="container">
+
     {% include directory ~ '/templates/partials/header.html.twig' %}
 
     {{ page.breadcrumb }}
@@ -18,13 +20,15 @@
       <main role="main">
         <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-        <section class="page-content-wrap">
+        <section class="page__content">
           {{ page.content }}
         </section>
+
       </main>
     </div>
 
     {% include directory ~ '/templates/partials/footer.html.twig' %}
+
   </div>
 </div>
 

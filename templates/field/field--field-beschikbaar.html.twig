@@ -19,14 +19,14 @@
 #}
 
 {% for item in items %}
-  <div{{ item.attributes.addClass('field__disposable') }}>
+  <div{{ item.attributes.addClass('availability') }}>
     {% set strippedText = item.content|render|striptags %}
     {% if strippedText == 'Bezet' %}
-      <div class="field__occupied">
+      <div class="availability__field--occupied">
         {{ strippedText }}
       </div>
     {% else %}
-      <div class="field__free">
+      <div class="availability__field--free">
         {{ strippedText }}
       </div>
     {% endif %}

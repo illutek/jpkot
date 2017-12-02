@@ -9,14 +9,17 @@
       height: auto
 
   &__description
+    +mQuery(479px)
+      padding-bottom: 3rem
 
-    &-available--free
-      background: $main_color1
-      padding: 10px
+    &-available
+      padding: 1rem
 
-    &-available--occupied
-      background: $main_color3
-      padding: 10px
+      &--free
+        background: $main_color1
+
+      &--occupied
+        background: $main_color3
 
     &-backto
       margin-top: 2.5rem
