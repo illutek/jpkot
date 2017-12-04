@@ -1,0 +1,105 @@
+// ////////////////////
+// @@ MEDIA QUERY
+// ///////////////////
+
+=mQuery($arg...)
+  @if length($arg) == 1
+    @media screen and (max-width: nth($arg, 1))
+      @content
+
+  @if length($arg) == 2
+    @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2))
+      @content
+
+=mQueryMin($arg...)
+  @if length($arg) == 1
+    @media screen and (min-width: nth($arg, 1))
+      @content
+
+
+=transform($transforms)
+  -moz-transform: $transforms
+  -o-transform: $transforms
+  -ms-transform: $transforms
+  -webkit-transform: $transforms
+  transform: $transforms
+
+
+// translate
+// +translate(2,3)
+=translate ($x, $y)
+  +transform(translate($x, $y))
+
+
+
+// +transition(xs); value + s
+=transition ($transform)
+  -webkit-transition: all $transform ease
+  -moz-transition: all $transform ease
+  -o-transition: all $transform ease
+  -ms-transition: all $transform ease
+
+// USE
+// .foo
+//   +center(both)
+
+=center($position)
+  position: absolute
+
+  @if $position == 'vertical'
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
+
+  @else if $position == 'horizontal'
+    left: 50%
+    -webkit-transform: translateX(-50%)
+    -ms-transform: translateX(-50%)
+    transform: translate(-50%)
+
+  @else if $position == 'both'
+    top: 50%
+    left: 50%
+    -webkit-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+
+
+
+// MEDIA QUERY MANAGER
+//
+// 0 - 600px:      Phone
+// 600px - 900px:  Tablet portret
+// 900px - 1200px: Tablet landscape
+// [1200px - 1800px] is de normale styles de desktop
+// 1800px +        Big desktop
+//
+
+/*
+// $breakpoint argument choices
+//
+// - phone
+// - tab-port
+// - tab-land
+// - big-desktop
+//
+// 1em = 16px
+//
+
+=respond($breakpoint)
+  @if $breakpoint == phone          //600px
+    @media (max-width: 37.5em)
+      @content
+
+  @if $breakpoint == tab-port       //900px
+    @media (max-width: 56.5em)
+      @content
+
+  @if $breakpoint == tab-land       //1200px
+    @media (max-width: 75em)
+      @content
+
+  @if $breakpoint == big-desktop    //more than 1800px
+    @media (min-width: 112.5em)
+      @content
