@@ -13,7 +13,6 @@
   top: 0
   right: 0
   transition: all .5s ease
-  //+transitionMixin(.5s)
 
     // push 370px to the right
   transform: translateX(37rem)
@@ -22,21 +21,21 @@
     width: 26rem
     padding: 1rem
 
-  &__menu-items
+  &__menu-items  // .menu-right__menu-items
     margin-top: 6rem
     font-size: 2.5rem
 
 
     // Drupal menu--main.html.twig
-  .menu  //ul
+  .menu  // ul
     list-style-type: none
 
-    &__item  //li
+    &__item  // li -     .menu__item
       border-bottom: solid 1px white
       padding: 3rem 0
       +transitionMixin(.5s)
 
-      &--active-trail
+      &--active-trail  // .menu__item--active-trail
         padding-left: 3rem
 
       &:last-child
@@ -50,7 +49,7 @@
         padding: 1.5rem 0
 
 
-      &-link  //a
+      &-link  // a -      .menu__item-link
         color: white
         text-transform: uppercase
         text-decoration: none
