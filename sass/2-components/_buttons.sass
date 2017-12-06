@@ -10,7 +10,7 @@
     color: $color__white
     text-transform: uppercase
     border-radius: 2px
-    +transition(.5s)
+    +transitionMixin(.5s)
     box-shadow: 0 1rem 2rem rgba($color__black, .15)
 
   &:after
@@ -28,7 +28,7 @@
     box-shadow: 0 .5rem 1rem rgba($color__black, .15)
 
   &:hover:after
-    +transition(.5s)
+    +transitionMixin(.5s)
     font-family: FontAwesome
     content: "\f101"
     padding-left: .5rem

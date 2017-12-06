@@ -17,7 +17,7 @@
       @content
 
 
-=transform($transforms)
+=transformMixin($transforms)
   -moz-transform: $transforms
   -o-transform: $transforms
   -ms-transform: $transforms
@@ -27,17 +27,18 @@
 
 // translate
 // +translate(2,3)
-=translate ($x, $y)
-  +transform(translate($x, $y))
+=translateMixin($x, $y)
+  +transformMixin(translate($x, $y))
 
 
 
 // +transition(xs); value + s
-=transition ($transform)
+=transitionMixin($transform)
   -webkit-transition: all $transform ease
   -moz-transition: all $transform ease
   -o-transition: all $transform ease
   -ms-transition: all $transform ease
+
 
 // USE
 // .foo

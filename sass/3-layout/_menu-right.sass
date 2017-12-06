@@ -11,7 +11,7 @@
   position: fixed
   right: 0
   color: white
-  +transition(0.5s)
+  +transitionMixin(0.5s)
   transform: translateX(370px)
   +mQuery(479px)
     width: 200px
@@ -44,7 +44,7 @@
       @extend .icon--mail
 
   &--visible
-    +transition(0.5s)
+    +transitionMixin(0.5s)
     transform: translateX(0px)
 
   .menu
