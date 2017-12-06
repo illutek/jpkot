@@ -3,43 +3,56 @@
  * @file
  * Theme override to display menu-main.
  *
+ * SASS - 3-layout/_menu__right.sass
  *
- * SASS - _menu__right.sass
+ * if structure deleted in this theme we will never use more than
+ * one menu level
+ *
+ * {% if menu_level == 0 %}
+ *      <ul{{ attributes.addClass('menu') }}>
+ *   {% else %}
+ *     <ul class="menu">
+ *   {% endif %}
+ *
+ * {% if item.below %}
+ *   {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+ * {% endif %}
+ *
+ * removed out of the classes variable (more than one level classes)
+ * item.is_expanded ? 'menu__item--expanded',
+ * item.is_collapsed ? 'menu__item--collapsed',
+ *
+ *
+ * { class: ['menu__link'] } adds a class to the 'a href'
+ *
+ * module https://www.drupal.org/project/simplify_menu, don't use it here
+ *
+ * the class menu__item--active-trail is not shown on the out of the box
+ * home button - solution add on another menu-link Home to the main-menu
+ * that points to /node (needless to say, hide the core Home link obviously)
  */
 #}
 {% import _self as menus %}
 
-{#
-  We call a macro which calls itself to render the full tree.
-  @see http://twig.sensiolabs.org/doc/tags/macro.html
-#}
+
+  {# We call a macro which calls itself to render the full tree. #}
+  {# @see http://twig.sensiolabs.org/doc/tags/macro.html #}
+
 {{ menus.menu_links(items, attributes, 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
-  {% import _self as menus %}
-  {% if items %}
-    {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('menu') }}>
-    {% else %}
-      <ul class="menu">
+    {% import _self as menus %}
+    {% if items %}
+        <ul{{ attributes.addClass('menu') }}>
+            {% for item in items %}
+                {% set classes = [
+                    'menu__item',
+                    item.in_active_trail ? 'menu__item--active-trail',
+                ] %}
+                <li{{ item.attributes.addClass(classes) }}>
+                    {{ link(item.title, item.url, { class: ['menu__item-link'] }) }}
+                </li>
+            {% endfor %}
+        </ul>
     {% endif %}
-    {% for item in items %}
-      {%
-        set classes = [
-          'menu__item',
-          'menu__item--upper',
-          item.is_expanded ? 'menu__item--expanded',
-          item.is_collapsed ? 'menu__item--collapsed',
-          item.in_active_trail ? 'menu__item--active-trail',
-        ]
-      %}
-      <li{{ item.attributes.addClass(classes) }}>
-        {{ link(item.title, item.url) }}
-        {% if item.below %}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-        {% endif %}
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
 {% endmacro %}
