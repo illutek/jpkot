@@ -10,15 +10,19 @@
  #}
 
 {% set classes = [
-'price-4-content',
+'price__content',
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
   <h2 class="heading-secondary heading-secondary--black">{{ node.label }}</h2>
-  {{ content }}
+
+  <div class="price__content-body">
+      {{ content }}
+  </div>
+
 </div>
 
 <div class="readmore readmore--price">
-  <a href="{{ url }}" rel="bookmark" class="btn btn--price">{{ 'MEER INFORMATIE'|t }}</a>
+  <a href="#popup-price" rel="bookmark" class="btn btn--price">{{ 'MEER INFORMATIE'|t }}</a>
 </div>
 

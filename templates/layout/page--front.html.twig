@@ -78,7 +78,7 @@
             </div>
         </section>
 
-        <section class="section-price">
+        <section class="section-price" id="section-price">
             <div class="row no-gutter">
                 <div class="price">
                     {{ page.price }}
@@ -88,5 +88,20 @@
 
         {% include directory ~ '/templates/partials/footer.html.twig' %}
 
+    </div>
+
+    <div class="popup-price" id="popup-price">
+        <div class="popup-price__content">
+
+            <a href="#section-price" class="popup-price__close">&times;</a>
+
+            <div class="popup-price__body">
+                {{ page.popupprice }}
+            </div>
+
+            <div class="readmore">
+                <a href="{{ base_path }}contact" rel="bookmark" class="btn btn--steenweg">{{ 'MEER INFORMATIE aanvragen'|t }}</a>
+            </div>
+        </div>
     </div>
 </div>

@@ -1,0 +1,46 @@
+// ////////////////////////////
+// @@ ++ POPUP PRICE MODAL
+// ///////////////////////////
+
+.popup-price
+  height: 100vh
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  background: rgba($color__main--1, .95)
+  z-index: 100
+  opacity: 0
+  visibility: hidden
+  +transitionMixin(.3s)
+
+  &__content
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: $color-_white
+    padding: 3rem
+    box-shadow: 0 1rem 3rem rgba($color--black, .2)
+    border-radius: .3rem
+
+  &:target
+    opacity: 1
+    visibility: visible
+
+  &__close
+    &:link,
+    &:visited
+      position: absolute
+      top: 2rem
+      right: 2rem
+      font-size: 5rem
+      line-height: .5
+      color: $color__font
+      text-decoration: none
+      display: inline-block
+      +transitionMixin(.3s)
+
+    &:hover
+      text-decoration: none
+      color: $color__main--1

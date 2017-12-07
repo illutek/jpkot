@@ -5,21 +5,22 @@
 .price
   background: $color__main--3
   position: relative
-  @extend .section-extend // on variables.sass
+  color: $color__font
+  text-align: center
+  padding: 3.5rem
+
   +mQuery(479px)
-    padding: 15px
-  .price-content
-    position: absolute
-    width: 100%
-    display: inline-block
-    left: 0
+    padding: 1.5rem
+
+  &__content
+
     +mQuery(479px)
-      padding: 0 10px
-    h2
-      margin-bottom: 1.67em
+      padding: 0 1rem
+
+    .heading-secondary
+
       +mQuery(479px)
-        margin-bottom: 1em
+        margin-bottom: 1rem
+
   p
     line-height: 2.5em
-  a
-    color: white
