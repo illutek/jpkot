@@ -99,3 +99,7 @@ The Bubbling
 Used my own Drupal8 boilerplate as startpoint for this project  
 https://github.com/illutek/theme-directory  
 Edit the bower.json file in order not to use bootstrap 4.0.0-beta but version 3.x.x.
+  
+    
+
+**TODO** - how to prevent a drupal8 view slider to load on a mobile device
