@@ -9,8 +9,8 @@
   cursor: pointer
   +transitionMixin(.1s)
 
-
-
+  +mQuery(479px)
+    top: 1rem
 
   &-btn
     +transitionMixin(.3s)
@@ -25,7 +25,8 @@
       font-size: 1.5em
 
   +mQuery(479px)
-    top: 2.5rem
+    //top: 2.5rem
+    //TODO dit verhaal geen idee dient opgelost
 
     .line-group
       width: 24px
