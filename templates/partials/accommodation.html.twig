@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Created by stefan on 12/8/17
+ *
+*/
+#}
+
+
+<section class="section-accommodation">
+    <div class="row no-gutter">
+        <div class="col-md-6">
+
+            <div class="accommodation__tiles">
+                <div class="accommodation__tile accommodation__tile--one">
+                    {# Accommodatie steenweg #}
+                    {{ page.accommodation_steenweg }}
+                </div>
+                {# end info-tile_one #}
+
+                <div class="accommodation__tile accommodation__tile--two">
+                    {# Accommodatie rooistraat #}
+                    {{ page.accommodation_rooistraat }}
+                </div>
+                {# end info-tile_two #}
+            </div>
+            {# end info-tiles_wrap #}
+
+        </div>
+        {# end col-md-6 #}
+
+        {# Accommodatie slider #}
+        <div class="col-md-6">
+
+            <div class="accommodation__slider">
+                <div class="accommodation__slider-slides">
+                    {{ page.slider }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

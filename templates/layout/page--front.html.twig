@@ -3,107 +3,26 @@
  * Created by Stefan on 18/04/2017.
  */
 #}
+
 {% include directory ~ '/templates/partials/menu-right.html.twig' %}
 
 <div id="container__wrapper">
+
     <div class="container">
 
         {% include directory ~ '/templates/partials/header.html.twig' %}
 
-        <section class="section-accommodation">
-            <div class="row no-gutter">
-                <div class="col-md-6">
+        {% include directory ~ '/templates/partials/accommodation.html.twig' %}
 
-                    <div class="accommodation__tiles">
-                        <div class="accommodation__tile accommodation__tile--one">
-                            {# Accommodatie steenweg #}
-                            {{ page.accommodation_steenweg }}
-                        </div>
-                        {# end info-tile_one #}
+        {% include directory ~ '/templates/partials/our-strengths.html.twig' %}
 
-                        <div class="accommodation__tile accommodation__tile--two">
-                            {# Accommodatie rooistraat #}
-                            {{ page.accommodation_rooistraat }}
-                        </div>
-                        {# end info-tile_two #}
-                    </div>
-                    {# end info-tiles_wrap #}
-
-                </div>
-                {# end col-md-6 #}
-
-                {# Accommodatie slider #}
-                <div class="col-md-6">
-
-                    <div class="accommodation__slider">
-                        <div class="accommodation__slider-slides">
-                            {{ page.slider }}
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="our-strengths-wrap">
-
-            <div class="row no-gutter">
-                <div class="our-strengths">
-                    <h2 class="heading-secondary heading-secondary--black">
-                        {{ "ONZE TROEVEN"|t }}
-                    </h2>
-                    <div class="col-md-6 our-strengths__col">
-                        <a href="{{ base_path }}node/41">
-                            <div class="our-strengths_img location-img"></div>
-                        </a>
-                        <div class="our-strengths_content">
-                            <h3 class="heading-tertiary heading-tertiary--black">{{ "LIGGING"|t }}</h3>
-                            <p>{{ "Ideaal gelegen tussen campus Diepenbeek en stad Hasselt"|t }}</p>
-                        </div>
-                    </div>
-                    {# end our-strengths__col #}
-
-                    <div class="col-md-6 our-strengths__col">
-                        <a href="{{ base_path }}node/42">
-                            <div class="our-strengths_img recreation-img"></div>
-                        </a>
-                        <div class="our-strengths_content">
-                            <h3 class="heading-tertiary heading-tertiary--black">{{ "ONTSPANNING"|t }}</h3>
-                            <p>{{ "Tafeltennis, snooker, pool, darts en fitness voorzien."|t }}</p>
-                        </div>
-                    </div>
-                    {# end our-strengths__col #}
-                </div>
-                {# end our-strengths #}
-            </div>
-        </section>
-
-        <section class="section-price" id="section-price">
-            <div class="row no-gutter">
-                <div class="price">
-                    {{ page.price }}
-                </div>
-            </div>
-        </section>
+        {% include directory ~ '/templates/partials/price.html.twig' %}
 
         {% include directory ~ '/templates/partials/footer.html.twig' %}
 
     </div>
 
-    {# popup price region #}
-    <div class="popup-price" id="popup-price">
-        <div class="popup-price__content">
+    {% include directory ~ '/templates/partials/popup-price.html.twig' %}
 
-            <a href="#section-price" class="popup-price__close">&times;</a>
 
-            <div class="popup-price__body">
-                {{ page.popupprice }}
-            </div>
-
-            <div class="readmore--popup">
-                <a href="{{ base_path }}contact" rel="bookmark" class="btn btn--steenweg">{{ 'MEER INFORMATIE aanvragen'|t }}</a>
-            </div>
-        </div>
-    </div> {# end of popup-price #}
-
-</div> {# end of container__wrapper#}
+</div>
