@@ -3,11 +3,14 @@
 // /////////////////////////
 
 .header__menu
-  +transitionMixin(.1s)
-  padding-top: 3.5rem
   position: absolute
-  right: 0
+  top: 3rem
+  right: 3rem
   cursor: pointer
+  +transitionMixin(.1s)
+
+
+
 
   &-btn
     +transitionMixin(.3s)
@@ -22,8 +25,7 @@
       font-size: 1.5em
 
   +mQuery(479px)
-    padding-top: 2.5rem
-    right: 25px
+    top: 2.5rem
 
     .line-group
       width: 24px
