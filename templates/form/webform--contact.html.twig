@@ -22,14 +22,20 @@
  */
 #}
 <div class="col-md-6 col-md-offset-3">
-  {{ 'Ons Contacteren kan via onderstaand contactformulier.' }}
-  <div class="webform-contact-content">
+
+  <div class="webform__message">
+    {{ 'Ons Contacteren kan via onderstaand contactformulier.'|t }}
+  </div>
+
+
+  <div class="webform__content">
 
     <form{{ attributes }}>
       {{ title_prefix }}
       {{ children }}
       {{ title_suffix }}
     </form>
+
   </div>
 </div>
 

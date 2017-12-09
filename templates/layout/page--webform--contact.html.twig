@@ -6,27 +6,21 @@
 {% include directory ~ '/templates/partials/menu-right.html.twig' %}
 
 <div id="container__wrapper">
+
   <div class="container">
-      {% include directory ~ '/templates/partials/header.html.twig' %}
 
-      {{ page.breadcrumb }}
+    {% include directory ~ '/templates/partials/header.html.twig' %}
 
-      {{ page.highlighted }}
+    {{ page.breadcrumb }}
 
-      {{ page.help }}
-    <div class="row">
-      <main role="main">
-        <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {{ page.highlighted }}
 
-        <section class="page-webform-contact-wrap">
+    {{ page.help }}
 
-            {{ page.content }}
+    {% include directory ~ '/templates/partials/webform-main-content.html.twig' %}
 
-        </section>
+    {% include directory ~ '/templates/partials/footer.html.twig' %}
 
-      </main>
-    </div>
-
-      {% include directory ~ '/templates/partials/footer.html.twig' %}
   </div>
+
 </div>

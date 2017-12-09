@@ -7,32 +7,57 @@
   color: white
   border: none
   outline: none
+  text-transform: lowercase
   border-bottom: dotted 1px white
   &:focus
     border-color: rgba($color__white, .4)
 
-.webform-contact-content
+.webform
   color: white
-  input
-    @extend .field-extend
-    padding: 5px 0 0
-    width: 400px
-    &[type='submit']
-      border: solid 1px white
-      width: 100px
-      padding: 6px
-    +mQuery(479px)
-      width: 200px
-  textarea
-    @extend .field-extend
-    width: 500px
-    resize: none
-    overflow: hidden
-    min-height: 20px!important
-    padding: 0
-    margin-top: 10px
-    +mQuery(479px)
-      width: 300px
+
+  &__message
+    font-size: 1.8rem
+
+  &__content
+    input
+      @extend .field-extend
+      padding: .5rem 0 0
+      width: 40rem
+
+      &[type='submit']
+        margin-top: 3rem
+        padding: 1.2rem 4rem
+        width: 50%
+        border: none
+        color: $color__white
+        background: $color__main--1
+        text-transform: uppercase
+        border-radius: 2px
+        box-shadow: 0 1rem 2rem rgba($color__black, .15)
+        +transitionMixin(.5s)
+
+        &:active,
+        &:focus
+          color: $color__white
+          background: $color__main--1
+          border: none
+          transform: translateY(-1px)
+          box-shadow: 0 .5rem 1rem rgba($color__black, .15)
+
+      +mQuery(479px)
+        width: 20rem
+
+    textarea
+      @extend .field-extend
+      width: 50rem
+      resize: none
+      overflow: hidden
+      min-height: 2rem !important
+      padding: 0
+      margin-top: 1rem
+
+      +mQuery(479px)
+        width: 30rem
 
 
 
