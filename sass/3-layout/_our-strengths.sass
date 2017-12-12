@@ -4,7 +4,7 @@
 
 // the extends for the DRY principles
 // http://programmer.97things.oreilly.com/wiki/index.php/Don%27t_Repeat_Yourself
-.strengts-img-after-extend
+.extend-strengts__image--after
   content: ""
   transition: opacity 0.5s
   position: absolute
@@ -14,56 +14,66 @@
   bottom: 0
   left: 0
 
-.strengts-img-hover-after-extend
+.extend-strengts__image--hover
   opacity: 1
   transition: opacity 0.5s
 
 
 .our-strengths
   background: white
-  @extend .section-extend // on variables.sass
+  color: $color__font
+  text-align: center
+  padding: 3.5rem
+  min-height: 45rem
+
+  .heading-secondary--black
+    margin-bottom: 1.67em
+
+  &__column
+    &:last-child
+      border-left: solid 1px $color__main--1
+
+      +respond(phone)  //@media max 600px
+        border-left: none
+        border-top: solid 1px $color__main--1
+        margin-top: 3.5rem
+        padding-top: 3.5rem
+
+  &__content
+    margin-top: 5rem
+    width: 100%
+
 
   // The images sprites with transition https://gordonlesti.com/css-background-transitions-with-image-sprites/
-  // Disadvantage with this method strites must be pixel perfect (sprites do not change but lie together)
-  .our-strengths_img
-    img
-      width: 116px
-      height: 256px
+  // Disadvantage with this method sprites must be pixel perfect (sprites do not change but lie together)
+  &__icon
     position: relative
     display: inline-block
     width: 116px
     height: 116px
 
-  .location-img
-    background: transparent url("../images/google-icon.jpg") no-repeat 0 0
-    &::after
-      background: transparent url("../images/google-icon.jpg") no-repeat 0 -116px
-      @extend .strengts-img-after-extend
-    &:hover::after
-      @extend .strengts-img-hover-after-extend
-
-  .recreation-img
-    background: transparent url("../images/recreation-icon.jpg") no-repeat 0 0
-    &::after
-      background: transparent url("../images/recreation-icon.jpg") no-repeat 0 -116px
-      @extend .strengts-img-after-extend
-    &:hover::after
-      @extend .strengts-img-hover-after-extend
+    img
+      width: 116px
+      height: 256px
 
 
-  .our-strengths_content
-    margin-top: 50px
-    width: 100%
-  h2
-    margin-bottom: 1.67em
+    &--location
+      background: transparent url("../images/google-icon.jpg") no-repeat 0 0
+      &::after
+        background: transparent url("../images/google-icon.jpg") no-repeat 0 -116px
+        @extend .extend-strengts__image--after
+      &:hover::after
+        @extend .extend-strengts__image--hover
 
-.our-strengths__col
-  &:last-child
-    border-left: solid 1px $color__main--1
-    +mQuery(479px)
-      border-left: none
-      border-top: solid 1px $color__main--1
-      margin-top: 35px
-      padding-top: 35px
+    &--recreation
+      background: transparent url("../images/recreation-icon.jpg") no-repeat 0 0
+      &::after
+        background: transparent url("../images/recreation-icon.jpg") no-repeat 0 -116px
+        @extend .extend-strengts__image--after
+      &:hover::after
+        @extend .extend-strengts__image--hover
+
+
+
 
 

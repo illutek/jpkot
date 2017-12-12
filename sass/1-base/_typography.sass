@@ -13,13 +13,9 @@
   &--black
     color: $color__black
 
-  +mQuery(579px)
+  +respond(phone)
     font-size: 1.4em
     text-align: center
-  +mQuery(321px)
-    font-size: 1.1em
-
-
 
 
 .heading-secondary
@@ -35,9 +31,6 @@
 
   &--lower
     text-transform: capitalize
-
-  +mQuery(479px)
-    font-size: 1.6em
 
 
 .heading-tertiary, h3
