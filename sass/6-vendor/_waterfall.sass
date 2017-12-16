@@ -5,9 +5,30 @@
 // No BEM because of not own js script
 
 .waterfall
+
+  .pin
+    width: 24%
+
+    +respond(tab-port)
+      width: 48%
+
+    +respond(small-phone)
+      width: 96%
+
   .list-group
-    margin-right: 5px
-    margin-left: 5px
+    margin-right: .5rem
+    margin-left: .5rem
+
+    > li.pin-footer
+          position: absolute
+          left: 45%
+          bottom: 50%
+          opacity: 0
+
+          a
+            color: white
+            width: 5rem
+
     &:hover
       > li.pin-footer
         opacity: 1
@@ -16,35 +37,15 @@
         img
           border: solid 1px $color__main--1
           transition: all 0.5s ease-in-out
+
+
     > li:first-child
       padding: 0
       position: relative
       img
         width: 100%
         border: solid 1px white
+
     > li
       list-style: none
-    > li.pin-footer
-      position: absolute
-      left: 45%
-      bottom: 50%
-      opacity: 0
-      a
-        color: white
-        width: 50px
 
-
-+mQueryMin(768px)
-  .waterfall
-    .pin
-      width: 346px
-
-+mQueryMin(992px)
-  .waterfall
-    .pin
-      width: 299px
-
-+mQueryMin(1200px)
-  .waterfall
-    .pin
-      width: 275px

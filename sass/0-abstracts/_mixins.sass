@@ -89,6 +89,11 @@
 //
 
 =respond($breakpoint)
+
+  @if $breakpoint == small-phone     //375px
+    @media (max-width: 23.5em)
+      @content
+
   @if $breakpoint == phone          //600px
     @media (max-width: 37.5em)
       @content

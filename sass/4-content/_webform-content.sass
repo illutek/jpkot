@@ -14,6 +14,10 @@
 
 .webform
   color: white
+  padding: 0 3.5rem
+
+  +respond(phone)
+    padding: 0 1rem
 
   &__message
     font-size: 1.8rem
@@ -22,7 +26,7 @@
     input
       @extend .field-extend
       padding: .5rem 0 0
-      width: 40rem
+      width: 38rem
 
       &[type='submit']
         margin-top: 3rem
@@ -44,20 +48,22 @@
           transform: translateY(-1px)
           box-shadow: 0 .5rem 1rem rgba($color__black, .15)
 
-      +mQuery(479px)
-        width: 20rem
+      +respond(small-phone)
+        width: 22rem
 
     textarea
       @extend .field-extend
-      width: 50rem
+      width: 47.5rem
       resize: none
       overflow: hidden
       min-height: 2rem !important
       padding: 0
       margin-top: 1rem
 
-      +mQuery(479px)
-        width: 30rem
+      +respond(small-phone)
+        width: 32rem
+
+     
 
 
 
