@@ -50,16 +50,18 @@
     margin-top: 2.5rem
 
 .accommodation__slider
+  height: 90rem
+  overflow: hidden
+
+  +respond(tab-port)
+    display: none
+
   &-slides
-    overflow: hidden
 
     img
       width: 100%
       height: auto
       vertical-align: middle
-
-    +respond(tab-port)
-      display: none
 
 
 //ACCOMMODATION FULL NODE--ACCOMMODATIE--FULL.HTML.TWIG
@@ -80,5 +82,9 @@
       padding: 1.5rem
       display: inline-block
       margin-bottom: .5rem
+
+      +respond(tab-port)
+        width: 100%
+        text-align: center
 
 
