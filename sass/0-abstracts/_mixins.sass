@@ -1,6 +1,6 @@
-// ////////////////////
+// /////////////////////////////////
 // @@ MEDIA QUERY
-// ///////////////////
+// /////////////////////////////////
 
 =mQuery($arg...)
   @if length($arg) == 1
@@ -17,6 +17,9 @@
       @content
 
 
+// /////////////////////////////////
+// @@ TRANSFORM
+// /////////////////////////////////
 =transformMixin($transforms)
   -moz-transform: $transforms
   -o-transform: $transforms
@@ -40,9 +43,14 @@
   -ms-transition: all $transform ease
 
 
+// /////////////////////////////////
+// @@ POSITION CENTER
+// /////////////////////////////////
 // USE
 // .foo
 //   +center(both)
+// the parent should be position relative
+
 
 =center($position)
   position: absolute
@@ -67,8 +75,9 @@
     transform: translate(-50%, -50%)
 
 
-// TODO everthing to MEDIA QUERY MANAGER
-// MEDIA QUERY MANAGER
+// /////////////////////////////////
+// @@ MEDIA QUERY MANAGER
+// /////////////////////////////////
 //
 // 0 - 600px:      Phone
 // 600px - 900px:  Tablet portret
@@ -80,6 +89,8 @@
 /*
 // $breakpoint argument choices
 //
+// - smallest-phone
+// - small-phone
 // - phone
 // - tab-port
 // - tab-land
@@ -90,8 +101,12 @@
 
 =respond($breakpoint)
 
-  @if $breakpoint == small-phone     //375px
+  @if $breakpoint == smallest-phone     //375px
     @media (max-width: 23.5em)
+      @content
+
+  @if $breakpoint == small-phone     //480px
+    @media (max-width: 30em)
       @content
 
   @if $breakpoint == phone          //600px

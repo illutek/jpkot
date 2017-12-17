@@ -3,16 +3,16 @@
 ### Drupal 8
 A theme set-up with Bootstrap
 
-#### Used modules  
-twig_field_value - backup_migrate - pathauto - colorbox - views_slideshow - 
-metatag - webform - google_analytics - xmlsitemap  
+#### Used modules
+twig_field_value - backup_migrate - pathauto - colorbox - views_slideshow -
+metatag - webform - google_analytics - xmlsitemap
 
 ---
 
-### Webtechnologies 
-- yarn for devDependencies primarily for gulp is a toolkit for automating tasks in your development.  
+### Webtechnologies
+- yarn for devDependencies primarily for gulp is a toolkit for automating tasks in your development.
 - bower for the theme Dependencies
-- Sass is the most mature, stable, and powerful professional grade CSS extension language in the world. 
+- Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
 - BEM — Block Element Modifier is a methodology that helps you to create reusable components.
 - Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
@@ -28,7 +28,7 @@ the images {{ content.field_impressie_img }}
       {{ item.content }}
     </li>
   </ul>
-{% endfor %}  
+{% endfor %}
 ```
 
 Extra the magnifying lens on the images
@@ -44,46 +44,65 @@ Extra the magnifying lens on the images
       </div>
     </li>
   </ul>
-{% endfor %}  
-```  
+{% endfor %}
+```
 
 #### @media Bubbling
 Sass provide a pretty killer feature for authoring @media when you nest them inside other selectors. If you add a @media query by nesting it inside a selector Sass will "bubble" that @media query and the new rule outside of the nest and back out to the root of your style sheet.
-http://thesassway.com/intermediate/responsive-web-design-part-2  
-In this project i use it in combination with a mediaquery mixin  
+http://thesassway.com/intermediate/responsive-web-design-part-2
+In this project i use it in combination with a mediaquery mixin
 
-The mixin  
+The mixin MEDIA QUERY MANAGER
 ```
-=mQuery($arg...)
-  @if length($arg) == 1
-    @media screen and (max-width: nth($arg, 1))
+=respond($breakpoint)
+
+  @if $breakpoint == smallest-phone     //375px
+    @media (max-width: 23.5em)
       @content
 
-  @if length($arg) == 2
-    @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2))
+  @if $breakpoint == small-phone     //480px
+    @media (max-width: 30em)
+      @content
+
+  @if $breakpoint == phone          //600px
+    @media (max-width: 37.5em)
+      @content
+
+  @if $breakpoint == tab-port       //900px
+    @media (max-width: 56.5em)
+      @content
+
+  @if $breakpoint == tab-land       //1200px
+    @media (max-width: 75em)
+      @content
+
+  @if $breakpoint == big-desktop    //more than 1800px
+    @media (min-width: 112.5em)
       @content
 ```
 
 The Bubbling
 ```
-.page-content-wrap
+.page__content
   background: white
-  padding: 35px
+  padding: 3.5rem
   overflow: hidden
-  +mQuery(479px)
-    padding: 10px
+
+  +respond(phone)
+    padding: 1rem
+
 ```
 ##### The css way without mixin and bubbling
 ```
-.page-content-wrap {
+.page__content {
   background: white;
-  padding: 35px;
+  padding: 3.5rem;
   overflow: hidden;
 }
 
 @media screen and (max-width: 479px) {
-  .page-content-wrap {
-    padding: 10px;
+  .page__content {
+    padding: 1rem;
   }
 }
 ```
@@ -91,15 +110,15 @@ The Bubbling
 
 ### Method of setting up this theme
 - after download and unzip, change directory to jpkot.
-- cd to jpkot and run 'bower install' for theme dependencies (bootstrap, bootstrap-waterfall and font-awesome) 
+- cd to jpkot and run 'bower install' for theme dependencies (bootstrap, bootstrap-waterfall and font-awesome)
 - run 'yarn install' for the dev-dependencies (gulp ....) see package.json for a complete list
 - run 'gulp' this create the css directory and a minify styles.css file but also a dist directory with the final theme
 
 ### Starting point
-Used my own Drupal8 boilerplate as startpoint for this project  
-https://github.com/illutek/theme-directory  
+Used my own Drupal8 boilerplate as startpoint for this project
+https://github.com/illutek/theme-directory
 Edit the bower.json file in order not to use bootstrap 4.0.0-beta but version 3.x.x.
-  
-    
+
+
 
 **TODO** - how to prevent a drupal8 view slider to load on a mobile device
