@@ -53,20 +53,4 @@
     openBtn.addEventListener('click', openMenu);
 
 
-    // close popup-price on click bcg
-    var popupBcg = document.getElementById('popup-price');
-    var priceSection = document.getElementById('section-price');
-
-    // TODO error 
-    // menuJS.js?p15o1h:65 Uncaught TypeError: Cannot read property // 'addEventListener' of null
-
-    function closePopup(event){  
-      event.stopPropagation();    
-      window.location.hash = 'section-price';
-      console.log('click on bcg');
-    }
-
-    popupBcg.addEventListener('click', closePopup);
-
-
 }());
