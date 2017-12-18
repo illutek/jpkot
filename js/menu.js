@@ -18,7 +18,7 @@
 
         closeMenu();
 
-        $('.header__menu, .close-btn').click(openMenu);
+        $('.header__menu, .menu-right__close-btn').click(openMenu);
 
     });
 })(jQuery);
