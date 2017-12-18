@@ -2,12 +2,13 @@
 // @@ PAGE
 // /////////////////////////
 
-// container 1170px+ menu-right 350 px = 1520px
-+mQueryMin(1520px)
-  #container__wrapper
-    +transitionMixin(0.5s)
-    margin-right: 0
+// container 1170px + menu-right 350 px = 1520px
 
+#container__wrapper
+  +transitionMixin(0.5s)
+  margin-right: 0
+
+  +mQueryMin(1520px)
     &.pushover-left
       +transitionMixin(0.5s)
       margin-right: 350px

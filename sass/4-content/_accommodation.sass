@@ -5,14 +5,13 @@
 // ACCOMMODATION ON FRONT-PAGE NODE--ACCOMMODATIE--TEASER.HTML.TWIG
 
 .accommodation__tiles
-  p
-    line-height: 4rem
+
   a
     color: white
 
   .accommodation__tile
     height: 45rem
-    padding: 3.5rem
+    padding: 4.5rem 3.5rem 3.5rem
     text-align: center
     color: white
     vertical-align: middle
@@ -20,9 +19,6 @@
 
     +respond(tab-port)
       height: 41rem
-
-    +respond(phone)
-      padding: 1.5rem
 
     &-content
       display: inline-block
@@ -86,5 +82,10 @@
       +respond(tab-port)
         width: 100%
         text-align: center
+        
+  &__overview
+    margin-top: 3rem
 
+    table
+      margin-bottom: 3rem
 

@@ -14,14 +14,16 @@
     color: $color__black
 
   +respond(phone)
-    font-size: 1.4em
     text-align: center
+
+  +respond(smallest-phone)
+    font-size: 2.2rem
 
 
 .heading-secondary
   font-size: 3.2rem
   text-transform: uppercase
-  margin: 2.5rem 0
+  margin-bottom: 2.5rem
 
   &--white
     color: $color__white
@@ -31,6 +33,10 @@
 
   &--lower
     text-transform: capitalize
+
+  +respond(smallest-phone)
+    margin-bottom: 1.5rem
+    font-size: 1.4em
 
 
 .heading-tertiary, h3
@@ -50,5 +56,8 @@
 
 
 p
-  line-height: 2.7rem
+  line-height: 2.3
   font-size: 1.8rem
+
+  +respond(smallest-phone)
+    line-height: 2
