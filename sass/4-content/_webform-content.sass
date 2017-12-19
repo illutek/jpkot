@@ -26,30 +26,23 @@
     input
       @extend .field-extend
       padding: .5rem 0 0
-      width: 38rem
-
-      &[type='submit']
-        margin-top: 3rem
-        padding: 1.2rem 4rem
-        width: 50%
-        border: none
-        color: $color__white
-        background: $color__main--1
-        text-transform: uppercase
-        border-radius: 2px
-        box-shadow: 0 1rem 2rem rgba($color__black, .15)
-        +transitionMixin(.5s)
-
-        &:active,
-        &:focus
-          color: $color__white
-          background: $color__main--1
-          border: none
-          transform: translateY(-1px)
-          box-shadow: 0 .5rem 1rem rgba($color__black, .15)
+      width: 37rem
 
       +respond(smallest-phone)
         width: 22rem
+
+      &[type='submit']
+        @extend .btn:link
+        @extend .btn--steenweg
+
+        &:hover
+          @extend .btn:hover
+
+        &:active,
+        &:focus
+          @extend .btn:active
+          outline: none
+          background: $color__main--1
 
     textarea
       @extend .field-extend
@@ -63,6 +56,11 @@
       +respond(smallest-phone)
         width: 32rem
 
+  &__submit
+    margin-top: 6rem
+
+    +respond(small-phone)
+      text-align: center
 
 
 

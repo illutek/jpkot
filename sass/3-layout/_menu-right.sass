@@ -2,6 +2,8 @@
 // @@ MENU RIGHT WRAPPER
 // ///////////////////////////
 
+// BEM Block__element--modifier
+
 .menu-right
   color: white
   height: 100vh
@@ -26,12 +28,12 @@
     font-size: 2.5rem
 
   // menu-right visible (JScript)
-  &--visible
+  &--visible  // .menu-right--visible
     +transitionMixin(.5s)
     transform: translateX(0)
 
 
-  &__email
+  &__email  // .menu-right__email
     padding: 2rem 0 0 1.5rem
     font-size: 2.2rem
 
@@ -39,9 +41,9 @@
       padding: 2rem 0 0 .5rem
       font-size: 1.8rem
 
-    &-link  //a
+    &-link  //a  .menu-right__email-link
       color: white
-      @extend .icon--mail
+      @extend .icon--mail  // class on 1-base/_fontawesome-icons.sass
 
       &:hover
         color: white
@@ -50,13 +52,13 @@
 
   // Drupal menu--main.html.twig
 
-  .menu  // ul
+  .menu  // ul   - on line 49
     list-style-type: none
 
     &__item  // li -     .menu__item
       border-bottom: solid 1px white
       padding: 3rem 0
-      +transitionMixin(.5s)
+      +transitionMixin(.5s)  // 0-abstracts/_mixins.sass
 
       &--active-trail  // .menu__item--active-trail
         padding-left: 3rem
@@ -67,7 +69,7 @@
       &:hover
         padding-left: 3rem
 
-      +respond(phone)
+      +respond(phone)   // mediaquery -  0-abstracts/_mixins.sass
         font-size: 1.8rem
         padding: 1.5rem 0
 
