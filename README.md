@@ -16,6 +16,34 @@ metatag - webform - google_analytics - xmlsitemap
 - BEM — Block Element Modifier is a methodology that helps you to create reusable components.
 - Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
+#### BEM and SASS
+A perfect combination, resulting in a nice code, here is a short fragment from sass/3-layout/menu right. sass  
+```
+.menu
+    list-style-type: none
+
+    &__item
+      border-bottom: solid 1px white
+      padding: 3rem 0
+      +transitionMixin(.5s)
+
+      &--active-trail  
+        padding-left: 3rem
+
+```
+
+
+
+#### JQUERY - JAVASCRIPT
+Menu slide effect, I have set this up in 2 different ways
+- with JQUERY js/menu.js
+- with JAVASCRIPT js/menuJS.js (default)
+
+Display of popup price notification with css, also closing with x happens with css.  
+Closing the popup by clicking on the background with jquery (js/popup.js)
+
+
+
 #### Photo-album
 With bootstrap-waterfall https://github.com/Mystist/bootstrap-waterfall (with bower)
 - On node--foto-album.html.twig attach the library {{ attach_library('jpkot/waterfalljs') }} and print
