@@ -40,11 +40,12 @@
       font-size: 1.8rem
 
     &-link  //a  .menu-right__email-link
-      color: white
-      @extend .icon--mail  // class on 1-base/_fontawesome-icons.sass
+      color: $color__white
 
-      &:hover
-        color: white
+      &:hover,
+      &:active,
+      &:visited
+        color: $color__white
 
 
 
@@ -54,7 +55,7 @@
     list-style-type: none
 
     &__item  // li -     .menu__item
-      border-bottom: solid 1px white
+      border-bottom: solid 1px $color__white
       padding: 3rem 0
       +transitionMixin(.5s)  // 0-abstracts/_mixins.sass
 
@@ -73,7 +74,7 @@
 
 
       &-link  // a -      .menu__item-link
-        color: white
+        color: $color__white
         text-transform: uppercase
         text-decoration: none
 

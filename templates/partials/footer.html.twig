@@ -5,7 +5,7 @@
 #}
 
 <footer class="footer u-margin-top--default">
-  <div class="row no-gutter">
+  
     <div class="footer__contact">
       <div class="footer__contact-content">
 
@@ -17,7 +17,7 @@
 
           {#Desktop version Phone#}
           <div class="footer__phone--desktop">
-            <div class="phone-field icon--phone">+32 11 227 710</div>
+            <div class="footer__phone-field icon--phone">+32 11 227 710</div>
           </div>
 
           {#Mobile version Phone#}
@@ -32,19 +32,18 @@
 
         <div class="footer__email">
           <script>
-              document.write("<a class='email-url' href=\"mail" + "to:" + new Array("jp.kot", "hotmail.com").join("@") + "\">" +
+              document.write("<a class='email-url icon--mail' href=\"mail" + "to:" + new Array("jp.kot", "hotmail.com").join("@") + "\">" +
                   "Ons contacteren via mail" + "</" + "a>");
           </script>
         </div>
 
         <div class="footer__copyright icon--copy">
-          Alle rechten voorbehouden JPKOT | 2017
+          Alle rechten voorbehouden JPKOT | {{ "now"|date("Y") }}
         </div>
 
       </div>
       {# footer__contact-content #}
     </div>
     {# footer__contact #}
-  </div>
-  {# .row #}
+
 </footer>

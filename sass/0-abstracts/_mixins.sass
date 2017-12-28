@@ -1,23 +1,4 @@
 // /////////////////////////////////
-// @@ MEDIA QUERY
-// /////////////////////////////////
-
-=mQuery($arg...)
-  @if length($arg) == 1
-    @media screen and (max-width: nth($arg, 1))
-      @content
-
-  @if length($arg) == 2
-    @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2))
-      @content
-
-=mQueryMin($arg...)
-  @if length($arg) == 1
-    @media screen and (min-width: nth($arg, 1))
-      @content
-
-
-// /////////////////////////////////
 // @@ TRANSFORM
 // /////////////////////////////////
 =transformMixin($transforms)
@@ -73,6 +54,25 @@
     -webkit-transform: translate(-50%, -50%)
     -ms-transform: translate(-50%, -50%)
     transform: translate(-50%, -50%)
+
+
+// ////////////////////////////////////
+// @@ MEDIA QUERY CUSTOM Values
+// ////////////////////////////////////
+
+=mQuery($arg...)
+  @if length($arg) == 1
+    @media screen and (max-width: nth($arg, 1))
+      @content
+
+  @if length($arg) == 2
+    @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2))
+      @content
+
+=mQueryMin($arg...)
+  @if length($arg) == 1
+    @media screen and (min-width: nth($arg, 1))
+      @content    
 
 
 // /////////////////////////////////
