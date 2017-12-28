@@ -1,6 +1,6 @@
-// /////////////////////////
+// ////////////////////////////
 // @@ MENU-BUTTON
-// /////////////////////////
+// ////////////////////////////
 
 .header__menu
   position: absolute
@@ -28,14 +28,13 @@
       display: none
 
 
-
 // E from MENU to hamburger
 .line-group
   position: relative
   width: 1.2rem
   height: 1.5rem
   float: left
-  margin: .4rem .2rem 0 .2rem
+  margin: .4rem .2rem 0
 
   &__line
     position: absolute
@@ -57,16 +56,17 @@
       width: 75%
 
   +respond(phone)  //@media max 600px
-    width: 2rem
+    width: 4rem
+    margin: .8rem .2rem 0
 
     &__line
       width: 100%
 
       &--top
-        margin-top: .3rem
+        margin-top: -.3rem
 
       &--midle
         margin-top: .8rem
 
       &--bottom
-        margin-top: 1.3rem
+        margin-top: 1.9rem
