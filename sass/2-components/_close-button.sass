@@ -6,43 +6,33 @@
   &__close-btn
     position: relative
 
-    .button-close
-      cursor: pointer
-      position: absolute
-      width: 3rem
-      height: 3rem
-      top: 2.5rem
-      right: 2rem
+.button-close
+  cursor: pointer
+  position: absolute
+  width: 3rem
+  height: 3rem
+  top: 2.5rem
+  right: 2rem
 
-      &__line
-        height: 2px
-        width: 3rem
-        background: $color__white
-        position: absolute
-        top: 1.5rem
-        +transitionMixin(0.5s)
+  &__line
+    height: 2px
+    width: 3rem
+    background: $color__white
+    position: absolute
+    top: 1.5rem
+    +transitionMixin(0.5s)
 
+    &--one
+      transform: rotate(45deg)
+    &--two
+      transform: rotate(-45deg)
 
-        &--one
-          transform: rotate(45deg)
-        &--two
-          transform: rotate(-45deg)
+  &:hover .button-close__line,
+  &:focus .button-close__line
+    background: $color__main--3
 
-
-      &:hover .button-close__line
-        background: $color__main--3
-        &--one
-          transform: rotate(-45deg)
-        &--two
-          transform: rotate(45deg)
-
-      &:hover .button-close__line,
-      &:focus .button-close__line
-        background: $color__main--3
-
-        &--one
-          transform: rotate(-45deg)
-
-        &--two
-          transform: rotate(45deg)
+    &--one
+      transform: rotate(-45deg)
+    &--two
+      transform: rotate(45deg)
 

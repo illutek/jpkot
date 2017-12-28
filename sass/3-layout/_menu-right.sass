@@ -5,7 +5,6 @@
 // BEM Block__element--modifier
 
 .menu-right
-  color: white
   height: 100vh
   width: 35rem
   background: $color__main--1
@@ -14,7 +13,7 @@
   z-index: 50
   top: 0
   right: 0
-  transition: all .5s ease
+  transition: all .5s
 
     // push 370px to the right
   transform: translateX(37rem)
@@ -29,7 +28,6 @@
 
   // menu-right visible (JScript)
   &--visible  // .menu-right--visible
-    +transitionMixin(.5s)
     transform: translateX(0)
 
 
