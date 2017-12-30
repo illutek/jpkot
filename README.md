@@ -13,11 +13,11 @@ metatag - webform - google_analytics - xmlsitemap
 - yarn for devDependencies primarily for gulp is a toolkit for automating tasks in your development.
 - bower for the theme Dependencies
 - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
-- BEM — Block Element Modifier is a methodology that helps you to create reusable components.
+- **BEM** — Block Element Modifier is a methodology that helps you to create reusable components.
 - Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
 #### BEM and SASS
-A perfect combination, resulting in a nice code, here is a short fragment from sass/3-layout/menu right. sass  
+A perfect combination, resulting in a clean code, here is a short fragment from sass/3-layout/menu right. sass  
 ```
 .menu
     list-style-type: none
@@ -31,7 +31,22 @@ A perfect combination, resulting in a nice code, here is a short fragment from s
         padding-left: 3rem
 
 ```
+##### The css way
+```
+.menu {
+  list-style-type: none;
+}
 
+.menu__item {
+  border-bottom: solid 1px white;
+  padding: 3rem 0;
+  transition: all .5s ease;
+}
+
+.menu__item--active-trail {
+  padding-left: 3rem;
+}
+```
 
 
 #### JQUERY - JAVASCRIPT
@@ -44,7 +59,7 @@ Closing the popup by clicking on the background with jquery (js/popup.js)
 
 
 
-#### Photo-album
+#### PHOTO ALBUM
 With bootstrap-waterfall https://github.com/Mystist/bootstrap-waterfall (with bower)
 - On node--foto-album.html.twig attach the library {{ attach_library('jpkot/waterfalljs') }} and print
 the images {{ content.field_impressie_img }}
@@ -110,6 +125,7 @@ The mixin MEDIA QUERY MANAGER
 ```
 
 The Bubbling
+##### The sass way with mixin
 ```
 .page__content
   background: white
@@ -137,7 +153,7 @@ The Bubbling
 ---
 
 ### Method of setting up this theme
-- after download and unzip, change directory to jpkot.
+- after download and unzip.
 - cd to jpkot and run 'bower install' for theme dependencies (bootstrap, bootstrap-waterfall and font-awesome)
 - run 'yarn install' for the dev-dependencies (gulp ....) see package.json for a complete list
 - run 'gulp' this create the css directory and a minify styles.css file but also a dist directory with the final theme
