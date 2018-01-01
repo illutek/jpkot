@@ -1,7 +1,7 @@
 # JP-kot
 
 ### Drupal 8
-A theme set-up with Bootstrap
+A theme set-up with Bootstrap 3.3.7 CSS framework
 
 #### Used modules
 twig_field_value - backup_migrate - pathauto - colorbox - views_slideshow -
@@ -10,11 +10,11 @@ metatag - webform - google_analytics - xmlsitemap
 ---
 
 ### Webtechnologies
-- yarn for devDependencies primarily for gulp is a toolkit for automating tasks in your development.
-- bower for the theme Dependencies
-- Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
-- **BEM** — Block Element Modifier is a methodology that helps you to create reusable components.
-- Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow.
+- **Yarn** FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT, for devDependencies primarily for gulp.
+- **Bower** for the theme Dependencies
+- **Sass** is the most mature, stable, and powerful professional grade CSS extension language in the world.
+- **BEM** — Block Element Modifier is a highly useful, powerful, and simple naming convention that makes your front-end code easier to read and understand, easier to work with, easier to scale, more robust and explicit, and a lot more strict.
+- **Gulp** is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
 #### BEM and SASS
 A perfect combination, resulting in a clean code, here is a short fragment from sass/3-layout/menu right. sass  
