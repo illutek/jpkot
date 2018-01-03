@@ -48,6 +48,30 @@ A perfect combination, resulting in a clean code, here is a short fragment from 
 }
 ```
 
+#### REM (Root em)
+All css units in this theme are rem units.
+I've converted the font size from 16px to 10px (10px/16px = 62.5%), so 1rem = 10px this makes it a lot easier to convert px to rem.  
+This setting is done on the file 'sass/1-base/_base-styles.sass'
+
+The rem unit is relative to the root—or the html—element. That means that we can define a single font size on the html element and define all rem units to be a percentage of that.  
+https://www.sitepoint.com/understanding-and-using-rem-units-in-css/
+
+#### DRY one step further
+
+```
+body
+  margin: 0
+  font-size: 1.6rem
+  font-weight: 400
+```
+**DRY**
+```
+body
+  margin: 0
+  font:
+    size: 1.6rem
+    weight: 400
+```
 
 #### JQUERY - JAVASCRIPT
 Menu slide effect, I have set this up in 2 different ways
@@ -57,13 +81,7 @@ Menu slide effect, I have set this up in 2 different ways
 Display of popup price notification with css, also closing with x happens with css.  
 Closing the popup by clicking on the background with jquery (js/popup.js)
 
-#### REM (Root em)
-All css units in this theme are rem units.
-I've converted the font size from 16px to 10px (10px/16px = 62.5%), so 1rem = 10px this makes it a lot easier to convert px to rem.  
-This setting is done on the file 'sass/1-base/_base-styles.sass'
 
-The rem unit is relative to the root—or the html—element. That means that we can define a single font size on the html element and define all rem units to be a percentage of that.  
-https://www.sitepoint.com/understanding-and-using-rem-units-in-css/
 
 
 #### PHOTO ALBUM
