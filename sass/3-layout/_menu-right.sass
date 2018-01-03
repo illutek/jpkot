@@ -55,15 +55,13 @@
     list-style-type: none
 
     &__item  // li -     .menu__item
-      border-bottom: solid 1px $color__white
       padding: 3rem 0
       +transitionMixin(.5s)  // 0-abstracts/_mixins.sass
+      &:not(:last-child)
+        border-bottom: solid 1px $color__white
 
       &--active-trail  // .menu__item--active-trail
         padding-left: 3rem
-
-      &:last-child
-        border-bottom: none
 
       &:hover
         padding-left: 3rem
