@@ -5,7 +5,8 @@
 // BEM Block__element--modifier
 
 .menu-right
-  height: 100vh
+  :height 100vh  //Property Syntax
+
   width: 35rem
   background: $color__main--1
   padding: 2.5rem
@@ -73,8 +74,10 @@
 
       &-link  // a -      .menu__item-link
         color: $color__white
-        text-transform: uppercase
-        text-decoration: none
+        
+        text:
+          transform: uppercase
+          decoration: none
 
         &:hover
           text-decoration: none
