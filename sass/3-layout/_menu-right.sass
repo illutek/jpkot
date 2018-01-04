@@ -21,11 +21,12 @@
 
   +respond(phone)
     width: 26rem
+    transform: translateX(28rem)
     padding: 1rem
 
   &__menu-items  // .menu-right__menu-items
     margin-top: 6rem
-    font-size: 2.5rem
+    font-size: $fs + .9rem
 
   // menu-right visible (JScript)
   &--visible  // .menu-right--visible
@@ -34,11 +35,11 @@
 
   &__email  // .menu-right__email
     padding: 2rem 0 0 1.5rem
-    font-size: 2.2rem
+    font-size: $fs + .6rem
 
     +respond(phone)
       padding: 2rem 0 0 .5rem
-      font-size: 1.8rem
+      font-size: $fs + .2rem
 
     &-link  //a  .menu-right__email-link
       color: $color__white
@@ -68,7 +69,7 @@
         padding-left: 3rem
 
       +respond(phone)   // mediaquery -  0-abstracts/_mixins.sass
-        font-size: 1.8rem
+        font-size: $fs + .2rem
         padding: 1.5rem 0
 
 
