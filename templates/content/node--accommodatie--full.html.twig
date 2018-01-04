@@ -1,5 +1,6 @@
 {#
 /**
+ * Created by Stefan on 27/04/2017.
  * @file
  *
 */
@@ -18,7 +19,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 {#
 /**
  * id="node-{{ node.id }}"
- * Does not use this but does give possibilities for styling
+ * background color on sass/3-layout/_page-photoalbum.sass
 */
 #}
 <article id="node-{{ node.id }}" {{ attributes.addClass(classes) }}>
