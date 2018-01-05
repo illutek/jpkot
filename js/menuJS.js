@@ -25,11 +25,11 @@
      * @type {Element}
      */
 
-    const openBtn = document.getElementById('open__menu');
-    const closeBtn = document.getElementById('close__menu');
-    const menuRightWrapper = document.getElementsByClassName('menu-right')[0];
+    var openBtn = document.getElementById('open__menu');
+    var closeBtn = document.getElementById('close__menu');
+    var menuRightWrapper = document.getElementsByClassName('menu-right')[0];
     // const menuRightWrapper = document.getElementsByClassName('menu-right');
-    const containerWrapper = document.getElementById('container__wrapper');
+    var containerWrapper = document.getElementById('container__wrapper');
 
 
     /**
