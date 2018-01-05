@@ -2,7 +2,10 @@
  * Created by Stefan on 17/11/2017.
  * Strict mode makes it easier to write "secure" JavaScript.
  *
+  * (function () {
+ *   })(); = IIFE
  */
+
 (function () {
     'use strict';
 
@@ -22,11 +25,11 @@
      * @type {Element}
      */
 
-    var openBtn = document.getElementById('open__menu');
-    var closeBtn = document.getElementById('close__menu');
-    var menuRightWrapper = document.getElementsByClassName('menu-right')[0];
-    // var menuRightWrapper = document.getElementsByClassName('menu-right');
-    var containerWrapper = document.getElementById('container__wrapper');
+    const openBtn = document.getElementById('open__menu');
+    const closeBtn = document.getElementById('close__menu');
+    const menuRightWrapper = document.getElementsByClassName('menu-right')[0];
+    // const menuRightWrapper = document.getElementsByClassName('menu-right');
+    const containerWrapper = document.getElementById('container__wrapper');
 
 
     /**
@@ -53,4 +56,4 @@
     openBtn.addEventListener('click', openMenu);
 
 
-}());
+})();
