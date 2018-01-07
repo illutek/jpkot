@@ -25,12 +25,25 @@
      * @type {Element}
      */
 
-    var openBtn = document.getElementById('open__menu');
-    var closeBtn = document.getElementById('close__menu');
-    var menuRightWrapper = document.getElementsByClassName('menu-right')[0];
-    // const menuRightWrapper = document.getElementsByClassName('menu-right');
-    var containerWrapper = document.getElementById('container__wrapper');
+    /**
+     * The old ES5 way 
+     *  var openBtn = document.getElementById('open__menu');
+     *  var closeBtn = document.getElementById('close__menu');
+     *  var menuRightWrapper = document.getElementsByClassName('menu-right')[0];
+     *  // const menuRightWrapper = document.getElementsByClassName('menu-right');
+     *  var containerWrapper = document.getElementById('container__wrapper');
+     * 
+     * Change on 2018-01-06 to ES6 (ES2016) with babel and gulp-babel gulpfile.js to gulpfile.babel.js
+     * Now i can use const keyword and most important querySelector
+     * https://markgoodyear.com/2015/06/using-es6-with-gulp/
+     * https://stackoverflow.com/questions/44958216/how-to-minify-es6-functions-with-gulp-uglify/46746412
+     * 
+    */
 
+    const openBtn = document.querySelector('#open__menu');
+    const closeBtn = document.querySelector('#close__menu');
+    const menuRightWrapper = document.querySelector('.menu-right');
+    const containerWrapper =document.querySelector('#container__wrapper');
 
     /**
      * functions
