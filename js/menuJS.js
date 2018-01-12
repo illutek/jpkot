@@ -34,7 +34,7 @@
      *  var containerWrapper = document.getElementById('container__wrapper');
      * 
      * Change on 2018-01-06 to ES6 (ES2016) with babel and gulp-babel gulpfile.js to gulpfile.babel.js
-     * Now i can use const keyword and most important querySelector
+     * Now i can use the 'const' keyword and most important 'querySelector'
      * https://markgoodyear.com/2015/06/using-es6-with-gulp/
      * https://stackoverflow.com/questions/44958216/how-to-minify-es6-functions-with-gulp-uglify/46746412
      * 

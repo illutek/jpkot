@@ -18,6 +18,10 @@ bootstrap:
 globaljs:
   js:
     js/menuJS.js: {}
+    js/custom.js: {}
+
+popupjs:
+  js:
     js/popup.js: {}
 
 waterfalljs:

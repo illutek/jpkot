@@ -18,6 +18,8 @@
  */
 #}
 
+{# TODO setting up all of this with JS, makes it much simpler #}
+
 {% for item in items %}
   <div{{ item.attributes.addClass('availability') }}>
     {% set strippedText = item.content|render|striptags %}
