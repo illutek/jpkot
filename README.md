@@ -1,5 +1,16 @@
 # JP-kot
 
+### Table of Contents
+- [Webtechnologies](#webtechnologies)  
+- [BEM and SASS](#bem)  
+- [REM](#rem)  
+- [DRY](#dry)  
+- [JQUERY - JAVASCRIPT](#js)  
+- [PHOTO ALBUM](#photo)  
+- [@media Bubbling](#bubbling)  
+- [Method of setting up this theme](#method)
+
+
 ### Drupal 8
 A theme set-up with Bootstrap 3.3.7 CSS framework
 
@@ -9,16 +20,17 @@ metatag - webform - google_analytics - xmlsitemap
 
 ---
 
-### Webtechnologies
+### <a name="webtechnologies"></a> Webtechnologies
 - **Yarn** FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT, for devDependencies primarily for gulp.
 - **Bower** for the theme Dependencies
 - **Sass** is the most mature, stable, and powerful professional grade CSS extension language in the world.
-- **BEM** — Block Element Modifier is a highly useful, powerful, and simple naming convention that makes your front-end code easier to read and understand, easier to work with, easier to scale, more robust and explicit, and a lot more strict.
+- **BEM** — Block Element Modifier is a highly useful, powerful, and simple naming convention that makes your front-end code easier to read 
+- and understand, easier to work with, easier to scale, more robust and explicit, and a lot more strict.
 - **Gulp** is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
-#### BEM and SASS
+#### <a name="bem"></a> BEM and SASS
 A perfect combination, resulting in a clean code, here is a short fragment from sass/3-layout/menu right. sass  
-```
+``` css
 .menu
     list-style-type: none
 
@@ -32,7 +44,7 @@ A perfect combination, resulting in a clean code, here is a short fragment from 
 
 ```
 ##### The css way
-```
+``` css
 .menu {
   list-style-type: none;
 }
@@ -48,24 +60,25 @@ A perfect combination, resulting in a clean code, here is a short fragment from 
 }
 ```
 
-#### REM (Root em)
+#### <a name="rem"></a> REM (Root em)
 All css units in this theme are rem units.
 I've converted the font size from 16px to 10px (10px/16px = 62.5%), so 1rem = 10px this makes it a lot easier to convert px to rem.  
 This setting is done on the file 'sass/1-base/_base-styles.sass'
 
-The rem unit is relative to the root—or the html—element. That means that we can define a single font size on the html element and define all rem units to be a percentage of that.  
+The rem unit is relative to the root—or the html—element. That means that we can define a single font size on the html element and define all 
+rem units to be a percentage of that.  
 https://www.sitepoint.com/understanding-and-using-rem-units-in-css/
 
-#### DRY one step further
+#### <a name="dry"></a> DRY one step further
 
-```
+``` css
 body
   margin: 0
   font-size: 1.6rem
   font-weight: 400
 ```
 **DRY**
-```
+``` css
 body
   margin: 0
   font:
@@ -73,23 +86,27 @@ body
     weight: 400
 ```
 
-#### JQUERY - JAVASCRIPT
+#### <a name="js"></a> JQUERY - JAVASCRIPT
 Menu slide effect, I have set this up in 2 different ways
 - with JQUERY js/menu.js
 - with JAVASCRIPT js/menuJS.js (default)
 
 Display of popup price notification with css, also closing with x happens with css.  
-Closing the popup by clicking on the background with jquery (js/popup.js)
+Closing the popup by clicking on the background with jquery (js/popup.js)  
+
+- custom.js just for adding classes to the the h3 and h4 tags, these tags are created in the text editor, is already difficult enough 
+for the editor, so adding the classes '.heading-tertiary' en .'heading-fourth' with JS  
+
+**TODO**  
+- [ ] field--field-beschikbaar.html.twig to JS (see comment on this file)
 
 
-
-
-#### PHOTO ALBUM
+####<a name="photo"></a> PHOTO ALBUM
 With bootstrap-waterfall https://github.com/Mystist/bootstrap-waterfall (with bower)
 - On node--foto-album.html.twig attach the library {{ attach_library('jpkot/waterfalljs') }} and print
 the images {{ content.field_impressie_img }}
 - On field--field-impressie-img.html.twig add the class waterfall
-```
+``` twig
 {% for item in items %}
   <ul class="pin list-group">
     <li class="list-group-custom">
@@ -100,7 +117,7 @@ the images {{ content.field_impressie_img }}
 ```
 
 Extra the magnifying lens on the images
-```
+``` twig
 {% for item in items %}
   <ul class="pin list-group">
     <li class="list-group-custom">
@@ -115,13 +132,14 @@ Extra the magnifying lens on the images
 {% endfor %}
 ```
 
-#### @media Bubbling
-Sass provide a pretty killer feature for authoring @media when you nest them inside other selectors. If you add a @media query by nesting it inside a selector Sass will "bubble" that @media query and the new rule outside of the nest and back out to the root of your style sheet.
+#### <a name="bubbling"></a> @media Bubbling
+Sass provide a pretty killer feature for authoring @media when you nest them inside other selectors. If you add a @media query by nesting 
+it inside a selector Sass will "bubble" that @media query and the new rule outside of the nest and back out to the root of your style sheet.
 http://thesassway.com/intermediate/responsive-web-design-part-2
 In this project i use it in combination with a mediaquery mixin
 
 The mixin MEDIA QUERY MANAGER
-```
+``` css
 =respond($breakpoint)
 
   @if $breakpoint == smallest-phone     //375px
@@ -151,7 +169,7 @@ The mixin MEDIA QUERY MANAGER
 
 The Bubbling
 ##### The sass way with mixin
-```
+``` css
 .page__content
   background: white
   padding: 3.5rem
@@ -162,7 +180,7 @@ The Bubbling
 
 ```
 ##### The css way without mixin and bubbling
-```
+``` css
 .page__content {
   background: white;
   padding: 3.5rem;
@@ -177,7 +195,7 @@ The Bubbling
 ```
 ---
 
-### Method of setting up this theme
+### <a name="methode"></a> Method of setting up this theme
 - after download and unzip.
 - cd to jpkot and run 'bower install' for theme dependencies (bootstrap, bootstrap-waterfall and font-awesome)
 - run 'yarn install' for the dev-dependencies (gulp ....) see package.json for a complete list
@@ -190,4 +208,5 @@ Edit the bower.json file in order not to use bootstrap 4.0.0-beta but version 3.
 
 
 
-**TODO** - how to prevent a drupal8 view slider to load on a mobile device
+**TODO**  
+- [ ] how to prevent a drupal8 view slider to load on a mobile device
