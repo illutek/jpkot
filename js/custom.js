@@ -1,13 +1,15 @@
 /**
  * Created by Stefan on 12/01/2018.
  *
- * add .heading-tertiary to h3 tag
- * add .heading-fourth to h4 tag
  */
-
 
 (function () {
   'use strict';
+
+/**
+ * add .heading-tertiary to h3 tag
+ * add .heading-fourth to h4 tag
+ */
 
     let heading3 = document.getElementsByTagName('h3');
     let heading4 = document.getElementsByTagName('h4');
