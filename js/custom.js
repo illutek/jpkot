@@ -40,6 +40,8 @@
 
 // Gets all the cells i want
 let item;
+const parentDiv = document.querySelector('.availability');
+const oldSpan = document.querySelector('.availability').getElementsByTagName('span'[0]);
 let items = document.querySelectorAll('td.views-field-field-beschikbaar');
 let itemsL = items.length;
 
@@ -49,13 +51,20 @@ items = Array.from(items);
 
 // loop items.lenght
 item = items[0].children[0].children[0].innerText;
+
 if(item == 'Bezet') {
   console.log('Looking good');
-  const span = document.createElement('span');
+
+  const newSpan = document.createElement('span');
+  newSpan.className = 'availability__field--occupied';
+
   const text = document.createTextNode('Bezet create');
-  console.log(span);
-  span.className = 'availability__field--occupied';
-  span.appendChild(text);
+
+  console.log(newSpan);
+
+  newSpan.appendChild(text);
+
+  // parentDiv.replaceChild(newSpan, oldSpan);
 };
 // end loop
 
@@ -80,6 +89,9 @@ if(item == 'Bezet') {
 console.log('Item lenght ' + itemsL);
 console.log(items);
 console.log('The text value ' + item);
+console.log('Old span ' + oldSpan);
+console.log('ParentDiv ' + parentDiv);
+// console.log('New span ' + newSpan);
 
 
 })();
