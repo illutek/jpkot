@@ -27,4 +27,59 @@
 
     // console.log(heading3);
 
+/**
+ * field--field-beschikbaar add class depends of his content
+ */
+
+ /**
+  * this gets only the elements of the first table
+  */
+//  const item = document.querySelector('tbody').getElementsByClassName('views-field-field-beschikbaar');
+
+// const item = document.querySelectorAll('tbody');
+
+// Gets all the cells i want
+let item;
+let items = document.querySelectorAll('td.views-field-field-beschikbaar');
+let itemsL = items.length;
+
+items = Array.from(items);
+// replaced the text works fine
+// items = items[0].children[0].textContent = 'contentAdded';
+
+// loop items.lenght
+item = items[0].children[0].children[0].innerText;
+if(item == 'Bezet') {
+  console.log('Looking good');
+  const span = document.createElement('span');
+  const text = document.createTextNode('Bezet create');
+  console.log(span);
+  span.className = 'availability__field--occupied';
+  span.appendChild(text);
+};
+// end loop
+
+// const span = document.createElement('span');
+// const text = document.createTextNode('Bezet create');
+// console.log(span);
+// span.className = 'availability__field--occupied';
+// span.appendChild(text);
+
+
+// items = items[0].classList.add('classAdded');
+
+// item.forEach(function(td){
+//   // items = item.childNodes
+// });
+
+// let val;
+
+// val = items.className;
+
+// console.log(val);
+console.log('Item lenght ' + itemsL);
+console.log(items);
+console.log('The text value ' + item);
+
+
 })();

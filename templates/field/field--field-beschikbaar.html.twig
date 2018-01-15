@@ -23,14 +23,6 @@
 {% for item in items %}
   <div{{ item.attributes.addClass('availability') }}>
     {% set strippedText = item.content|render|striptags %}
-    {% if strippedText == 'Bezet' %}
-      <div class="availability__field--occupied">
-        {{ strippedText }}
-      </div>
-    {% else %}
-      <div class="availability__field--free">
-        {{ strippedText }}
-      </div>
-    {% endif %}
+        <span>{{ strippedText }}</span>
   </div>
 {% endfor %}
