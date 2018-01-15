@@ -95,13 +95,13 @@ Display of popup price notification with css, also closing with x happens with c
 Closing the popup by clicking on the background with jquery (js/popup.js)  
 
 - custom.js just for adding classes to the the h3 and h4 tags, these tags are created in the text editor, is already difficult enough 
-for the editor, so adding the classes '.heading-tertiary' en .'heading-fourth' with JS  
+for the editor, so adding the classes '.heading-tertiary' and .'heading-fourth' with JS  
 
 **TODO**  
 - [ ] field--field-beschikbaar.html.twig to JS (see comment on this file)
 
 
-####<a name="photo"></a> PHOTO ALBUM
+#### <a name="photo"></a> PHOTO ALBUM
 With bootstrap-waterfall https://github.com/Mystist/bootstrap-waterfall (with bower)
 - On node--foto-album.html.twig attach the library {{ attach_library('jpkot/waterfalljs') }} and print
 the images {{ content.field_impressie_img }}
