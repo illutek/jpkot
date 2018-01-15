@@ -39,32 +39,28 @@
 // const item = document.querySelectorAll('tbody');
 
 // Gets all the cells i want
-let item;
-const parentDiv = document.querySelector('.availability');
-const oldSpan = document.querySelector('.availability').getElementsByTagName('span'[0]);
+let itemText;
+
 let items = document.querySelectorAll('td.views-field-field-beschikbaar');
+let availability = document.querySelectorAll('div.availability-item');
 let itemsL = items.length;
 
 items = Array.from(items);
+availability = Array.from(availability);
 // replaced the text works fine
 // items = items[0].children[0].textContent = 'contentAdded';
 
 // loop items.lenght
-item = items[0].children[0].children[0].innerText;
+itemText = items[0].children[0].children[0].innerText;
+// availabilityItem = availability[0].children[0].innerHTML;
 
-if(item == 'Bezet') {
+if(itemText== 'Bezet') {
   console.log('Looking good');
-
-  const newSpan = document.createElement('span');
-  newSpan.className = 'availability__field--occupied';
-
-  const text = document.createTextNode('Bezet create');
-
-  console.log(newSpan);
-
-  newSpan.appendChild(text);
-
-  // parentDiv.replaceChild(newSpan, oldSpan);
+  availability.forEach(function(head){
+    head.classList.add('availability--test');
+  });
+} else {
+  console.log('BAD');
 };
 // end loop
 
@@ -88,10 +84,7 @@ if(item == 'Bezet') {
 // console.log(val);
 console.log('Item lenght ' + itemsL);
 console.log(items);
-console.log('The text value ' + item);
-console.log('Old span ' + oldSpan);
-console.log('ParentDiv ' + parentDiv);
-// console.log('New span ' + newSpan);
+console.log(availability);
 
 
 })();

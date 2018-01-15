@@ -23,6 +23,6 @@
 {% for item in items %}
   <div{{ item.attributes.addClass('availability') }}>
     {% set strippedText = item.content|render|striptags %}
-        <span>{{ strippedText }}</span>
+        <div class="availability-item">{{ strippedText }}</div>
   </div>
 {% endfor %}
