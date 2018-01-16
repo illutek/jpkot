@@ -115,6 +115,8 @@ With bootstrap-waterfall https://github.com/Mystist/bootstrap-waterfall (with bo
 - On node--foto-album.html.twig attach the library {{ attach_library('jpkot/waterfalljs') }} and print
 the images {{ content.field_impressie_img }}
 - On field--field-impressie-img.html.twig add the class waterfall
+- sass/6-vendor/_waterfall.sass the styling  
+
 ``` twig
 {% for item in items %}
   <ul class="pin list-group">

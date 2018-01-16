@@ -3,6 +3,7 @@
 // ///////////////////////////
 
 // No BEM because of not own js script
+// mixin center(both) centering the magnifier on the image
 
 .waterfall
 
@@ -21,8 +22,7 @@
 
     > li.pin-footer
           position: absolute
-          left: 45%
-          bottom: 50%
+          +center(both)
           opacity: 0
 
           a
