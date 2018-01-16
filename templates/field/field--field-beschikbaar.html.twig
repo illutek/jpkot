@@ -18,11 +18,10 @@
  */
 #}
 
-{# TODO setting up all of this with JS, makes it much simpler, no extra module and settings in the view #}
+{# TODO setting up all of this with JS, makes it much simpler, no extra module required #}
 
 {% for item in items %}
   <div{{ item.attributes.addClass('availability') }}>
-    {% set strippedText = item.content|render|striptags %}
-        <div class="availability-item">{{ strippedText }}</div>
+    <div class="availability__field">{{ item.content }}</div>
   </div>
 {% endfor %}

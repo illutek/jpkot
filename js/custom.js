@@ -30,39 +30,21 @@
 /**
  * field--field-beschikbaar add class depends of his content
  */
+    // variable availabilityOcc returns a HTMLCollection of 28 items
+    let availabilityOcc = document.getElementsByClassName('availability__field');
+    // variable itemsLenght = 28
+    let itemsLenght = availabilityOcc.length;
+    let availabilityText;
 
+    for(let i = 0; i < itemsLenght; i++) {
+      availabilityText = availabilityOcc[i].innerText;
+      if(availabilityText === 'Bezet') {
+        availabilityOcc[i].classList.add('availability__field--occupied');
+      };
+    }
 
-let items = document.querySelectorAll('td.views-field-field-beschikbaar');
-items = Array.from(items);
-let itemText = items[0].children[0].children[0].innerText;
-let itemsL = items.length;
-
-let availability = document.querySelectorAll('div.availability-item');
-availability = Array.from(availability);
-
-// loop items.lenght
-for(let i = 1; i < itemsL; i++){
-  // availability = document.querySelector('div.availability-item:nth-child(i)');
-  if(itemText== 'Bezet') {
-    // console.log('Looking good');
-    availability.forEach(function(x){
-      x.classList.add('availability__field--occupied');
-    });
-  } else {
-    availability.forEach(function(y){
-      y.classList.add('availability__field--free');
-    });
-    // console.log('availability__field--free');
-  };
-}
-
-// end loop
-
-
-// console.log(val);
-console.log('Item lenght ' + itemsL);
-// console.log(items);
-console.log(availability);
-
+    // console.log(availabilityOcc);
+    // console.log(itemsLenght);
+    // console.log(availabilityText);
 
 })();
