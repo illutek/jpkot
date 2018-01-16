@@ -97,6 +97,15 @@ Closing the popup by clicking on the background with jquery (js/popup.js)
 - custom.js just for adding classes to the the h3 and h4 tags, these tags are created in the text editor, is already difficult enough 
 for the editor, so adding the classes '.heading-tertiary' and .'heading-fourth' with JS  
 
+``` js
+ let heading3 = document.getElementsByTagName('h3');
+ heading3 = Array.from(heading3);
+ heading3.forEach(function(head){
+      head.classList.add('heading-tertiary');
+    });
+
+```
+
 **TODO**  
 - [ ] field--field-beschikbaar.html.twig to JS (see comment on this file)
 
