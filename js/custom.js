@@ -31,59 +31,37 @@
  * field--field-beschikbaar add class depends of his content
  */
 
- /**
-  * this gets only the elements of the first table
-  */
-//  const item = document.querySelector('tbody').getElementsByClassName('views-field-field-beschikbaar');
-
-// const item = document.querySelectorAll('tbody');
-
-// Gets all the cells i want
-let itemText;
 
 let items = document.querySelectorAll('td.views-field-field-beschikbaar');
-let availability = document.querySelectorAll('div.availability-item');
+items = Array.from(items);
+let itemText = items[0].children[0].children[0].innerText;
 let itemsL = items.length;
 
-items = Array.from(items);
+let availability = document.querySelectorAll('div.availability-item');
 availability = Array.from(availability);
-// replaced the text works fine
-// items = items[0].children[0].textContent = 'contentAdded';
 
 // loop items.lenght
-itemText = items[0].children[0].children[0].innerText;
-// availabilityItem = availability[0].children[0].innerHTML;
+for(let i = 1; i < itemsL; i++){
+  // availability = document.querySelector('div.availability-item:nth-child(i)');
+  if(itemText== 'Bezet') {
+    // console.log('Looking good');
+    availability.forEach(function(x){
+      x.classList.add('availability__field--occupied');
+    });
+  } else {
+    availability.forEach(function(y){
+      y.classList.add('availability__field--free');
+    });
+    // console.log('availability__field--free');
+  };
+}
 
-if(itemText== 'Bezet') {
-  console.log('Looking good');
-  availability.forEach(function(head){
-    head.classList.add('availability--test');
-  });
-} else {
-  console.log('BAD');
-};
 // end loop
 
-// const span = document.createElement('span');
-// const text = document.createTextNode('Bezet create');
-// console.log(span);
-// span.className = 'availability__field--occupied';
-// span.appendChild(text);
-
-
-// items = items[0].classList.add('classAdded');
-
-// item.forEach(function(td){
-//   // items = item.childNodes
-// });
-
-// let val;
-
-// val = items.className;
 
 // console.log(val);
 console.log('Item lenght ' + itemsL);
-console.log(items);
+// console.log(items);
 console.log(availability);
 
 
