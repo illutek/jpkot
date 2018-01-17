@@ -94,6 +94,7 @@ Menu slide effect, I have set this up in 2 different ways
 Display of popup price notification with css, also closing with x happens with css.  
 Closing the popup by clicking on the background with jquery (js/popup.js)  
 
+<<<<<<< HEAD
 - custom.js just for adding classes to the h3 and h4 tags, these tags are created in the text editor, is already difficult enough 
 for the editor, so adding the classes '.heading-tertiary' and .'heading-fourth' with JS  
 
@@ -110,6 +111,24 @@ for the editor, so adding the classes '.heading-tertiary' and .'heading-fourth' 
 **TODO**  
 - [ ] field--field-beschikbaar.html.twig to JS (see comment on this file)
 
+=======
+- custom.js  
+  - for adding classes to the the h3 and h4 tags, these tags are created in the text editor, is already difficult enough 
+for the editor, so adding the classes '.heading-tertiary' and .'heading-fourth' with JS 
+
+
+  - also adding classNames to the field--field-beschikbaar depending of his content  
+  content = 'Bezet' -> ``` classList.add('availability__field--occupied')```
+
+``` js
+      let heading3 = document.getElementsByTagName('h3');
+      heading3 = Array.from(heading3);
+      
+      heading3.forEach(function(head){
+            head.classList.add('heading-tertiary');
+      });
+```  
+>>>>>>> availabilityField
 
 #### <a name="photo"></a> PHOTO ALBUM
 With bootstrap-waterfall https://github.com/Mystist/bootstrap-waterfall (with bower)
