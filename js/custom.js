@@ -30,9 +30,9 @@
 /**
  * field--field-beschikbaar add class depends of his content
  */
-    // variable availabilityOcc returns a HTMLCollection of 28 items
+    // variable availabilityOcc returns a HTMLCollection of x items
     let availabilityOcc = document.getElementsByClassName('hasClass');
-    // variable itemsLenght = 28
+    // variable itemsLenght = x
     let itemsLenght = availabilityOcc.length;
     let availabilityText;
 
