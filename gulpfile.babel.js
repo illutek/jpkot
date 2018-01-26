@@ -118,7 +118,7 @@ gulp.task('js:dist', function () {
             presets: ['es2015']
         }))
         .pipe(uglify())
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(path.dist.js));
 });
 
@@ -135,7 +135,7 @@ gulp.task('style:dist', function () {
             cascade: false
         }))
         .pipe(cleancss({compatibility: 'ie9'}))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('css'))
         .pipe(gulp.dest(path.dist.css));
 });
