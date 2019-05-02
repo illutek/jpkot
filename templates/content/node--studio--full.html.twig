@@ -65,6 +65,13 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                             {{ content.body }}
                         </div>
 
+
+                        {% if content.field_kamer_prijs[0] is not empty %}
+                            <div class="studio__description-price">
+                                {{ content.field_kamer_prijs }}
+                            </div>
+                        {% endif %}
+
                         <div class="studio__description-backto">
                             <script>
                                 document.write('<a href="' + document.referrer + '">Terug naar overzicht</a>');
